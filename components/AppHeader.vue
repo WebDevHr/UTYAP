@@ -1,5 +1,5 @@
 <template>
-    <header class="bg-transparent fixed w-full">
+    <header class="bg-transparent fixed w-full pt-3">
       <nav class="mx-auto flex max-w-7xl items-center justify-between py-4 px-6 lg:px-8" aria-label="Global">
         <div class="flex lg:flex-1">
           <router-link class="-m-1.5 p-1.5" :to="{name: 'index'}">
@@ -50,15 +50,15 @@
   
           <router-link 
             :to="{name: 'index'}"
-            class="text-sm font-semibold leading-3 text-white hover:shadow hover:bg-white/20 py-5 px-5 rounded"
+            class="text-sm font-semibold leading-3 text-white hover:shadow hover:bg-white/20 py-5 px-5 rounded font-bold text-[16px] font-sans"
           >Anasayfa</router-link>
           <router-link 
             :to="{name: 'hakkimizda'}" 
-            class="text-sm font-semibold leading-3 text-white hover:shadow hover:bg-white/20 py-5 px-5 rounded"
+            class="text-sm font-semibold leading-3 text-white hover:shadow hover:bg-white/20 py-5 px-5 rounded font-bold text-[16px] font-sans"
           >Hakkımızda</router-link>
           <router-link 
             :to="{name: 'index'}" 
-            class="text-sm font-semibold leading-3 text-white hover:shadow hover:bg-white/20 py-5 px-5 rounded"
+            class="text-sm font-semibold leading-3 text-white hover:shadow hover:bg-white/20 py-5 px-5 rounded font-bold text-[16px] font-sans"
           >İletişim</router-link>
 
         </PopoverGroup>
