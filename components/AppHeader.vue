@@ -1,6 +1,6 @@
 <template>
-    <header class="bg-transparent fixed w-full pt-3">
-      <nav class="mx-auto flex max-w-7xl items-center justify-between py-4 px-6 lg:px-8" aria-label="Global">
+    <header class="bg-transparent fixed w-full pt-3 scrollTrig" ref="navbar">
+      <nav class="mx-auto flex max-w-7xl items-center justify-between py-4" aria-label="Global">
         <div class="flex lg:flex-1">
           <router-link class="-m-1.5 p-1.5" :to="{name: 'index'}">
             <span class="sr-only">UTYAP</span>
@@ -17,7 +17,7 @@
         <PopoverGroup class="hidden lg:flex lg:gap-x-6">
 
           <Popover class="relative" v-slot="{ open }">
-            <PopoverButton class="flex items-center gap-x-1 text-sm font-semibold leading-3 text-white hover:shadow hover:bg-white/20 py-4 pl-7 pr-5 rounded">
+            <PopoverButton class="tracking-widest flex items-center gap-x-1 text-sm font-semibold leading-3 text-white hover:shadow hover:bg-white/20 py-4 pl-7 pr-5 rounded text-[16px] font-inter">
               UTYAP
               <ChevronDownIcon :class="[open ? 'rotate-180' : '', 'h-5 w-5 flex-none']" aria-hidden="true" />
             </PopoverButton>
@@ -50,15 +50,15 @@
   
           <router-link 
             :to="{name: 'index'}"
-            class="text-sm font-semibold leading-3 text-white hover:shadow hover:bg-white/20 py-5 px-5 rounded font-bold text-[16px] font-sans"
+            class="tracking-widest text-sm font-semibold leading-3 text-white hover:shadow hover:bg-white/20 py-5 px-5 rounded text-[16px] font-inter"
           >Anasayfa</router-link>
           <router-link 
             :to="{name: 'hakkimizda'}" 
-            class="text-sm font-semibold leading-3 text-white hover:shadow hover:bg-white/20 py-5 px-5 rounded font-bold text-[16px] font-sans"
+            class="tracking-widest text-sm font-semibold leading-3 text-white hover:shadow hover:bg-white/20 py-5 px-5 rounded text-[16px] font-inter"
           >Hakkımızda</router-link>
           <router-link 
             :to="{name: 'index'}" 
-            class="text-sm font-semibold leading-3 text-white hover:shadow hover:bg-white/20 py-5 px-5 rounded font-bold text-[16px] font-sans"
+            class="tracking-widest text-sm font-semibold leading-3 text-white hover:shadow hover:bg-white/20 py-5 px-5 rounded text-[16px] font-inter"
           >İletişim</router-link>
 
         </PopoverGroup>
@@ -66,9 +66,9 @@
 
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
           <a href="#" class="text-sm font-semibold leading-3 text-white bg-white/20 py-4 px-5 rounded">
-            <div class="flex flex-row gap-x-1 justify-center align-center">
-              <div class="pt-1">Bize Katılın </div>
-              <ArrowRightIcon class="h-5 w-5 flex-none" aria-hidden="true" />
+            <div class="flex flex-row gap-x-1 justify-center align-center" >
+              <div class="pt-1 tracking-widest">Bize Katılın </div>
+              <ArrowRightIcon class="h-5 w-5 flex-none box" aria-hidden="true" />
             </div>
           </a>
         </div>
@@ -113,7 +113,7 @@
   </template>
   
   <script setup>
-  import { ref } from 'vue'
+  import { ref, onMounted } from 'vue'
   import {
     Dialog,
     DialogPanel,
@@ -133,20 +133,41 @@
     FingerPrintIcon,
     SquaresPlusIcon,
     XMarkIcon,
+    ComputerDesktopIcon,
+    CpuChipIcon,
+    RocketLaunchIcon
   } from '@heroicons/vue/24/outline'
   import { ChevronDownIcon, ArrowRightIcon, ChevronUpIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/vue/20/solid'
+
+  const { $gsap: gsap, $Draggable: Draggable } = useNuxtApp(); //gsap to work
   
   const products = [
-    { name: 'Analytics', description: '', href: '#', icon: ChartPieIcon },
-    { name: 'Engagement', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-    { name: 'Security', description: 'Your customers’ data will be safe and secure', href: '#', icon: FingerPrintIcon },
-    { name: 'Integrations', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
-    { name: 'Automations', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
+    { name: 'Yazılım Departmanı', description: 'Yapay zeka - Web geliştirme - uygulama geliştirme', href: '#', icon: ComputerDesktopIcon },
+    { name: 'Robotik Departmanı', description: 'Elektronik tasırım - Özgün/İnovatif - Savunma sanayi', href: '#', icon: CpuChipIcon },
+    { name: 'Uzay Teknolojileri Departmanı', description: 'Uzay araçları - İnovatif tasarım - Keşif araçları - Fırlatma sistemleri', href: '#', icon: RocketLaunchIcon },
+    // { name: 'Integrations', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
+    // { name: 'Automations', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
   ]
   const callsToAction = [
-    { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
-    { name: 'Contact sales', href: '#', icon: PhoneIcon },
+    { name: 'Tanıtım Videosu', href: 'https://www.youtube.com/shorts/VRTgVtvZujU', icon: PlayCircleIcon },
+    { name: 'İletişime Geçin', href: '#', icon: PhoneIcon },
   ]
   
   const mobileMenuOpen = ref(false)
+
+  onMounted(() => {
+    setTimeout(() => {
+      gsap.to('scrollTrig', {
+      backgroundColor: 'rgba(255, 255, 255, 0)',
+      scrollTrigger: {
+        trigger: 'scrollTrig',
+        start: 'bottom bottom',
+        end: '+=100',
+        scrub: 1,
+        markers: true,
+      },
+    });
+    }, 1000);
+  })
+
   </script>

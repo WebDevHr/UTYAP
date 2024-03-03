@@ -12,6 +12,7 @@
   "dependencies": {
     "@headlessui/vue": "^1.7.19",
     "@heroicons/vue": "^2.1.1",
+    "gsap": "^3.12.5",
     "nuxt": "^3.10.3",
     "tsparticles-interaction-light": "^2.12.0",
     "tsparticles-path-polygon": "^2.12.0",

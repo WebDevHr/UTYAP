@@ -1,5 +1,5 @@
 <template>
-    <div class="mx-auto flex max-w-7xl items-center justify-between py-4 px-6 lg:px-8">
+    <div class="mx-auto flex max-w-7xl items-center justify-between py-4 px-6 lg:px-8 border rounded">
         <div class="grid grid-flow-row-dense grid-cols-3 grid-rows-3 mt-[100px]">
             <div class="col-span-2 border">
                 <NuxtParticles
@@ -7,7 +7,7 @@
                 :options="options"
                 ></NuxtParticles>
                 <h1 class="pt-32 font-sans text-5xl/normal font-bold text-white max-w-[600px]">İnsanların bağlantı kurma şeklini değiştiriyoruz.</h1>
-                <h2 class="text-2xl/relaxed font-normal text-white">
+                <h2 class="text-2xl/relaxed font-normal text-white mt-10">
                     Utyap 2019'da Gazi Üniversitesi Teknoloji Fakültesinde gönüllü öğrenciler tarafından kurulmuştur.
 
                     2022 itibariyle kendini tamamen yenileyen Utyap birçok toplulukla anlaşmalar yaparak yeni hedefler, yeni hayaller yolunda ilerlemeye başlamıştır.

@@ -5,4 +5,10 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     'nuxt-particles'
   ],
+  plugins: [
+    '~/plugins/gsap-plugin.js'
+  ],
+  css: [
+    '~/assets/css/main.css',
+  ],
 })
