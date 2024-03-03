@@ -1,19 +1,17 @@
 <template>
-  <div class="font-sans bg-gray-100">
-
-    <!-- Navigation -->
-    <nav class="bg-blue-500 p-4">
-      <div class="w-full h-20" id="particles-js"></div>
-      <div class="container mx-auto">
-        <router-link to="/" class="text-white font-bold text-lg">Your Brand</router-link>
-      </div>
-    </nav>
+  <div class="font-sans bg-transparent mx-auto max-w-7xl items-center justify-between py-4 px-6 lg:px-8">
+    <NuxtParticles
+      id="tsparticles"
+      :options="options"
+    ></NuxtParticles>
 
     <!-- Hero Section -->
-    <header class="bg-gray-900 text-white py-16">
+    <header class="bg-transparent text-white pb-16 pt-48">
       <div class="container mx-auto text-center">
-        <h1 class="text-4xl font-bold mb-4">Welcome to Your Product</h1>
-        <p class="text-lg">Supercharge your experience with our amazing features.</p>
+        <div class="flex justify-center">
+          <h1 class="text-6xl font-bold mb-4" style="width: 500px;">UZAY TEKNOLOJİLERİ VE YAPAY ZEKA TOPLULUĞU</h1>
+        </div>
+        <p class="text-lg">Gazi universitesinin, tek uzay teknolojileri toplulugu</p>
         <router-link to="#" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 mt-6 rounded-full inline-block">Get Started</router-link>
       </div>
     </header>
@@ -69,11 +67,24 @@
   </div>
 </template>
   
-<script>
+<script setup>
+import options from '~/assets/particles.json'
+
+import { tsParticles } from 'tsparticles-engine'
+import { loadFull } from 'tsparticles' // or whichever bundle you wish to use
+import { loadPolygonPath } from 'tsparticles-path-polygon'
+import { loadLightInteraction } from 'tsparticles-interaction-light'
+if (process.client) {
+  // This example will BLOCK your application from rendering until the tsParticles library is initialized
+  // You can put this in some other place if you know that you won't be loading particles until after the first paint
+  await loadFull(tsParticles)
+}
+await loadPolygonPath(tsParticles)
+await loadLightInteraction(tsParticles)
+
 
 </script>
 
 <style scoped>
 /* Add Tailwind CSS classes here if needed */
 </style>
-  

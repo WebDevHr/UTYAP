@@ -1,11 +1,10 @@
 <template>
     <header class="bg-transparent fixed w-full">
-      <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+      <nav class="mx-auto flex max-w-7xl items-center justify-between py-4 px-6 lg:px-8" aria-label="Global">
         <div class="flex lg:flex-1">
-          <a href="#" class="-m-1.5 p-1.5">
+          <router-link class="-m-1.5 p-1.5" :to="{name: 'index'}">
             <span class="sr-only">UTYAP</span>
-            <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="UTYAP" />
-          </a>
+            <img class="h-12 w-auto" src="~/assets/pictures/utyap-logo.png" alt="UTYAP" /></router-link>
         </div>
         <div class="flex lg:hidden">
           <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700" @click="mobileMenuOpen = true">
@@ -13,11 +12,14 @@
             <Bars3Icon class="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
-        <PopoverGroup class="hidden lg:flex lg:gap-x-12">
-          <Popover class="relative">
-            <PopoverButton class="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
+
+        
+        <PopoverGroup class="hidden lg:flex lg:gap-x-6">
+
+          <Popover class="relative" v-slot="{ open }">
+            <PopoverButton class="flex items-center gap-x-1 text-sm font-semibold leading-3 text-white hover:shadow hover:bg-white/20 py-4 pl-7 pr-5 rounded">
               UTYAP
-              <ChevronDownIcon class="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
+              <ChevronDownIcon :class="[open ? 'rotate-180' : '', 'h-5 w-5 flex-none']" aria-hidden="true" />
             </PopoverButton>
   
             <transition enter-active-class="transition ease-out duration-200" enter-from-class="opacity-0 translate-y-2" enter-to-class="opacity-100 translate-y-0" leave-active-class="transition ease-in duration-150" leave-from-class="opacity-100 translate-y-0" leave-to-class="opacity-0 translate-y-1">
@@ -46,21 +48,38 @@
             </transition>
           </Popover>
   
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Anasayfa</a>
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Hakkımızda</a>
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900">İletişim</a>
+          <router-link 
+            :to="{name: 'index'}"
+            class="text-sm font-semibold leading-3 text-white hover:shadow hover:bg-white/20 py-5 px-5 rounded"
+          >Anasayfa</router-link>
+          <router-link 
+            :to="{name: 'hakkimizda'}" 
+            class="text-sm font-semibold leading-3 text-white hover:shadow hover:bg-white/20 py-5 px-5 rounded"
+          >Hakkımızda</router-link>
+          <router-link 
+            :to="{name: 'index'}" 
+            class="text-sm font-semibold leading-3 text-white hover:shadow hover:bg-white/20 py-5 px-5 rounded"
+          >İletişim</router-link>
+
         </PopoverGroup>
+
+
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Bize Katılın <span aria-hidden="true">&rarr;</span></a>
+          <a href="#" class="text-sm font-semibold leading-3 text-white bg-white/20 py-4 px-5 rounded">
+            <div class="flex flex-row gap-x-1 justify-center align-center">
+              <div class="pt-1">Bize Katılın </div>
+              <ArrowRightIcon class="h-5 w-5 flex-none" aria-hidden="true" />
+            </div>
+          </a>
         </div>
       </nav>
       <Dialog as="div" class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
-        <div class="fixed inset-0 z-10" />
+        <div class="fixed inset-0 z-10"></div>
         <DialogPanel class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div class="flex items-center justify-between">
             <a href="#" class="-m-1.5 p-1.5">
               <span class="sr-only">UTYAP</span>
-              <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" />
+              <img class="h-12 w-auto" src="~/assets/pictures/utyap-logo.png" alt="UTYAP" />
             </a>
             <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" @click="mobileMenuOpen = false">
               <span class="sr-only">Close menu</span>
@@ -72,7 +91,7 @@
               <div class="space-y-2 py-6">
                 <Disclosure as="div" class="-mx-3" v-slot="{ open }">
                   <DisclosureButton class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                    Product
+                    UTYAP
                     <ChevronDownIcon :class="[open ? 'rotate-180' : '', 'h-5 w-5 flex-none']" aria-hidden="true" />
                   </DisclosureButton>
                   <DisclosurePanel class="mt-2 space-y-2">
@@ -115,10 +134,10 @@
     SquaresPlusIcon,
     XMarkIcon,
   } from '@heroicons/vue/24/outline'
-  import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/vue/20/solid'
+  import { ChevronDownIcon, ArrowRightIcon, ChevronUpIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/vue/20/solid'
   
   const products = [
-    { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
+    { name: 'Analytics', description: '', href: '#', icon: ChartPieIcon },
     { name: 'Engagement', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
     { name: 'Security', description: 'Your customers’ data will be safe and secure', href: '#', icon: FingerPrintIcon },
     { name: 'Integrations', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
