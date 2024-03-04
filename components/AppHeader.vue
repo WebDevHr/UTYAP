@@ -1,7 +1,7 @@
 <template>
-    <header class="bg-transparent fixed w-full pt-3 scrollTrig" ref="navbar">
-      <nav class="mx-auto flex max-w-7xl items-center justify-between py-4" aria-label="Global">
-        <div class="flex lg:flex-1">
+    <header class="bg-transparent fixed w-full pt-3 " >
+      <nav class="mx-auto flex max-w-7xl items-center justify-between py-4 " aria-label="Global" ref="navbar">
+        <div class="flex lg:flex-1 trigger" >
           <router-link class="-m-1.5 p-1.5" :to="{name: 'index'}">
             <span class="sr-only">UTYAP</span>
             <img class="h-12 w-auto" src="~/assets/pictures/utyap-logo.png" alt="UTYAP" /></router-link>
@@ -32,7 +32,7 @@
                     <div class="flex-auto">
                       <a :href="item.href" class="block font-semibold text-gray-900">
                         {{ item.name }}
-                        <span class="absolute inset-0" />
+                        <span class="absolute inset-0"></span>
                       </a>
                       <p class="mt-1 text-gray-600">{{ item.description }}</p>
                     </div>
@@ -154,20 +154,19 @@
   ]
   
   const mobileMenuOpen = ref(false)
+  // const element = ref('navbar')
 
-  onMounted(() => {
-    setTimeout(() => {
-      gsap.to('scrollTrig', {
-      backgroundColor: 'rgba(255, 255, 255, 0)',
-      scrollTrigger: {
-        trigger: 'scrollTrig',
-        start: 'bottom bottom',
-        end: '+=100',
-        scrub: 1,
-        markers: true,
-      },
-    });
-    }, 1000);
-  })
+  // let tween = gsap.to(element, {
+  //   backgroundColor: 'black',
+  //   scrollTrigger: {
+  //     trigger: element,
+  //     start: 'top top',
+  //     end: 'center center',
+  //     scrub: 1,
+  //     markers: true, // Remove this in production
+  //   },
+  // });
+
+  // tween.scrollTrigger.kill()
 
   </script>

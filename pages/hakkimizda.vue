@@ -1,7 +1,7 @@
 <template>
-    <div class="mx-auto flex max-w-7xl items-center justify-between py-4 px-6 lg:px-8 border rounded">
+    <div class="mx-auto flex max-w-7xl items-center justify-between py-4 px-6 lg:px-8 rounded">
         <div class="grid grid-flow-row-dense grid-cols-3 grid-rows-3 mt-[100px]">
-            <div class="col-span-2 border">
+            <div class="col-span-2">
                 <NuxtParticles
                 id="tsparticles"
                 :options="options"
