@@ -13,7 +13,13 @@
             <h1 class="text-6xl font-bold mb-4" style="width: 500px;">UZAY TEKNOLOJİLERİ VE YAPAY ZEKA TOPLULUĞU</h1>
           </div>
           <p class="text-lg">Gazi universitesinin, tek uzay teknolojileri toplulugu</p>
-          <router-link to="#" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 mt-6 rounded-full inline-block">Get Started</router-link>
+          <router-link to="#" 
+            class="bg-white/30 hover:bg-white hover:text-black text-white font-bold py-2 px-4 mt-6 rounded-full inline-block border"
+          >
+            <div class="flex justify-center items-center gap-x-1">
+              Ekiplerimiz hakkında bilgi edinin <ArrowRightIcon class="h-5 w-5" aria-hidden="true" />
+            </div>
+          </router-link>
         </div>
       </header>
     </div>
@@ -71,6 +77,19 @@
   
 <script setup>
 import options from '~/assets/particles.json'
+import {
+  ArrowPathIcon,
+  Bars3Icon,
+  ChartPieIcon,
+  CursorArrowRaysIcon,
+  FingerPrintIcon,
+  SquaresPlusIcon,
+  XMarkIcon,
+  ComputerDesktopIcon,
+  CpuChipIcon,
+  RocketLaunchIcon
+} from '@heroicons/vue/24/outline'
+import { ChevronDownIcon, ArrowRightIcon, ChevronUpIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/vue/20/solid'
 
 import { tsParticles } from 'tsparticles-engine'
 import { loadFull } from 'tsparticles' // or whichever bundle you wish to use
@@ -83,6 +102,8 @@ if (process.client) {
 }
 await loadPolygonPath(tsParticles)
 await loadLightInteraction(tsParticles)
+
+
 
 
 </script>

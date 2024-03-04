@@ -15,6 +15,11 @@
             </div>
             <div class="col-span-1 border"></div>
         </div>
+        <div class="grid grid-flow-row-dense grid-cols-3 grid-rows-3 rounded">
+            <div class="">
+                BİZ KİMİZ?
+            </div>
+        </div>
     </div>
 </template>
 
