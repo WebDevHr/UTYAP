@@ -14,10 +14,11 @@
           </div>
           <p class="text-lg">Gazi universitesinin, tek uzay teknolojileri toplulugu</p>
           <router-link to="#" 
-            class="bg-white/30 hover:bg-white hover:text-black text-white font-bold py-2 px-4 mt-6 rounded-full inline-block border"
+            class="bg-white/30 hover:bg-white hover:text-gray-800 text-white font-bold py-2 px-4 mt-6 rounded-full inline-block border transition-all duration-300"
           >
             <div class="flex justify-center items-center gap-x-1">
-              Ekiplerimiz hakkında bilgi edinin <ArrowRightIcon class="h-5 w-5" aria-hidden="true" />
+              Ekiplerimiz hakkında bilgi edinin 
+              <ArrowRightIcon class="h-5 w-5" aria-hidden="true" />
             </div>
           </router-link>
         </div>

@@ -65,12 +65,14 @@
 
 
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" class="text-sm font-semibold leading-3 text-white bg-white/20 py-4 px-5 rounded">
-            <div class="flex flex-row gap-x-1 justify-center align-center" >
-              <div class="pt-1 tracking-widest">Bize Katılın </div>
-              <ArrowRightIcon class="h-5 w-5 flex-none box" aria-hidden="true" />
+          <router-link :to="{name : '404'}">
+            <div class="bg-white/30 hover:bg-white hover:text-gray-800 text-white font-bold py-2 px-4 rounded-full inline-block border transition-all duration-300" >
+              <div class="tracking-wide flex justify-center items-center gap-x-1">
+                Bize Katılın 
+                <ArrowRightIcon class="h-5 w-5 flex-none box" aria-hidden="true" />
+              </div>
             </div>
-          </a>
+          </router-link>
         </div>
       </nav>
       <Dialog as="div" class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
