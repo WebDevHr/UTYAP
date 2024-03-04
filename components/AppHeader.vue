@@ -1,6 +1,6 @@
 <template>
-    <header class="bg-transparent fixed w-full pt-3 " >
-      <nav class="mx-auto flex max-w-7xl items-center justify-between py-4 " aria-label="Global" ref="navbar">
+    <header class="bg-transparent fixed w-full pt-2 test px-6 2xl:px-0 container" ref="navbar">
+      <nav class="mx-auto flex max-w-7xl items-center justify-between py-4" aria-label="Global" >
         <div class="flex lg:flex-1 trigger" >
           <router-link class="-m-1.5 p-1.5" :to="{name: 'index'}">
             <span class="sr-only">UTYAP</span>
@@ -17,23 +17,23 @@
         <PopoverGroup class="hidden lg:flex lg:gap-x-6">
 
           <Popover class="relative" v-slot="{ open }">
-            <PopoverButton class="tracking-widest flex items-center gap-x-1 text-sm font-semibold leading-3 text-white hover:shadow hover:bg-white/20 py-4 pl-7 pr-5 rounded text-[16px] font-inter">
+            <PopoverButton class="tracking-widest flex items-center gap-x-1 text-sm font-semibold leading-3 text-white hover:shadow-2xl hover:bg-white/20 py-4 pl-7 pr-5 rounded text-[16px] font-inter transition-all duration-300">
               UTYAP
               <ChevronDownIcon :class="[open ? 'rotate-180' : '', 'h-5 w-5 flex-none']" aria-hidden="true" />
             </PopoverButton>
   
-            <transition enter-active-class="transition ease-out duration-200" enter-from-class="opacity-0 translate-y-2" enter-to-class="opacity-100 translate-y-0" leave-active-class="transition ease-in duration-150" leave-from-class="opacity-100 translate-y-0" leave-to-class="opacity-0 translate-y-1">
-              <PopoverPanel class="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
+            <transition enter-active-class="transition ease-out duration-300" enter-from-class="opacity-0 translate-y-3" enter-to-class="opacity-100 translate-y-0" leave-active-class="transition ease-in duration-150" leave-from-class="opacity-100 translate-y-0" leave-to-class="opacity-0 translate-y-1">
+              <PopoverPanel class="absolute -left-8 top-full z-10 mt-4 w-screen max-w-2xl overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
                 <div class="p-4">
                   <div v-for="item in products" :key="item.name" class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
                     <div class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                       <component :is="item.icon" class="h-6 w-6 text-gray-600 group-hover:text-indigo-600" aria-hidden="true" />
                     </div>
                     <div class="flex-auto">
-                      <a :href="item.href" class="block font-semibold text-gray-900">
+                      <nuxt-link :to="{name: item.href}" class="block font-semibold text-gray-900">
                         {{ item.name }}
                         <span class="absolute inset-0"></span>
-                      </a>
+                      </nuxt-link>
                       <p class="mt-1 text-gray-600">{{ item.description }}</p>
                     </div>
                   </div>
@@ -50,15 +50,15 @@
   
           <router-link 
             :to="{name: 'index'}"
-            class="tracking-widest text-sm font-semibold leading-3 text-white hover:shadow hover:bg-white/20 py-5 px-5 rounded text-[16px] font-inter"
+            class="tracking-widest text-sm font-semibold leading-3 text-white hover:shadow hover:bg-white/20 py-5 px-5 rounded text-[16px] font-inter transition-all duration-300"
           >Anasayfa</router-link>
           <router-link 
             :to="{name: 'hakkimizda'}" 
-            class="tracking-widest text-sm font-semibold leading-3 text-white hover:shadow hover:bg-white/20 py-5 px-5 rounded text-[16px] font-inter"
+            class="tracking-widest text-sm font-semibold leading-3 text-white hover:shadow hover:bg-white/20 py-5 px-5 rounded text-[16px] font-inter transition-all duration-300"
           >Hakkımızda</router-link>
           <router-link 
             :to="{name: 'index'}" 
-            class="tracking-widest text-sm font-semibold leading-3 text-white hover:shadow hover:bg-white/20 py-5 px-5 rounded text-[16px] font-inter"
+            class="tracking-widest text-sm font-semibold leading-3 text-white hover:shadow hover:bg-white/20 py-5 px-5 rounded text-[16px] font-inter transition-all duration-300"
           >İletişim</router-link>
 
         </PopoverGroup>
@@ -115,7 +115,7 @@
   </template>
   
   <script setup>
-  import { ref, onMounted } from 'vue'
+  import { ref, onMounted, onBeforeUnmount } from 'vue'
   import {
     Dialog,
     DialogPanel,
@@ -144,9 +144,9 @@
   const { $gsap: gsap, $Draggable: Draggable } = useNuxtApp(); //gsap to work
   
   const products = [
-    { name: 'Yazılım Departmanı', description: 'Yapay zeka - Web geliştirme - uygulama geliştirme', href: '#', icon: ComputerDesktopIcon },
-    { name: 'Robotik Departmanı', description: 'Elektronik tasırım - Özgün/İnovatif - Savunma sanayi', href: '#', icon: CpuChipIcon },
-    { name: 'Uzay Teknolojileri Departmanı', description: 'Uzay araçları - İnovatif tasarım - Keşif araçları - Fırlatma sistemleri', href: '#', icon: RocketLaunchIcon },
+    { name: 'Yazılım Departmanı', description: 'Yapay zeka - Web geliştirme - uygulama geliştirme', href: 'departmanlar-yazilim', icon: ComputerDesktopIcon },
+    { name: 'Robotik Departmanı', description: 'Elektronik tasırım - Özgün/İnovatif - Savunma sanayi', href: 'departmanlar-robotik', icon: CpuChipIcon },
+    { name: 'Uzay Teknolojileri Departmanı', description: 'Uzay araçları - İnovatif tasarım - Keşif araçları - Fırlatma sistemleri', href: 'departmanlar-uzay_teknolojileri', icon: RocketLaunchIcon },
     // { name: 'Integrations', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
     // { name: 'Automations', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
   ]
@@ -154,21 +154,26 @@
     { name: 'Tanıtım Videosu', href: 'https://www.youtube.com/shorts/VRTgVtvZujU', icon: PlayCircleIcon },
     { name: 'İletişime Geçin', href: '#', icon: PhoneIcon },
   ]
+
+  
   
   const mobileMenuOpen = ref(false)
-  // const element = ref('navbar')
 
-  // let tween = gsap.to(element, {
-  //   backgroundColor: 'black',
-  //   scrollTrigger: {
-  //     trigger: element,
-  //     start: 'top top',
-  //     end: 'center center',
-  //     scrub: 1,
-  //     markers: true, // Remove this in production
-  //   },
-  // });
+  onMounted(() => {
+    let tween = gsap.to(".test", {
+      backgroundColor: 'rgba(0, 0, 0, 0.6)',
+      paddingTop: 5,
+      duration: 300,
+      scrollTrigger: {
+        trigger: ".test",
+        start: 'center top',
+        scrub: 1,
+      },
+    });
+  })
 
-  // tween.scrollTrigger.kill()
+  onBeforeUnmount(() => {
+    tween.scrollTrigger.kill()
+  })
 
   </script>
