@@ -1,8 +1,8 @@
-{
+  {
     "autoPlay": true,
     "background": {
       "color": {
-        "value": "#7158D0"
+        "value": "#031707"
       },
       "image": "",
       "position": "50% 50%",
@@ -48,7 +48,7 @@
           "mode": "bubble",
           "parallax": {
             "enable": false,
-            "force": 2,
+            "force": 5,
             "smooth": 10
           }
         },
@@ -335,7 +335,7 @@
         "type": "circle"
       },
       "size": {
-        "value": 1,
+        "value": 1.5,
         "animation": {
           "count": 0,
           "enable": false,
@@ -510,10 +510,10 @@
         "enable": true,
         "stroke": {
           "color": {
-            "value": "#fff"
+            "value": "#ffffff"
           },
           "width": 0.5,
-          "opacity": 0.2
+          "opacity": 0.3
         }
       },
       "enable": true,
