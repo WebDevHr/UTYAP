@@ -23,9 +23,14 @@
             </PopoverButton>
   
             <transition enter-active-class="transition ease-out duration-300" enter-from-class="opacity-0 translate-y-3" enter-to-class="opacity-100 translate-y-0" leave-active-class="transition ease-in duration-150" leave-from-class="opacity-100 translate-y-0" leave-to-class="opacity-0 translate-y-1">
-              <PopoverPanel class="absolute -left-8 top-full z-10 mt-4 w-screen max-w-2xl overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
+              <PopoverPanel v-slot="{ close }" class="absolute -left-8 top-full z-10 mt-4 w-screen max-w-2xl overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
                 <div class="p-4">
-                  <div v-for="item in products" :key="item.name" class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+                  <div 
+                    v-for="item in products" 
+                    :key="item.name" 
+                    class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50" 
+                    @click="accept(close)"
+                  >
                     <div class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                       <component :is="item.icon" class="h-6 w-6 text-gray-600 group-hover:text-indigo-600" aria-hidden="true" />
                     </div>
@@ -39,7 +44,7 @@
                   </div>
                 </div>
                 <div class="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
-                  <a v-for="item in callsToAction" :key="item.name" :href="item.href" class="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100">
+                  <a @click="accept(close)" v-for="item in callsToAction" :key="item.name" :href="item.href" class="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100">
                     <component :is="item.icon" class="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
                     {{ item.name }}
                   </a>
@@ -97,12 +102,26 @@
                     <ChevronDownIcon :class="[open ? 'rotate-180' : '', 'h-5 w-5 flex-none']" aria-hidden="true" />
                   </DisclosureButton>
                   <DisclosurePanel class="mt-2 space-y-2">
-                    <DisclosureButton v-for="item in [...products, ...callsToAction]" :key="item.name" as="a" :href="item.href" class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">{{ item.name }}</DisclosureButton>
+                    <DisclosureButton 
+                      v-for="item in [...products, ...callsToAction]" 
+                      :key="item.name" as="a" 
+                      :href="item.href" 
+                      class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    >{{ item.name }}</DisclosureButton>
                   </DisclosurePanel>
                 </Disclosure>
-                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Anasayfa</a>
-                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Hakkımızda</a>
-                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">İletişim</a>
+                <router-link 
+                  :to="{name: 'index'}"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >Anasayfa</router-link>
+                <router-link 
+                  :to="{name: 'hakkimizda'}" 
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >Hakkımızda</router-link>
+                <router-link 
+                  :to="{name: 'under_construction'}" 
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >İletişim</router-link>
               </div>
               <div class="py-6">
                 <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Bize Katılın</a>
@@ -175,5 +194,10 @@
   onUnmounted(() => {
     tween.scrollTrigger.kill()
   })
+
+  async function accept(close) {
+    await fetch('/accept-terms', { method: 'POST' })
+    close()
+  }
 
   </script>
