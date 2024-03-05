@@ -1,5 +1,5 @@
 <template>
-    <header class="bg-transparent fixed w-full pt-2 test px-6 2xl:px-0 container" ref="navbar">
+    <header class="bg-transparent fixed w-full pt-4 test px-6 2xl:px-0 container" ref="navbar">
       <nav class="mx-auto flex max-w-7xl items-center justify-between py-4" aria-label="Global" >
         <div class="flex lg:flex-1 trigger" >
           <router-link class="-m-1.5 p-1.5" :to="{name: 'index'}">
@@ -57,7 +57,7 @@
             class="tracking-widest text-sm font-semibold leading-3 text-white hover:shadow hover:bg-white/20 py-5 px-5 rounded text-[16px] font-inter transition-all duration-300"
           >Hakkımızda</router-link>
           <router-link 
-            :to="{name: 'index'}" 
+            :to="{name: 'under_construction'}" 
             class="tracking-widest text-sm font-semibold leading-3 text-white hover:shadow hover:bg-white/20 py-5 px-5 rounded text-[16px] font-inter transition-all duration-300"
           >İletişim</router-link>
 
@@ -69,7 +69,7 @@
             <div class="bg-white/30 hover:bg-white hover:text-gray-800 text-white font-bold py-2 px-4 rounded-full inline-block border transition-all duration-300" >
               <div class="tracking-wide flex justify-center items-center gap-x-1">
                 Bize Katılın 
-                <ArrowRightIcon class="h-5 w-5 flex-none box" aria-hidden="true" />
+                <ArrowRightIcon class="h-5 w-5" aria-hidden="true" />
               </div>
             </div>
           </router-link>
@@ -115,7 +115,7 @@
   </template>
   
   <script setup>
-  import { ref, onMounted, onBeforeUnmount } from 'vue'
+  import { ref, onMounted, onUnmounted } from 'vue'
   import {
     Dialog,
     DialogPanel,
@@ -152,7 +152,7 @@
   ]
   const callsToAction = [
     { name: 'Tanıtım Videosu', href: 'https://www.youtube.com/shorts/VRTgVtvZujU', icon: PlayCircleIcon },
-    { name: 'İletişime Geçin', href: '#', icon: PhoneIcon },
+    { name: 'İletişime Geçin', href: 'under_construction', icon: PhoneIcon },
   ]
 
   
@@ -172,7 +172,7 @@
     });
   })
 
-  onBeforeUnmount(() => {
+  onUnmounted(() => {
     tween.scrollTrigger.kill()
   })
 

@@ -40,10 +40,6 @@ await loadPolygonPath(tsParticles)
 await loadLightInteraction(tsParticles)
 
 
-onBeforeUnmount(() => {
-    console.log("sdfasdf")
-})
-
 </script>
 
 <style scoped>
