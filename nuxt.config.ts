@@ -3,10 +3,11 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
     '@nuxtjs/tailwindcss',
-    'nuxt-particles'
+    'nuxt-particles',
+    'nuxt-swiper',
   ],
   plugins: [
-    '~/plugins/gsap-plugin.js'
+    '~/plugins/gsap-plugin.js',
   ],
   css: [
     '~/assets/css/main.css',

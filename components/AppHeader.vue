@@ -1,5 +1,5 @@
 <template>
-    <header class="bg-transparent fixed w-full pt-4 test px-6 2xl:px-0 container" ref="navbar">
+    <header class="bg-transparent fixed w-full pt-4 test px-6 2xl:px-0 container z-[1000]" ref="navbar">
       <nav class="mx-auto flex max-w-7xl items-center justify-between py-4" aria-label="Global" >
         <div class="flex lg:flex-1 trigger" >
           <router-link class="-m-1.5 p-1.5" :to="{name: 'index'}">
@@ -70,8 +70,8 @@
 
 
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-          <router-link :to="{name : '404'}">
-            <div class="bg-white/30 hover:bg-white hover:text-gray-800 text-white font-bold py-2 px-4 rounded-full inline-block border transition-all duration-300" >
+          <router-link :to="{name : 'under_construction'}">
+            <div class="bg-white/30 hover:bg-white hover:text-gray-800 text-white font-bold py-2 px-4 rounded-full inline-block border transition-all duration-500" >
               <div class="tracking-wide flex justify-center items-center gap-x-1">
                 Bize Katılın 
                 <ArrowRightIcon class="h-5 w-5" aria-hidden="true" />
