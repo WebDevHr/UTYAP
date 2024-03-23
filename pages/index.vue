@@ -26,7 +26,7 @@
           <h1 class="text-[30px] font-semibold flex justify-center underline py-10">
             Detaylı Bilgi | Aramıza Katıl!
           </h1>
-          <div class="flex lg:gap-x-10 flex-col lg:flex-row mx-10 justify-center">
+          <div class="flex xl:gap-x-10 flex-col xl:flex-row mx-10 justify-center relative items-center">
             <div 
               ref="cardToHover" 
               class="cardToHover card w-[350px] rounded overflow-hidden py-10 text-center" 
@@ -35,10 +35,14 @@
               @mouseenter="cardHover"
               @mouseleave="cardHoverLeave"
             >
-              <div class="border rounded-3xl overflow-hidden bg-gray-200">
-                <img :src="cartInfo.imgSrc" :alt="cartInfo.imgSrc" class="h-[300px] object-cover">
-                <div class="cardBody p-5 border bg-gray-200 h-[300px]">
-                  <h1 class="text-md font-bold h-[60px] overflow-hidden mt-5">
+              
+              <div class="shadow-lg border rounded-3xl overflow-hidden bg-gray-100">
+                <div class="applyButton absolute top-[30px] justify-center w-[350px] hidden">
+                  <button class=" px-5 py-3 my-2 border-2 border-gray-500 hover:border-white rounded-3xl bg-white/50 hover:bg-white font-semibold duration-300 text-gray-500 hover:text-gray-700">Hemen başvur</button>
+                </div>
+                <img :src="cartInfo.imgSrc" :alt="cartInfo.imgSrc" class="h-[215px] object-cover">
+                <div class="cardBody p-5 bg-gray-100 h-[300px]">
+                  <h1 class="text-md font-bold h-[55px] overflow-hidden mt-5">
                     {{ cartInfo.title }}
                   </h1>
                   <h4 class="font-light text-base h-[50px] mb-3">
@@ -46,13 +50,13 @@
                   </h4>
                   <nuxt-link 
                     :to="cartInfo.link.source" 
-                    class="font-light flex justify-center gap-x-2 items-center text-sm hover:text-blue-950 duration-300"
+                    class="flex justify-center gap-x-2 items-center text-xs font-semibold hover:text-blue-950 duration-300"
                   >
                      <LinkIcon class="h-3 w-3" aria-hidden="true" />
                       {{ cartInfo.link.text }}
                   </nuxt-link>
 
-                  <div class="cards gap-x-5 mx-5 hidden">
+                  <div class="cards gap-x-3 mx-5 hidden">
                     <div 
                       v-for="(card, index) in cartInfo.cards" 
                       class="bg-white p-5 flex-auto flex flex-col items-center justify-center rounded-lg my-5"
@@ -139,6 +143,7 @@ function cardHover(event) {
   const description = card.querySelector('.description');
   const hiddenInfo = card.querySelector('.cards');
   const cardBody = card.querySelector('.cardBody');
+  const applyButton = card.querySelector('.applyButton');
 
   gsap.to([description, hiddenInfo], { 
     opacity: 1, 
@@ -152,12 +157,22 @@ function cardHover(event) {
     duration: 0.3, 
     ease: 'power1.out' 
   });
+
+  gsap.to([applyButton], { 
+    display: 'flex',
+    opacity: 1,
+    y: '10px', // Adjust the upward movement as needed
+    duration: 0.3, 
+    ease: 'power1.out' 
+  });
+  
 }
 function cardHoverLeave(event) {
   const card = event.currentTarget; // Get the card being hovered
   const description = card.querySelector('.description');
   const hiddenInfo = card.querySelector('.cards');
   const cardBody = card.querySelector('.cardBody');
+  const applyButton = card.querySelector('.applyButton');
 
   gsap.to([description, hiddenInfo], { 
     opacity: 0, 
@@ -171,24 +186,16 @@ function cardHoverLeave(event) {
     duration: 0.3, 
     ease: 'power1.out' 
   });
+
+  gsap.to([applyButton], { 
+    display: 'none',
+    opacity: 0,
+    y: '0px', // Adjust the upward movement as needed
+    duration: 0.3, 
+    ease: 'power1.out' 
+  });
 }
 
-onMounted(() => {
-  // ...other existing code
-
-  // Event listeners for individual cards
-  if (cardToHover.value) { 
-    cardToHover.value.addEventListener('mouseenter', cardHover);
-    cardToHover.value.addEventListener('mouseleave', cardLeave);
-  }
-})
-
-onUnmounted(() => {
-  if (cardToHover.value) { 
-    cardToHover.value.removeEventListener('mouseenter', cardHover);
-    cardToHover.value.removeEventListener('mouseleave', cardLeave);
-  }
-})
 
 const cartInfos = [
   {
@@ -213,7 +220,7 @@ const cartInfos = [
     description: 'Aramıza katılmak ve bizimle bu heyecanı yaşamak ister misiniz? Bunun için "Hemen Başvur" butonuna tıklamanız ve başvuru formunu doldurmanız yeterli!'
   },
   {
-    imgSrc: '/pictures/1.jpg',
+    imgSrc: '/pictures/2.jpg',
     title: 'EĞİTMEN, JÜRİ, KONUŞMACI & MENTOR OLARAK BEN DE VARIM!',
     subtitle: 'Sizi aramızda görmeyi çok isteriz.',
     link: {
@@ -233,7 +240,7 @@ const cartInfos = [
     description: 'Bizimle çalışmak ister misiniz? Bunun için "Hemen Başvur" butonuna tıklamanız ve başvuru formunu doldurmanız yeterli!'
   },
   {
-    imgSrc: '/pictures/1.jpg',
+    imgSrc: '/pictures/4.jpg',
     title: 'PARTNER TOPLULUK OLARAK BİZ DE VARIZ!',
     subtitle: 'Sizi aramızda görmeyi çok isteriz.',
     link: {
