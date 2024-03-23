@@ -1,13 +1,13 @@
 <template>
-  <div>
-    <audio ref="audioPlayer" controls :src="audioSrc" :autoplay="autoplay">
+  <div class="w-[48px] hover:w-[300px] duration-300 overflow-hidden border border-r-0 border-gray-500 rounded-s-full bg-gray-100">
+    <audio class="" ref="audioPlayer" controls :src="audioSrc" :autoplay="autoplay">
       Your browser does not support the audio element.
     </audio>
   </div>
 </template>
 
 <script setup>
-import { defineProps, ref } from 'vue';
+import { ref } from 'vue';
 
 const props = defineProps({
   audioSrc: {

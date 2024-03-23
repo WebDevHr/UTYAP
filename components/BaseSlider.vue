@@ -14,7 +14,7 @@
 </script>
 
 <template>
-  <div>
+  <div class="overflow-hidden md:overflow-visible">
     <!-- <Swiper
       :height="500"
       class="w-full rounded my-10"
