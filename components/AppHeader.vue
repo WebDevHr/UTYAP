@@ -1,6 +1,6 @@
 <template>
-    <header class="bg-transparent fixed w-full pt-4 test px-6 2xl:px-0 container z-[1000]" ref="navbar">
-      <nav class="mx-auto flex max-w-7xl items-center justify-between py-4" aria-label="Global" >
+    <header class="bg-transparent fixed w-full pt-4 test px-6 2xl:px-0 z-[1000" ref="navbar">
+      <nav class="mx-auto flex max-w-7xl items-center justify-between py-4" aria-label="Global" v-if="!mobileMenuOpen" >
         <div class="flex lg:flex-1 trigger" >
           <router-link class="-m-1.5 p-1.5" :to="{name: 'index'}">
             <span class="sr-only">UTYAP</span>
@@ -9,7 +9,7 @@
         <div class="flex lg:hidden">
           <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700" @click="mobileMenuOpen = true">
             <span class="sr-only">Open main menu</span>
-            <Bars3Icon class="h-6 w-6" aria-hidden="true" />
+            <Bars3Icon class="h-6 w-6 text-white" aria-hidden="true" />
           </button>
         </div>
 
@@ -147,18 +147,13 @@
     PopoverPanel,
   } from '@headlessui/vue'
   import {
-    ArrowPathIcon,
     Bars3Icon,
-    ChartPieIcon,
-    CursorArrowRaysIcon,
-    FingerPrintIcon,
-    SquaresPlusIcon,
     XMarkIcon,
     ComputerDesktopIcon,
     CpuChipIcon,
     RocketLaunchIcon
   } from '@heroicons/vue/24/outline'
-  import { ChevronDownIcon, ArrowRightIcon, ChevronUpIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/vue/20/solid'
+  import { ChevronDownIcon, ArrowRightIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/vue/20/solid'
 
   const { $gsap: gsap, $Draggable: Draggable } = useNuxtApp(); //gsap to work
   
@@ -177,11 +172,12 @@
   
   
   const mobileMenuOpen = ref(false)
+  let tween
 
   onMounted(() => {
-    let tween = gsap.to(".test", {
+    tween = gsap.to(".test", {
       backgroundColor: 'rgba(0, 0, 0, 0.6)',
-      paddingTop: 5,
+      paddingTop: 0,
       duration: 300,
       scrollTrigger: {
         trigger: ".test",

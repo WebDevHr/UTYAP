@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="font-sans bg-transparent mx-auto max-w-7xl items-center justify-between py-4 px-6 lg:px-8 mb-10">
+    <div class="font-sans bg-transparent mx-auto max-w-7xl items-center justify-between py-4 px-6 lg:px-8 mb-10 ">
       <NuxtParticles
         id="tsparticles"
         :options="options"
@@ -23,7 +23,7 @@
       <div class="font-sans mx-auto max-w-7xl items-center justify-between py-4">
 
         <section class="py-16">
-          <h1 class="text-[30px] font-semibold flex justify-center underline py-10">
+          <h1 class="text-[20px] md:text-[30px]  font-semibold flex justify-center underline py-10">
             Detaylı Bilgi | Aramıza Katıl!
           </h1>
           <div class="flex xl:gap-x-10 flex-col xl:flex-row mx-10 justify-center relative items-center">
@@ -135,8 +135,6 @@ onMounted(() => {
   loaded.value = true
 })
 
-
-const cardToHover = ref(null);
 
 function cardHover(event) {
   const card = event.currentTarget; // Get the card being hovered

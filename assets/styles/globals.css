@@ -6,21 +6,20 @@
  
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 8px;
 }
  
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: #d6d6d6;
 }
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 5px;
+    background: #707070;
 }
  
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: #3d3d3d;
 }
