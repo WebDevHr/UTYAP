@@ -19,7 +19,7 @@
 </template>
 
 <script setup>
-import options from '~/assets/particles-polygon-mask-rocket.json'
+import options from '~/assets/particles/particles-polygon-mask-rocket.json'
 
 import { tsParticles } from 'tsparticles-engine'
 import { loadFull } from 'tsparticles' // or whichever bundle you wish to use

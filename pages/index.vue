@@ -102,7 +102,7 @@
   
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
-import options from '~/assets/particles.json'
+import options from '~/assets/particles/particles.json'
 import AudioPlayer from '~/components/AudioPlayer.vue';
 import HeroSection from '~/components/HeroSection.vue';
 import BaseSlider from '~/components/BaseSlider.vue';

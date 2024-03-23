@@ -25,7 +25,7 @@
 
 
 <script setup>
-import options from '~/assets/particles2.json'
+import options from '~/assets/particles/particles2.json'
 
 import { tsParticles } from 'tsparticles-engine'
 import { loadFull } from 'tsparticles' // or whichever bundle you wish to use
