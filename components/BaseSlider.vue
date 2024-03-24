@@ -18,7 +18,7 @@
     <h1 class="font-semibold text-white lg:text-[40px] md:text-[30px] text-[24px] flex justify-center items-center underline mb-10">
       Haberler
     </h1>
-    <div class="overflow-hidden md:overflow-visible">
+    <div class="overflow-hidden md:overflow-visible mb-10">
       <!-- <Swiper
         :height="500"
         class="w-full rounded my-10"
@@ -89,10 +89,10 @@
         >
           <div class="card overflow-hidden mx-6 border rounded-md">
             <div>
-              <div class="max-h-56 overflow-hidden rounded-t-md" data-swiper-parallax="-200">
+              <div class="max-h-56 overflow-hidden rounded-t-md" data-swiper-parallax="-200" >
                 <img class="w-full object-cover" :src="`pictures/${idx}.jpg`" :alt="idx" /> 
               </div>
-              <div class="lg:px-12 px-4" data-swiper-parallax="-800">
+              <div class="lg:px-12 px-4" data-swiper-parallax="-800" data-swiper-parallax-opacity="0.5">
                 <div class="font-bold text-xl mb-2 mt-6">
                   Başvurular alınıyor!!!
                 </div>
@@ -101,7 +101,7 @@
                 </p>
               </div>
             </div>
-            <div class="flex justify-start my-5 mx-14" data-swiper-parallax="-1000">
+            <div class="flex justify-start my-5 mx-14" data-swiper-parallax="-1000" data-swiper-parallax-opacity="0">
               <span class="bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#news</span>
             </div>
           </div>

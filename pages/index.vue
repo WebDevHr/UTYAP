@@ -16,13 +16,19 @@
 
     <CardsComponent />
 
-    <section class="bg-blue-500 text-white py-16">
-      <div class="container mx-auto text-center border">
-        <h2 class="text-3xl font-bold mb-4">Ready to get started?</h2>
-        <p class="text-lg mb-8">Sign up now and experience the difference.</p>
-        <router-link to="#" class="bg-white text-blue-500 hover:bg-blue-600 font-bold py-2 px-4 rounded-full inline-block">Sign Up</router-link>
+    <div class="text-white relative">
+      <NuxtParticles
+        id="tsparticles2"
+        :options="options2"
+      ></NuxtParticles>
+      <div class="bg-black/40 pt-16 pb-8">
+        <div class="font-sans bg-transparent mx-auto max-w-7xl items-center justify-between py-4 px-6 lg:px-8 mb-10 text-center">
+        <h2 class="text-xl lg:text-3xl font-bold mb-4">UTYAP HAKKINDA</h2>
+        <p class="text-md lg:text-lg mb-8 lg:mx-20 md:mx-10 mx-3 text-justify">Utyap 2019'da Gazi Üniversitesi Teknoloji Fakültesinde gönüllü öğrenciler tarafından kurulmuştur. 2022 itibariyle kendini tamamen yenileyen Utyap birçok toplulukla anlaşmalar yaparak yeni hedefler, yeni hayaller yolunda ilerlemeye başlamıştır.</p>
+        <router-link to="#" class="bg-white/30 hover:bg-white hover:text-gray-800 text-white font-bold py-2 px-4 mt-6 rounded-full inline-block border transition-all duration-500">DAHA FAZLA BİLGİ</router-link>
       </div>
-    </section>
+      </div>
+    </div>
 
 
     <div>
@@ -37,6 +43,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import options from '~/assets/particles/particles.json'
+import options2 from '~/assets/particles/particles-parallax.json'
 import AudioPlayer from '~/components/AudioPlayer.vue';
 import CardsComponent from '~/components/CardsComponent.vue';
 import HeroSection from '~/components/HeroSection.vue';
