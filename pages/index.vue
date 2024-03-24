@@ -1,20 +1,31 @@
 <template>
   <div>
-    <div class="font-sans bg-transparent mx-auto max-w-7xl items-center justify-between py-4 px-6 lg:px-8 mb-10 ">
+    <div class="relative">
       <NuxtParticles
         id="tsparticles"
         :options="options"
       ></NuxtParticles>
+      <div class="font-sans bg-transparent mx-auto max-w-7xl items-center justify-between py-4 px-6 lg:px-8 mb-10">
+        <AudioPlayer :audioSrc="interstellar" :autoplay="loaded" class="fixed bottom-5 right-0 z-[1001]"/>
 
-      <AudioPlayer :audioSrc="interstellar" :autoplay="loaded" class="fixed bottom-5 right-0 z-[1001]"/>
-
-      <HeroSection />
-      
-      <BaseSlider />
+        <HeroSection />
+        
+        <BaseSlider />
+      </div>
     </div>
 
     <CardsComponent />
-    <div class="bg-black">
+
+    <section class="bg-blue-500 text-white py-16">
+      <div class="container mx-auto text-center border">
+        <h2 class="text-3xl font-bold mb-4">Ready to get started?</h2>
+        <p class="text-lg mb-8">Sign up now and experience the difference.</p>
+        <router-link to="#" class="bg-white text-blue-500 hover:bg-blue-600 font-bold py-2 px-4 rounded-full inline-block">Sign Up</router-link>
+      </div>
+    </section>
+
+
+    <div>
       <div class="font-sans bg-transparent mx-auto max-w-7xl items-center justify-between py-4 px-6 lg:px-8">
         hello
       </div>

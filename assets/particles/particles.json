@@ -27,6 +27,9 @@
       "enable": true,
       "zIndex": -1
     },
+    "style": {
+      "position": "absolute"
+    },
     "detectRetina": true,
     "duration": 0,
     "fpsLimit": 120,
@@ -490,7 +493,6 @@
     "pauseOnOutsideViewport": true,
     "responsive": [],
     "smooth": false,
-    "style": {},
     "themes": [
       {
         "name": "light",

@@ -17,7 +17,7 @@
         <PopoverGroup class="hidden lg:flex lg:gap-x-6">
 
           <Popover class="relative" v-slot="{ open }">
-            <PopoverButton class="navLink tracking-widest flex items-center gap-x-1 text-sm font-semibold leading-3 text-white hover:bg-indigo-200 py-4 pl-7 pr-5 rounded text-[16px] font-inter">
+            <PopoverButton class="navLink tracking-widest flex items-center gap-x-1 text-sm font-semibold leading-3 text-white hover:bg-indigo-300 py-4 pl-7 pr-5 rounded text-[16px] font-inter">
               UTYAP
               <ChevronDownIcon :class="[open ? 'rotate-180' : '', 'h-5 w-5 flex-none']" aria-hidden="true" />
             </PopoverButton>
@@ -32,7 +32,7 @@
                     @click="accept(close)"
                   >
                     <div class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                      <component :is="item.icon" class="h-6 w-6 text-gray-600 group-hover:text-indigo-600" aria-hidden="true" />
+                      <component :is="item.icon" class="h-6 w-6 text-gray-600 group-hover:text-indigo-700" aria-hidden="true" />
                     </div>
                     <div class="flex-auto">
                       <nuxt-link :to="{name: item.href}" class="block font-semibold text-gray-900">
@@ -55,15 +55,15 @@
   
           <router-link 
             :to="{name: 'index'}"
-            class="navLink tracking-widest text-sm font-semibold leading-3 text-white hover:bg-indigo-200 py-5 px-5 rounded text-[16px] font-inter"
+            class="navLink tracking-widest text-sm font-semibold leading-3 text-white hover:bg-indigo-300 py-5 px-5 rounded text-[16px] font-inter"
           >Anasayfa</router-link>
           <router-link 
             :to="{name: 'hakkimizda'}" 
-            class="navLink tracking-widest text-sm font-semibold leading-3 text-white hover:bg-indigo-200 py-5 px-5 rounded text-[16px] font-inter"
+            class="navLink tracking-widest text-sm font-semibold leading-3 text-white hover:bg-indigo-300 py-5 px-5 rounded text-[16px] font-inter"
           >Hakkımızda</router-link>
           <router-link 
             :to="{name: 'under_construction'}" 
-            class="navLink tracking-widest text-sm font-semibold leading-3 text-white hover:bg-indigo-200 py-5 px-5 rounded text-[16px] font-inter"
+            class="navLink tracking-widest text-sm font-semibold leading-3 text-white hover:bg-indigo-300 py-5 px-5 rounded text-[16px] font-inter"
           >İletişim</router-link>
 
         </PopoverGroup>
@@ -71,7 +71,7 @@
 
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
           <router-link :to="{name : 'under_construction'}">
-            <div class="navFollow navLink text-white font-light py-2 px-4 rounded-full inline-block border hover:bg-indigo-200 " >
+            <div class="navFollow navLink text-white font-light py-2 px-4 rounded-full inline-block border hover:bg-indigo-300 " >
               <div class="tracking-wide flex justify-center items-center gap-x-1">
                 Bize Katılın 
                 <ArrowRightIcon class="h-5 w-5" aria-hidden="true" />

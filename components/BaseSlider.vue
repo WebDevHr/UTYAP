@@ -69,12 +69,16 @@
       </Swiper> -->
       <Swiper
         class="swiper-cards xl:w-[600px] lg:w-[500px] md:w-[400px] sm:w-[300px] w-[250px] shadow rounded-md"
-        :modules="[SwiperAutoplay, SwiperEffectCards]"
+        :modules="[SwiperAutoplay, SwiperEffectCube, SwiperParallax, SwiperA11y]"
         :slides-per-view="1"
         :loop="true"
-        :effect="'cards'"
+        :parallax="true"
+        :speed="800"
+        :mousewheel="true"
+        :a11y="true"
+        effect="cube"
         :autoplay="{
-          delay: 8000,
+          delay: 4000,
           disableOnInteraction: true
         }"
       >
@@ -85,10 +89,10 @@
         >
           <div class="card overflow-hidden mx-6 border rounded-md">
             <div>
-              <div class="max-h-56 overflow-hidden rounded-t-md">
+              <div class="max-h-56 overflow-hidden rounded-t-md" data-swiper-parallax="-200">
                 <img class="w-full object-cover" :src="`pictures/${idx}.jpg`" :alt="idx" /> 
               </div>
-              <div class="lg:px-12 px-4">
+              <div class="lg:px-12 px-4" data-swiper-parallax="-800">
                 <div class="font-bold text-xl mb-2 mt-6">
                   Başvurular alınıyor!!!
                 </div>
@@ -97,7 +101,7 @@
                 </p>
               </div>
             </div>
-            <div class="flex justify-start my-5 mx-14">
+            <div class="flex justify-start my-5 mx-14" data-swiper-parallax="-1000">
               <span class="bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#news</span>
             </div>
           </div>

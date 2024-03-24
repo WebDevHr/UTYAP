@@ -17,8 +17,8 @@
               @mouseleave="cardHoverLeave"
             >
               
-              <div class="shadow-lg border rounded-3xl overflow-hidden bg-gray-100">
-                <div class="applyButton absolute top-[30px] justify-center w-[350px] hidden">
+              <div class="shadow-lg border rounded-3xl overflow-hidden bg-gray-100 relative">
+                <div class="applyButton absolute -top-[12px] justify-center w-[350px] hidden">
                   <button class=" px-5 py-3 my-2 border-2 border-gray-500 hover:border-white rounded-3xl bg-white/50 hover:bg-white font-semibold duration-300 text-gray-500 hover:text-gray-700">Hemen başvur</button>
                 </div>
                 <img :src="cartInfo.imgSrc" :alt="cartInfo.imgSrc" class="h-[215px] object-cover">
@@ -59,15 +59,6 @@
             </div>
           </div>
           
-        </section>
-
-        <!-- Call to Action -->
-        <section class="bg-blue-500 text-white py-16">
-          <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-4">Ready to get started?</h2>
-            <p class="text-lg mb-8">Sign up now and experience the difference.</p>
-            <router-link to="#" class="bg-white text-blue-500 hover:bg-blue-600 font-bold py-2 px-4 rounded-full inline-block">Sign Up</router-link>
-          </div>
         </section>
 
       </div>
