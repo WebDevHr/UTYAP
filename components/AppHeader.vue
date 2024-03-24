@@ -1,5 +1,5 @@
 <template>
-    <header class="bg-transparent fixed w-full pt-4 test px-6 2xl:px-0 z-[1000" ref="navbar">
+    <header ref="headerNav" class="bg-transparent fixed w-full pt-4 navHeader px-6 2xl:px-0 z-[1000]">
       <nav class="mx-auto flex max-w-7xl items-center justify-between py-4" aria-label="Global" v-if="!mobileMenuOpen" >
         <div class="flex lg:flex-1 trigger" >
           <router-link class="-m-1.5 p-1.5" :to="{name: 'index'}">
@@ -17,7 +17,7 @@
         <PopoverGroup class="hidden lg:flex lg:gap-x-6">
 
           <Popover class="relative" v-slot="{ open }">
-            <PopoverButton class="tracking-widest flex items-center gap-x-1 text-sm font-semibold leading-3 text-white hover:shadow-2xl hover:bg-white/20 py-4 pl-7 pr-5 rounded text-[16px] font-inter transition-all duration-300">
+            <PopoverButton class="navLink tracking-widest flex items-center gap-x-1 text-sm font-semibold leading-3 text-white hover:bg-indigo-200 py-4 pl-7 pr-5 rounded text-[16px] font-inter">
               UTYAP
               <ChevronDownIcon :class="[open ? 'rotate-180' : '', 'h-5 w-5 flex-none']" aria-hidden="true" />
             </PopoverButton>
@@ -55,15 +55,15 @@
   
           <router-link 
             :to="{name: 'index'}"
-            class="tracking-widest text-sm font-semibold leading-3 text-white hover:shadow hover:bg-white/20 py-5 px-5 rounded text-[16px] font-inter transition-all duration-300"
+            class="navLink tracking-widest text-sm font-semibold leading-3 text-white hover:bg-indigo-200 py-5 px-5 rounded text-[16px] font-inter"
           >Anasayfa</router-link>
           <router-link 
             :to="{name: 'hakkimizda'}" 
-            class="tracking-widest text-sm font-semibold leading-3 text-white hover:shadow hover:bg-white/20 py-5 px-5 rounded text-[16px] font-inter transition-all duration-300"
+            class="navLink tracking-widest text-sm font-semibold leading-3 text-white hover:bg-indigo-200 py-5 px-5 rounded text-[16px] font-inter"
           >Hakkımızda</router-link>
           <router-link 
             :to="{name: 'under_construction'}" 
-            class="tracking-widest text-sm font-semibold leading-3 text-white hover:shadow hover:bg-white/20 py-5 px-5 rounded text-[16px] font-inter transition-all duration-300"
+            class="navLink tracking-widest text-sm font-semibold leading-3 text-white hover:bg-indigo-200 py-5 px-5 rounded text-[16px] font-inter"
           >İletişim</router-link>
 
         </PopoverGroup>
@@ -71,7 +71,7 @@
 
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
           <router-link :to="{name : 'under_construction'}">
-            <div class="bg-white/30 hover:bg-white hover:text-gray-800 text-white font-bold py-2 px-4 rounded-full inline-block border transition-all duration-500" >
+            <div class="navFollow navLink text-white font-light py-2 px-4 rounded-full inline-block border hover:bg-indigo-200 " >
               <div class="tracking-wide flex justify-center items-center gap-x-1">
                 Bize Katılın 
                 <ArrowRightIcon class="h-5 w-5" aria-hidden="true" />
@@ -161,34 +161,33 @@
     { name: 'Yazılım Departmanı', description: 'Yapay zeka - Web geliştirme - uygulama geliştirme', href: 'departmanlar-yazilim', icon: ComputerDesktopIcon },
     { name: 'Robotik Departmanı', description: 'Elektronik tasırım - Özgün/İnovatif - Savunma sanayi', href: 'departmanlar-robotik', icon: CpuChipIcon },
     { name: 'Uzay Teknolojileri Departmanı', description: 'Uzay araçları - İnovatif tasarım - Keşif araçları - Fırlatma sistemleri', href: 'departmanlar-uzay_teknolojileri', icon: RocketLaunchIcon },
-    // { name: 'Integrations', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
-    // { name: 'Automations', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
   ]
   const callsToAction = [
     { name: 'Tanıtım Videosu', href: 'https://www.youtube.com/shorts/VRTgVtvZujU', icon: PlayCircleIcon },
     { name: 'İletişime Geçin', href: 'under_construction', icon: PhoneIcon },
   ]
 
-  
+  const headerNav = ref(null)
   
   const mobileMenuOpen = ref(false)
-  let tween
 
   onMounted(() => {
-    tween = gsap.to(".test", {
-      backgroundColor: 'rgba(0, 0, 0, 0.6)',
-      paddingTop: 0,
-      duration: 300,
-      scrollTrigger: {
-        trigger: ".test",
-        start: 'center top',
-        scrub: 1,
-      },
+    const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".navHeader",
+          start: 'center top',
+          scrub: 1,
+        },
     });
-  })
 
-  onUnmounted(() => {
-    tween.scrollTrigger.kill()
+    tl.to(".navLink", { color: 'black' })
+        .to(".navFollow", { borderColor: 'black' })
+        .to(".navHeader", {
+          backgroundColor: 'rgba(255, 255, 255)',
+          paddingTop: 0,
+          boxShadow: "0px 2px 10px 0px rgba(0, 0, 0, 0.16), 0px 2px 5px 0px rgba(0, 0, 0, 0.26)",
+        });
+
   })
 
   async function accept(close) {
