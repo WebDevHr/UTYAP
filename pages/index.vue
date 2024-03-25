@@ -32,12 +32,12 @@
 
 
     <div class="font-bebasneue tracking-wider select-none">
-      <div class="font-sans bg-transparent mx-auto max-w-7xl items-center justify-between py-4 px-6 lg:px-8 flex flex-row gap-x-10 h-[500px] mb-[100px]">
-        <div class="basis-1/2 flex gap-x-20 justify-center items-center bg-[url('/assets/pictures/laptop.png')] bg-cover h-[350px] w-[350px] mt-20">
-          <img src="/assets/pictures/gazi-logo.png" alt="Utyap Logo" width="120" height="120">
-          <img src="/assets/pictures/utyap-logo.png" alt="Utyap Logo" width="120" height="120">
+      <div class="font-sans bg-transparent mx-auto max-w-7xl items-center justify-between py-4 px-6 lg:px-8 flex flex-col xl:flex-row gap-x-10 xl:h-[500px] mb-[100px]">
+        <div class="xl:basis-1/2 flex xl:gap-x-20 gap-x-10 justify-center items-center bg-[url('/assets/pictures/laptop.png')] bg-cover h-[250px] xl:h-[350px] my-10 xl:my-0 w-[400px] xl:w-[350px] xl:mt-20">
+          <img src="/assets/pictures/gazi-logo.png" alt="Utyap Logo" class="xl:w-[120px] xl:h-[120px] w-[80px] h-[80px]">
+          <img src="/assets/pictures/utyap-logo.png" alt="Utyap Logo" class="xl:w-[120px] xl:h-[120px] w-[80px] h-[80px]">
         </div>
-        <div class="basis-1/2 flex flex-col h-[350px]">
+        <div class="xl:basis-1/2 flex flex-col h-[350px] container">
           <h2 class="font-bold text-xl lg:text-3xl my-4 tracking-wider">VİZYONUMUZ | MİSYONUMUZ</h2>
           <p class="text-md font-thin text-gray-500 leading-loose font-ubuntu text-justify">
             UTYAP ekibi olarak genç neslin; sürdürülebilirliği özümseyip teknoloji ve girişimcilikle birleştirerek 
