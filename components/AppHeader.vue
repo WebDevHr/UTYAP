@@ -17,7 +17,7 @@
         <PopoverGroup class="hidden lg:flex lg:gap-x-6">
 
             <Popover v-for="(navItem, index) in navItems" :key="index"  class="relative" v-slot="{ open }">
-              <PopoverButton  class="navLink h-[50px] tracking-widest flex items-center gap-x-1 text-sm font-normal leading-3 text-white hover:shadow rounded text-[16px] font-inter transition-transform duration-200">
+              <PopoverButton  class="navLink h-[50px] tracking-widest flex items-center gap-x-1 text-sm font-normal leading-3 text-white rounded text-[16px] font-inter hover:shadow-[0px_2px_10px_rgb(0,0,0,0.5)]">
                 <div v-if="navItem.subItems.length != 0" class="flex flex-row gap-x-1 items-center py-4 pl-7 pr-5">
                   {{ navItem.name }}
                   <ChevronDownIcon :class="[open ? 'rotate-180' : '', 'h-5 w-5 flex-none']" aria-hidden="true" />
@@ -63,7 +63,7 @@
 
 
         <router-link :to="{name : 'under_construction'}" class="hidden lg:flex lg:flex-1 lg:justify-end">
-          <div class="navFollow navLink text-white font-normal py-2 px-4 rounded-full inline-block border hover:bg-indigo-300 " >
+          <div class="navFollow navLink text-white font-normal py-2 px-4 rounded-full inline-block border hover:border-none hover:shadow-[0px_2px_10px_rgb(0,0,0,0.5)]" >
             <div class="tracking-wide flex justify-center items-center gap-x-1">
               Bize Katılın 
               <ArrowRightIcon class="h-5 w-5" aria-hidden="true" />
@@ -211,3 +211,7 @@
   }
 
   </script>
+
+
+<style scoped>
+</style>
