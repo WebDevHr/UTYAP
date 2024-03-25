@@ -1,5 +1,5 @@
 <script setup>
-  import SwiperControls from '~/components/SwiperControls.vue'
+  import SwiperControls from '~/components/homepage/SwiperControls.vue'
 
   const slides = ref(Array.from({ length: 5 }, () => {
     const r = Math.floor(Math.random() * 256)
@@ -15,9 +15,9 @@
 
 <template>
   <div>
-    <h1 class="font-semibold text-white lg:text-[40px] md:text-[30px] text-[24px] flex justify-center items-center underline mb-10">
+    <h2 class="font-semibold text-white lg:text-[40px] md:text-[30px] text-[24px] flex justify-center items-center mb-10">
       Haberler
-    </h1>
+    </h2>
     <div class="overflow-hidden md:overflow-visible mb-10">
       <!-- <Swiper
         :height="500"
@@ -87,7 +87,7 @@
           :key="idx"
           class="bg-white rounded-md py-4"
         >
-          <div class="card overflow-hidden mx-6 border rounded-md">
+          <div class="card overflow-hidden mx-6 rounded-md select-none">
             <div>
               <div class="max-h-56 overflow-hidden rounded-t-md" data-swiper-parallax="-200" >
                 <img class="w-full object-cover" :src="`pictures/${idx}.jpg`" :alt="idx" /> 

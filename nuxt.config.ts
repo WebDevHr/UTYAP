@@ -1,11 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: [
-    '@nuxtjs/tailwindcss',
-    'nuxt-particles',
-    'nuxt-swiper',
-  ],
+  modules: ['@nuxtjs/tailwindcss', 'nuxt-particles', 'nuxt-swiper', "@nuxt/fonts"],
   plugins: [
     '~/plugins/gsap-plugin.js',
   ],

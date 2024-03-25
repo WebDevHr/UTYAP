@@ -4,7 +4,7 @@
       <div class="font-sans mx-auto max-w-7xl items-center justify-between py-4">
 
         <section class="py-16">
-          <h1 class="text-[20px] md:text-[30px] font-semibold flex justify-center underline py-10">
+          <h1 class="text-[20px] md:text-[30px] font-semibold flex justify-center py-10">
             Detaylı Bilgi | Aramıza Katıl!
           </h1>
           <div class="flex xl:gap-x-10 flex-col xl:flex-row mx-10 justify-center relative items-center">
@@ -19,7 +19,7 @@
               
               <div class="shadow-lg border rounded-3xl overflow-hidden bg-gray-100 relative">
                 <div class="applyButton absolute -top-[12px] justify-center w-[350px] hidden">
-                  <button class=" px-5 py-3 my-2 border-2 border-gray-500 hover:border-white rounded-3xl bg-white/50 hover:bg-white font-semibold duration-300 text-gray-500 hover:text-gray-700">Hemen başvur</button>
+                  <button class=" px-5 py-3 my-2 border-2 border-gray-700 hover:border-white rounded-3xl bg-white/60 hover:bg-white font-semibold duration-300 text-gray-500 hover:text-gray-900">Hemen başvur</button>
                 </div>
                 <img :src="cartInfo.imgSrc" :alt="cartInfo.imgSrc" class="h-[215px] object-cover">
                 <div class="cardBody p-5 bg-gray-100 h-[300px]">
@@ -31,7 +31,7 @@
                   </h4>
                   <nuxt-link 
                     :to="cartInfo.link.source" 
-                    class="flex justify-center gap-x-2 items-center text-xs font-semibold hover:text-blue-950 duration-300"
+                    class="flex justify-center gap-x-2 items-center text-xs font-semibold hover:text-blue-500 duration-300"
                   >
                      <LinkIcon class="h-3 w-3" aria-hidden="true" />
                       {{ cartInfo.link.text }}
