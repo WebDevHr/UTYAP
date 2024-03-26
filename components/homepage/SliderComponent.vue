@@ -68,7 +68,7 @@
         <SwiperControls />
       </Swiper> -->
       <Swiper
-        class="swiper-cards xl:w-[600px] lg:w-[500px] md:w-[400px] sm:w-[300px] w-[250px] shadow rounded-md"
+        class="swiper-cards xl:w-[700px] lg:w-[550px] md:w-[450px] sm:w-[400px] w-[300px] shadow rounded-md"
         :modules="[SwiperAutoplay, SwiperEffectCube, SwiperParallax, SwiperA11y]"
         :slides-per-view="1"
         :loop="true"
@@ -85,9 +85,9 @@
         <SwiperSlide
           v-for="(slide, idx) in slides"
           :key="idx"
-          class="bg-white rounded-md py-4"
+          class="bg-white rounded-md py-2 md:py-4"
         >
-          <div class="card overflow-hidden mx-6 rounded-md select-none">
+          <div class="card overflow-hidden mx-2 md:mx-4 rounded-md select-none">
             <div>
               <div class="max-h-56 overflow-hidden rounded-t-md" data-swiper-parallax="-200" >
                 <img class="w-full object-cover" :src="`pictures/${idx}.jpg`" :alt="idx" /> 

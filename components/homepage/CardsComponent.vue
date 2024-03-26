@@ -1,9 +1,9 @@
 <template>
     <div class=" bg-white">
       <!-- Features Section -->
-      <div class="font-sans mx-auto max-w-7xl items-center justify-between py-4">
+      <div class="font-sans mx-auto max-w-7xl items-center justify-between py-4 overflow-hidden">
 
-        <section class="py-16">
+        <section class="py-0 md:py-10">
           <h1 class="text-[20px] md:text-[30px] font-semibold flex justify-center py-10">
             Detaylı Bilgi | Aramıza Katıl!
           </h1>

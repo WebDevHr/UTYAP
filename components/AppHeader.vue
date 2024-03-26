@@ -4,7 +4,7 @@
         <div class="flex lg:flex-1 trigger" >
           <router-link class="-m-1.5 p-1.5" :to="{name: 'index'}">
             <span class="sr-only">UTYAP</span>
-            <img class="h-12 w-auto" src="~/assets/pictures/utyap-logo.png" alt="UTYAP" /></router-link>
+            <img class="h-10 md:h-12 w-auto" src="~/assets/pictures/utyap-logo.png" alt="UTYAP" /></router-link>
         </div>
         <div class="flex lg:hidden">
           <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700" @click="mobileMenuOpen = true">
@@ -74,11 +74,11 @@
 
       <Dialog as="div" class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
         <div class="fixed inset-0 z-10"></div>
-        <DialogPanel class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <DialogPanel class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-8 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div class="flex items-center justify-between">
             <a href="#" class="-m-1.5 p-1.5">
               <span class="sr-only">UTYAP</span>
-              <img class="h-12 w-auto" src="~/assets/pictures/utyap-logo.png" alt="UTYAP" />
+              <img class="h-10 w-auto" src="~/assets/pictures/utyap-logo.png" alt="UTYAP" />
             </a>
             <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" @click="mobileMenuOpen = false">
               <span class="sr-only">Close menu</span>
@@ -126,7 +126,7 @@
   </template>
   
   <script setup>
-  import { ref, onMounted, onUnmounted } from 'vue'
+  import { ref, onMounted } from 'vue'
   import {
     Dialog,
     DialogPanel,

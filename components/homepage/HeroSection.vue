@@ -8,7 +8,7 @@
           <router-link to="#" 
             class="bg-white/30 hover:bg-white hover:text-gray-800 text-white py-2 px-4 mt-6 rounded-full inline-block border transition-all duration-500"
           >
-            <div class="flex justify-center items-center gap-x-1 text-sm sm:text-base font-normal">
+            <div class="flex justify-center items-center gap-x-1 text-xs sm:text-sm md:text-base font-normal">
               Ekiplerimiz hakkında bilgi edinin 
               <ArrowRightIcon class="h-5 w-5" aria-hidden="true" />
             </div>
