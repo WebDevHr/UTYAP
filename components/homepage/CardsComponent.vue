@@ -10,7 +10,7 @@
           <div class="flex xl:gap-x-10 flex-col xl:flex-row mx-10 justify-center relative items-center">
             <div 
               ref="cardToHover" 
-              class="cardToHover card w-[296px] sm:w-[350px] rounded overflow-hidden py-10 text-center" 
+              class="cardToHover card w-[296px] sm:w-[350px] rounded overflow-hidden py-10 text-center " 
               v-for="(cartInfo, index) in cartInfos" 
               :key="index" 
               @mouseenter="cardHover"
@@ -23,7 +23,7 @@
                 </div>
                 <img :src="cartInfo.imgSrc" :alt="cartInfo.imgSrc" class="h-[215px] object-cover">
                 <div class="cardBody p-5 bg-gray-100 h-[300px]">
-                  <h1 class="text-sm xs:text-md font-bold h-[55px] overflow-hidden mt-5">
+                  <h1 class="text-sm xs:text-base font-bold h-[55px] overflow-hidden mt-5">
                     {{ cartInfo.title }}
                   </h1>
                   <h4 class="font-light text-sm sm:text-base h-[50px] mb-3">

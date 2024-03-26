@@ -69,12 +69,20 @@
       </Swiper> -->
       <Swiper
         class="swiper-cards xl:w-[700px] lg:w-[550px] md:w-[450px] sm:w-[400px] w-[296px] shadow rounded-md"
-        :modules="[SwiperAutoplay, SwiperEffectCube, SwiperParallax, SwiperA11y]"
+        :modules="[SwiperAutoplay, SwiperEffectCube, SwiperParallax, SwiperA11y, SwiperThumbs, SwiperPagination]"
         :slides-per-view="1"
         :loop="true"
+        :pagination="{
+          enabled: true,
+          clickable: true,
+          type: 'bullets',
+        }"
         :parallax="true"
         :speed="800"
-        :mousewheel="true"
+        :grab-cursor="true"
+        :thumbs="{
+          thumbsContainerClass: 'swiper-thumbs'
+        }"
         :a11y="true"
         effect="cube"
         :autoplay="{
@@ -123,6 +131,5 @@
   font-weight: bold;
   font-family: 'Roboto', sans-serif;
 }
-
 
 </style>

@@ -525,7 +525,9 @@
     "pauseOnOutsideViewport": true,
     "responsive": [],
     "smooth": false,
-    "style": {},
+    "style": {
+      "position": "absolute"
+    },
     "themes": [],
     "zLayers": 100,
     "emitters": [],

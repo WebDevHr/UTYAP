@@ -2,9 +2,9 @@
   "autoPlay": true,
   "background": {
     "color": {
-      "value": "#000000"
+      "value": "#ffffff"
     },
-    "image": "",
+    "image": "url('https://particles.js.org/images/background3.jpg')",
     "position": "50% 50%",
     "repeat": "no-repeat",
     "size": "cover",
@@ -14,18 +14,22 @@
     "composite": "destination-out",
     "cover": {
       "color": {
-        "value": "#fff"
+        "value": {
+          "r": 255,
+          "g": 255,
+          "b": 255
+        }
       },
       "opacity": 1
     },
-    "enable": false
+    "enable": true
   },
   "clear": true,
   "defaultThemes": {},
   "delay": 0,
   "fullScreen": {
     "enable": true,
-    "zIndex": 0
+    "zIndex": -1
   },
   "detectRetina": true,
   "duration": 0,
@@ -34,8 +38,8 @@
     "detectsOn": "window",
     "events": {
       "onClick": {
-        "enable": false,
-        "mode": []
+        "enable": true,
+        "mode": "push"
       },
       "onDiv": {
         "selectors": [],
@@ -75,11 +79,11 @@
         "distance": 200
       },
       "bubble": {
-        "distance": 40,
+        "distance": 400,
         "duration": 2,
         "mix": false,
-        "opacity": 8,
-        "size": 15,
+        "opacity": 1,
+        "size": 100,
         "divs": {
           "distance": 200,
           "duration": 0.4,
@@ -183,7 +187,7 @@
       }
     },
     "color": {
-      "value": "#fff",
+      "value": "#ffffff",
       "animation": {
         "h": {
           "count": 0,
@@ -241,10 +245,7 @@
         "radius": 0
       },
       "decay": 0,
-      "distance": {
-        "horizontal": 10,
-        "vertical": 10
-      },
+      "distance": {},
       "direction": "none",
       "drift": 0,
       "enable": true,
@@ -271,7 +272,7 @@
       },
       "random": false,
       "size": false,
-      "speed": 1,
+      "speed": 2,
       "spin": {
         "acceleration": 0,
         "enable": false
@@ -287,7 +288,7 @@
     },
     "number": {
       "density": {
-        "enable": false,
+        "enable": true,
         "width": 1920,
         "height": 1080
       },
@@ -295,7 +296,7 @@
         "mode": "delete",
         "value": 0
       },
-      "value": 600
+      "value": 200
     },
     "opacity": {
       "value": 1,
@@ -327,16 +328,12 @@
       "close": true,
       "fill": true,
       "options": {},
-      "type": [
-        "circle",
-        "square",
-        "triangle"
-      ]
+      "type": "circle"
     },
     "size": {
       "value": {
-        "min": 3,
-        "max": 5
+        "min": 1,
+        "max": 30
       },
       "animation": {
         "count": 0,
@@ -462,11 +459,11 @@
     "links": {
       "blink": false,
       "color": {
-        "value": "#fff"
+        "value": "#ffffff"
       },
       "consent": false,
-      "distance": 100,
-      "enable": false,
+      "distance": 150,
+      "enable": true,
       "frequency": 1,
       "opacity": 1,
       "shadow": {
@@ -495,31 +492,17 @@
   "pauseOnBlur": true,
   "pauseOnOutsideViewport": true,
   "responsive": [],
-  "smooth": true,
+  "smooth": false,
   "style": {
-    "position": "absolute"
+    "position": "absolute",
+    "background-attachment": "fixed",
+    "background-position": "center",
+    "background-repeat": "no-repeat",
+    "background-size": "cover"
   },
   "themes": [],
   "zLayers": 100,
-  "name": "Image Mask",
-  "canvasMask": {
-    "enable": true,
-    "override": {
-      "color": true,
-      "opacity": false
-    },
-    "pixels": {
-      "offset": 4
-    },
-    "position": {
-      "x": 50,
-      "y": 50
-    },
-    "scale": 5,
-    "image": {
-      "src": "https://particles.js.org/images/amongus_cyan.png"
-    }
-  },
+  "name": "Background Mask",
   "motion": {
     "disable": false,
     "reduce": {
