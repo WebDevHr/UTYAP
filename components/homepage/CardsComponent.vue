@@ -26,7 +26,7 @@
                   <h1 class="text-sm xs:text-md font-bold h-[55px] overflow-hidden mt-5">
                     {{ cartInfo.title }}
                   </h1>
-                  <h4 class="font-light text-base h-[50px] mb-3">
+                  <h4 class="font-light text-sm sm:text-base h-[50px] mb-3">
                     {{ cartInfo.subtitle }}
                   </h4>
                   <nuxt-link 
@@ -40,12 +40,12 @@
                   <div class="cards gap-x-3 mx-5 hidden">
                     <div 
                       v-for="(card, index) in cartInfo.cards" 
-                      class="bg-white p-3 sm:p-5 flex-auto flex flex-col items-center justify-center rounded-lg my-5"
+                      class="bg-white p-3 sm:p-5 flex-auto flex flex-col items-center font-inter rounded-lg my-5"
                       :class="[card.icon === 'exclamation' ? 'text-orange-300' : 'text-blue-950']"
                     >
                       <CalendarDaysIcon v-if="card.icon === 'calender'" class="h-5 w-5 flex-none" aria-hidden="true"/>
                       <ExclamationCircleIcon v-else class="h-5 w-5 flex-none" aria-hidden="true"/>
-                      <p class="text-xs font-semibold mt-3" >
+                      <p class="sm:text-xs text-[11px] font-semibold mt-3" >
                         {{ card.description }}
                       </p>
                     </div>  
