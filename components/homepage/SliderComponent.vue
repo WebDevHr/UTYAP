@@ -68,7 +68,7 @@
         <SwiperControls />
       </Swiper> -->
       <Swiper
-        class="swiper-cards xl:w-[700px] lg:w-[550px] md:w-[450px] sm:w-[400px] w-[300px] shadow rounded-md"
+        class="swiper-cards xl:w-[700px] lg:w-[550px] md:w-[450px] sm:w-[400px] w-[296px] shadow rounded-md"
         :modules="[SwiperAutoplay, SwiperEffectCube, SwiperParallax, SwiperA11y]"
         :slides-per-view="1"
         :loop="true"

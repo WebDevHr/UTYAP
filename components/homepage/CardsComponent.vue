@@ -10,7 +10,7 @@
           <div class="flex xl:gap-x-10 flex-col xl:flex-row mx-10 justify-center relative items-center">
             <div 
               ref="cardToHover" 
-              class="cardToHover card w-[350px] rounded overflow-hidden py-10 text-center" 
+              class="cardToHover card w-[296px] sm:w-[350px] rounded overflow-hidden py-10 text-center" 
               v-for="(cartInfo, index) in cartInfos" 
               :key="index" 
               @mouseenter="cardHover"
@@ -18,12 +18,12 @@
             >
               
               <div class="shadow-lg border rounded-3xl overflow-hidden bg-gray-100 relative">
-                <div class="applyButton absolute -top-[12px] justify-center w-[350px] hidden">
+                <div class="applyButton absolute -top-[12px] justify-center w-[296px] sm:w-[350px] hidden">
                   <button class=" px-5 py-3 my-2 border-2 border-gray-700 hover:border-white rounded-3xl bg-white/60 hover:bg-white font-semibold duration-300 text-gray-500 hover:text-gray-900">Hemen başvur</button>
                 </div>
                 <img :src="cartInfo.imgSrc" :alt="cartInfo.imgSrc" class="h-[215px] object-cover">
                 <div class="cardBody p-5 bg-gray-100 h-[300px]">
-                  <h1 class="text-md font-bold h-[55px] overflow-hidden mt-5">
+                  <h1 class="text-sm xs:text-md font-bold h-[55px] overflow-hidden mt-5">
                     {{ cartInfo.title }}
                   </h1>
                   <h4 class="font-light text-base h-[50px] mb-3">
@@ -40,7 +40,7 @@
                   <div class="cards gap-x-3 mx-5 hidden">
                     <div 
                       v-for="(card, index) in cartInfo.cards" 
-                      class="bg-white p-5 flex-auto flex flex-col items-center justify-center rounded-lg my-5"
+                      class="bg-white p-3 sm:p-5 flex-auto flex flex-col items-center justify-center rounded-lg my-5"
                       :class="[card.icon === 'exclamation' ? 'text-orange-300' : 'text-blue-950']"
                     >
                       <CalendarDaysIcon v-if="card.icon === 'calender'" class="h-5 w-5 flex-none" aria-hidden="true"/>
