@@ -7,7 +7,7 @@
             <img src="/assets/pictures/utyap-logo.png" alt="Utyap Logo" class="xl:w-[120px] xl:h-[120px] sm:w-[80px] sm:h-[80px] w-[60px] h-[60px]">
           </div>
           <div class="xl:basis-1/2 flex flex-col container">
-            <h2 class="font-bold text-xl md:text-3xl my-4 tracking-wider text-center lg:text-left">VİZYONUMUZ | MİSYONUMUZ</h2>
+            <h2 class="my-4 text-center lg:text-left">VİZYONUMUZ | MİSYONUMUZ</h2>
             <p class="text-sm md:text-base font-thin text-gray-500 md:leading-loose font-ubuntu lg:text-justify text-center">
               UTYAP ekibi olarak genç neslin; sürdürülebilirliği özümseyip teknoloji ve girişimcilikle birleştirerek 
               çevrelerinde en güçlü etkiyi yaratan motivasyonları yüksek, genç, bilgili, yetenekli girişimciler yetişmesini; 

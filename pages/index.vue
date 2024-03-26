@@ -13,6 +13,15 @@
     <AboutUsCoomponent />
     <VisionMissionComponent />
 
+    <div class="bg-[url('/pictures/parallax.jpg')] bg-fixed bg-cover">
+      <div class="bg-black/50">
+        <div class="font-ubuntu bg-transparent mx-auto max-w-7xl items-center justify-between py-4 px-2 sm:px-6 lg:px-8 text-white h-[600px]">
+          <h2 class="my-5 ">FOTOĞRAF GALERİSİ</h2>
+          <p class="font-ubuntu">Ekibimiz, etkinliklerimiz & yarışmalarımız </p>
+        </div>
+      </div>
+    </div>
+
   </div>
 </template>
   
