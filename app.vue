@@ -35,4 +35,16 @@ input::placeholder {
 textarea::placeholder {
   @apply text-gray-300
 }
+
+
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.4s ease-out;
+}
+
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  transform: translateX(-30px);
+}
 </style>
