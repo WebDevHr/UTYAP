@@ -18,7 +18,8 @@
                             yeni hayaller yolunda ilerlemeye başlamıştır.
                         </h4>
                     </div>
-                    <div class="md:col-span-2 hidden relative p-5 md:p-10 lg:p-20 md:flex items-end">
+                    <div
+                        class="col-span-2 hidden relative pl-5 md:pl-10 lg:pl-20 pr-0 md:flex items-end justify-end max-w-sm">
                         <img src="/assets/pictures/utyap-logo.png" alt="">
                         <!-- <NuxtParticles id="tsparticles2" :options="options2"></NuxtParticles> -->
                     </div>
@@ -95,7 +96,8 @@
                     <div class="flex flex-wrap gap-x-3 gap-y-10 justify-evenly">
                         <div v-for="n in 10" :key="n">
                             <div
-                                class="managerCard flex flex-col justify-center items-center w-[280px] border p-3 rounded-3xl border-transparent hover:border-white transition-all duration-500">
+                                class="managerCard flex flex-col justify-center items-center w-[280px] border p-3 rounded-3xl 
+                                border-transparent hover:border-white outline outline-transparent hover:outline-white outline-1 outline-offset-[5px] transition-all duration-300">
                                 <div
                                     class="overflow-hidden rounded-full h-44 w-44 bg-cover bg-center bg-[url('/pictures/3.jpg')]">
                                 </div>
@@ -113,6 +115,71 @@
                                     </a>
                                 </div>
 
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="relative">
+            <div
+                class="absolute top-0 left-0 bg-[url('/pictures/team-work.jpg')] bg-fixed bg-cover w-full h-full -z-20">
+            </div>
+            <div class="relative py-20 text-white">
+                <div class="absolute top-0 left-0 w-full h-full -z-10 bg-gradient-to-b from-black to-white/20">
+                </div>
+                <div class="mx-auto flex flex-col max-w-7xl py-4 px-4">
+                    <h2 class="my-10">Danışmanlar</h2>
+
+                    <div class="flex flex-wrap gap-x-3 gap-y-10 justify-evenly">
+                        <div v-for="n in 3" :key="n">
+                            <div
+                                class="managerCard flex flex-col justify-center items-center w-[280px] border p-3 rounded-3xl 
+                                border-transparent hover:border-white outline outline-transparent hover:outline-white outline-1 outline-offset-[5px] transition-all duration-300">
+                                <div
+                                    class="overflow-hidden rounded-full h-44 w-44 bg-cover bg-center bg-[url('/pictures/3.jpg')]">
+                                </div>
+                                <h3 class="mt-3">Samed Kahraman</h3>
+                                <h4 class="my-2 font-extralight">Pozisyon</h4>
+                                <div class="flex flex-row gap-x-1">
+                                    <a href="" class="p-1">
+                                        <img class="w-8 h-8" src="/icons/icons8-linkedin-240.png" alt="linkedin">
+                                    </a>
+                                    <a href="" class="p-1">
+                                        <img class="w-8 h-8" src="/icons/icons8-instagram-240.png" alt="instagram">
+                                    </a>
+                                    <a href="" class="p-1">
+                                        <img class="w-8 h-8" src="/icons/icons8-gmail-240.png" alt="gmail">
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="relative pb-20 text-white">
+                <div class="absolute top-0 left-0 w-full h-full -z-10 bg-gradient-to-b from-white/20 to-black ">
+                </div>
+                <div class="mx-auto flex flex-col max-w-7xl py-4 px-4">
+                    <h2 class="my-10">Takımlar</h2>
+
+                    <div class="flex flex-wrap gap-x-3 gap-y-10 justify-evenly">
+                        <div v-for="n in 3" :key="n">
+                            <div class="relative">
+                                <div
+                                    class="absolute top-0 left-0 w-full h-full -z-10 bg-cover bg-center bg-[url('/pictures/3.jpg')] rounded-3xl overflow-hidden">
+                                </div>
+                                <div class="managerCard flex flex-col justify-center items-center w-[280px] p-3 
+                                    transition-all duration-300 bg-black/50 -z-20 rounded-3xl hover:bg-transparent">
+                                    <h2 class="my-3">Paydar Takımı</h2>
+                                    <h3>Takım Üyelerİ:</h3>
+                                    <h4 class="my-1 font-extralight">Ahmet - Mehmet - Ali</h4>
+                                </div>
                             </div>
                         </div>
                     </div>
