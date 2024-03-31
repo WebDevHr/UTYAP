@@ -20,6 +20,10 @@ p {
   @apply font-inter
 }
 
+h1 {
+  @apply sm:text-6xl text-3xl font-bold mb-4 font-inter
+}
+
 h2 {
   @apply font-bebasneue tracking-widest text-xl md:text-2xl lg:text-3xl font-bold
 }

@@ -2,7 +2,7 @@
   "autoPlay": true,
   "background": {
     "color": {
-      "value": "#031707"
+      "value": "#07162e"
     },
     "image": "",
     "position": "50% 50%",
@@ -528,7 +528,7 @@
     },
     "scale": 0.75,
     "type": "inline",
-    "url": "https://site-assets.fontawesome.com/releases/v6.5.1/svgs/thin/microchip.svg",
+    "url": "https://site-assets.fontawesome.com/releases/v6.5.1/svgs/thin/user-astronaut.svg",
     "position": {
       "x": 5,
       "y": 25
