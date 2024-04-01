@@ -18,7 +18,7 @@
                   class=" px-5 py-3 my-2 border-2 border-gray-700 hover:border-white rounded-3xl bg-white/60 hover:bg-white font-semibold duration-300 text-gray-500 hover:text-gray-900">Hemen
                   başvur</button>
               </div>
-              <img :src="cartInfo.imgSrc" :alt="cartInfo.imgSrc" class="h-[215px] object-cover">
+              <img :src="cartInfo.imgSrc" :alt="cartInfo.imgSrc" class="h-[215px] w-full object-cover">
               <div class="cardBody p-5 bg-gray-100 h-[300px]">
                 <h1 class="text-sm xs:text-base font-bold h-[55px] overflow-hidden mt-5">
                   {{ cartInfo.title }}
@@ -129,7 +129,7 @@ function cardHoverLeave(event) {
 
 const cartInfos = [
   {
-    imgSrc: '/pictures/1.jpg',
+    imgSrc: '/pictures/card1.jpg',
     title: 'DESTEKÇİ OLARAK BEN DE VARIM!',
     subtitle: 'Sizi sponsor olarak aramızda görmeyi çok isteriz.',
     link: {
@@ -150,7 +150,7 @@ const cartInfos = [
     description: 'Aramıza katılmak ve bizimle bu heyecanı yaşamak ister misiniz? Bunun için "Hemen Başvur" butonuna tıklamanız ve başvuru formunu doldurmanız yeterli!'
   },
   {
-    imgSrc: '/pictures/2.jpg',
+    imgSrc: '/pictures/card2.jpg',
     title: 'EĞİTMEN, JÜRİ, KONUŞMACI & MENTOR OLARAK BEN DE VARIM!',
     subtitle: 'Sizi aramızda görmeyi çok isteriz.',
     link: {
@@ -170,7 +170,7 @@ const cartInfos = [
     description: 'Bizimle çalışmak ister misiniz? Bunun için "Hemen Başvur" butonuna tıklamanız ve başvuru formunu doldurmanız yeterli!'
   },
   {
-    imgSrc: '/pictures/4.jpg',
+    imgSrc: '/pictures/card3.jpg',
     title: 'PARTNER TOPLULUK OLARAK BİZ DE VARIZ!',
     subtitle: 'Sizi aramızda görmeyi çok isteriz.',
     link: {

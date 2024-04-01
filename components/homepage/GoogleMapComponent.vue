@@ -3,10 +3,13 @@
         :zoom="15">
         <Marker :options="{ position: center, title: 'utyap' }" />
         <InfoWindow :options="{ position: center }">
-            <div class="flex justify-center items-center gap-x-1">
+            <div class="flex justify-center items-center gap-x-1 mb-1">
                 <img src="/assets/pictures/utyap-logo.png" width="20" height="20" />
-                <div class="font-bold">UTYAP ofisi</div>
+                <div class="font-bold">UTYAP</div>
             </div>
+            <a href="https://maps.app.goo.gl/va9AgZV27qNsLk8b9"
+                class="text-blue-400 hover:text-blue-700 font-normal">View on Google
+                Maps</a>
         </InfoWindow>
     </GoogleMap>
 </template>

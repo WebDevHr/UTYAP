@@ -74,8 +74,9 @@
       </PopoverGroup>
 
 
-      <nuxt-link :to="{ name: 'under_construction' }" class="hidden lg:flex lg:flex-1 lg:justify-end"
-        :class="{ 'animate__animated animate__flash': repeat2 }">
+      <nuxt-link
+        to="https://docs.google.com/forms/d/e/1FAIpQLSczu_qUgivJdWK_xurMqQBwWctV5oR_bPEzm7tPUCKXGH1OVQ/viewform"
+        class="hidden lg:flex lg:flex-1 lg:justify-end" :class="{ 'animate__animated animate__flash': repeat2 }">
         <div
           class="navFollow navLink text-white font-normal py-2 px-4 rounded-full inline-block border border-white hover:border-transparent hover:shadow-[0px_2px_10px_rgb(0,0,0,0.5)]">
           <div class="tracking-wide flex justify-center items-center gap-x-1 italic">
