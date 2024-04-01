@@ -1,9 +1,9 @@
 <template>
   <div>
-    <div class="relative">
+    <div class="relative bg-gradient-to-t from-[#17163e] to-transparent pb-20">
       <NuxtParticles id="tsparticles" :options="options" />
       <div
-        class="font-sans bg-transparent mx-auto max-w-7xl items-center justify-between py-4 px-2 sm:px-6 lg:px-8 mb-10">
+        class="font-sans bg-transparent mx-auto max-w-7xl items-center justify-between py-4 px-2 sm:px-6 lg:px-8 pb-10">
         <LazyHomepageAudioPlayer :audioSrc="interstellar" :autoplay="loaded" class="fixed bottom-5 right-0 z-[1001]" />
         <HeroSection />
         <SliderComponent />
@@ -16,6 +16,7 @@
     <LazyHomepageVisionMissionComponent />
     <LazyHomepagePhotoGalleryComponent />
     <LazyHomepageContactUsComponent id="iletisim" />
+    <LazyHomepageGoogleMapComponent />
 
   </div>
 </template>

@@ -1,0 +1,18 @@
+<template>
+    <GoogleMap api-key="AIzaSyAFDykbT-OmZPnNI960INiWVqvTLgNZB6s" style="width: 100%; height: 500px" :center="center"
+        :zoom="15">
+        <Marker :options="{ position: center, title: 'utyap' }" />
+        <InfoWindow :options="{ position: center }">
+            <div class="flex justify-center items-center gap-x-1">
+                <img src="/assets/pictures/utyap-logo.png" width="20" height="20" />
+                <div class="font-bold">UTYAP ofisi</div>
+            </div>
+        </InfoWindow>
+    </GoogleMap>
+</template>
+
+<script setup>
+import { GoogleMap, Marker, CustomMarker, InfoWindow } from 'vue3-google-map'
+const center = { lat: 39.93941876113325, lng: 32.81729416785606 }
+
+</script>

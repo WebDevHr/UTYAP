@@ -1,11 +1,11 @@
 <template>
-  <div class="relative">
+  <div class="relative bg-gradient-to-b to-transparent from-[#17163e] text-white">
     <!-- <div class="absolute w-full h-full bg-black/40 z-[-1]"></div> -->
     <div class="font-sans mx-auto max-w-7xl items-center justify-between py-4 px-6 lg:px-8 z-[100]">
-      <h2 class="my-5">İletİşİm</h2>
+      <h2 class="mb-5 mt-20">İletİşİm</h2>
       <h3 class="text-lg font-semibold my-5">Bİzİmle İletİşİme Geçİn</h3>
       <div class="container flex flex-col md:flex-row gap-6 my-10">
-        <div class="md:basis-1/3 rounded-lg flex flex-col gap-y-5">
+        <div class="md:basis-1/3 rounded-lg flex flex-col gap-y-10">
           <div class="mb-3">
             <div class="flex gap-x-5 items-center">
               <MapPinIcon
