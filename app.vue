@@ -48,7 +48,12 @@ textarea::placeholder {
 
 .page-enter-from,
 .page-leave-to {
-  opacity: 0;
+  opacity: 0.2;
   transform: translateX(-30px);
+}
+
+html,
+body {
+  scroll-behavior: smooth;
 }
 </style>

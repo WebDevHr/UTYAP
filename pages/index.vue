@@ -15,7 +15,7 @@
 
     <LazyHomepageVisionMissionComponent />
     <LazyHomepagePhotoGalleryComponent />
-    <LazyHomepageContactUsComponent />
+    <LazyHomepageContactUsComponent id="iletisim" />
 
   </div>
 </template>

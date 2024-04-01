@@ -30,9 +30,9 @@
                 :class="[open ? 'rotate-180 transition-all duration-300' : 'transition-all duration-300', 'h-5 w-5 flex-none']"
                 aria-hidden="true" />
             </div>
-            <router-link v-else :to="{ name: navItem.link }" class="py-3 pl-3 pr-3">
+            <nuxt-link v-else :to="{ name: navItem.link, hash: navItem.hash }" class="py-3 pl-3 pr-3">
               {{ navItem.name }}
-            </router-link>
+            </nuxt-link>
           </PopoverButton>
 
           <transition v-if="navItem.subItems.length != 0" enter-active-class="transition ease-out duration-500"
@@ -40,7 +40,7 @@
             leave-active-class="transition ease-in duration-200" leave-from-class="opacity-100 translate-y-0"
             leave-to-class="opacity-0 -translate-y-5">
             <PopoverPanel v-slot="{ close }"
-              class="absolute left-0 top-full z-10 mt-4 w-[100%] overflow-hidden border-t-8 border-blue-500 rounded-t-xl rounded-b-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
+              class="absolute left-0 top-[110%] z-10 mt-4 w-[100%] overflow-hidden border-t-8 border-blue-500 rounded-t-xl rounded-b-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
               <div class="p-4">
                 <div v-for="item in navItem.subItems" :key="item.name"
                   class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
@@ -74,7 +74,7 @@
       </PopoverGroup>
 
 
-      <router-link :to="{ name: 'under_construction' }" class="hidden lg:flex lg:flex-1 lg:justify-end"
+      <nuxt-link :to="{ name: 'under_construction' }" class="hidden lg:flex lg:flex-1 lg:justify-end"
         :class="{ 'animate__animated animate__flash': repeat2 }">
         <div
           class="navFollow navLink text-white font-normal py-2 px-4 rounded-full inline-block border border-white hover:border-transparent hover:shadow-[0px_2px_10px_rgb(0,0,0,0.5)]">
@@ -83,7 +83,7 @@
             <ArrowRightIcon class="h-5 w-5" aria-hidden="true" />
           </div>
         </div>
-      </router-link>
+      </nuxt-link>
     </nav>
 
     <Dialog as="div" class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
@@ -138,6 +138,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
+import { useRoute, useRouter } from 'vue-router';
 import {
   Dialog,
   DialogPanel,
@@ -168,15 +169,17 @@ const navItems = [
   {
     name: 'Anasayfa',
     link: 'index',
-    subItems: []
+    subItems: [],
+    hash: ''
   },
   {
     name: 'Hakkımızda',
     link: 'hakkimizda',
-    subItems: []
+    subItems: [],
+    hash: ''
   },
   {
-    name: 'UTYAP',
+    name: 'Departmanlar',
     link: '',
     subItems: [
       { name: 'Yazılım Departmanı', description: 'Yapay zeka - Web geliştirme - uygulama geliştirme', href: 'departmanlar-yazilim', icon: ComputerDesktopIcon },
@@ -197,12 +200,14 @@ const navItems = [
   {
     name: 'Projeler',
     link: 'under_construction',
-    subItems: []
+    subItems: [],
+    hash: ''
   },
   {
     name: 'İletişim',
-    link: 'under_construction',
-    subItems: []
+    link: 'index',
+    subItems: [],
+    hash: '#iletisim'
   }
 ]
 
