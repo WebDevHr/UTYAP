@@ -22,7 +22,7 @@
             class="navLink h-[40px] tracking-widest flex items-center
             text-sm font-normal leading-3 text-white rounded text-[16px] font-inter italic
              hover:shadow-[0px_2px_10px_rgb(0,0,0,0.5)] border border-transparent hover:border-white transition-all duration-200 focus:outline-none outline-none">
-            <div v-if="navItem.subItems.length != 0" class="flex flex-row gap-x-1 items-center py-2 pl-5 pr-3">
+            <div v-if="navItem.subItems.length != 0" class="flex flex-row gap-x-[2px] items-center py-2 pl-5 pr-3">
               {{ navItem.name }}
               <ChevronDownIcon
                 :class="[open ? 'rotate-180 transition-all duration-300' : 'transition-all duration-300', 'h-5 w-5 flex-none']"
