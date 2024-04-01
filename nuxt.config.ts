@@ -10,6 +10,11 @@ export default defineNuxtConfig({
     '~/assets/css/globals.css',
   ],
   app: {
-    pageTransition: { name: 'page', mode: 'out-in' }
+    pageTransition: { name: 'page', mode: 'out-in' },
+    head: {
+      link: [
+        { rel : 'stylesheet', href: "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"}
+      ]
+    }
   },
 })

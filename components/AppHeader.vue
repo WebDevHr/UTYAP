@@ -4,7 +4,9 @@
       <div class="flex lg:flex-1 trigger">
         <router-link class="-m-1.5 p-1.5" :to="{ name: 'index' }">
           <span class="sr-only">UTYAP</span>
-          <img class="h-10 md:h-12 w-auto" src="~/assets/pictures/utyap-logo.png" alt="UTYAP" /></router-link>
+          <img class="h-10 md:h-12 w-auto"
+            :class="{ 'animate__animated animate__hinge': repeat1, 'animate__animated animate__bounceInDown': repeat3, }"
+            src="~/assets/pictures/utyap-logo.png" alt="UTYAP" /></router-link>
       </div>
       <div class="flex lg:hidden">
         <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
@@ -72,10 +74,11 @@
       </PopoverGroup>
 
 
-      <router-link :to="{ name: 'under_construction' }" class="hidden lg:flex lg:flex-1 lg:justify-end">
+      <router-link :to="{ name: 'under_construction' }" class="hidden lg:flex lg:flex-1 lg:justify-end"
+        :class="{ 'animate__animated animate__flash': repeat2 }">
         <div
           class="navFollow navLink text-white font-normal py-2 px-4 rounded-full inline-block border border-white hover:border-transparent hover:shadow-[0px_2px_10px_rgb(0,0,0,0.5)]">
-          <div class="tracking-wide flex justify-center items-center gap-x-1 animate-pulse hover:animate-none italic">
+          <div class="tracking-wide flex justify-center items-center gap-x-1 italic">
             Bize Katılın
             <ArrowRightIcon class="h-5 w-5" aria-hidden="true" />
           </div>
@@ -209,8 +212,11 @@ const callsToAction = [
 ]
 
 const headerNav = ref(null)
-
+const repeat1 = ref(false)
+const repeat2 = ref(false)
+const repeat3 = ref(false)
 const mobileMenuOpen = ref(false)
+
 
 onMounted(() => {
   const tl = gsap.timeline({
@@ -230,6 +236,20 @@ onMounted(() => {
       boxShadow: "0px 2px 10px 0px rgba(0, 0, 0, 0.16), 0px 2px 5px 0px rgba(0, 0, 0, 0.26)",
     });
 
+  setInterval(() => {
+    repeat2.value = true;
+    setTimeout(() => {
+      repeat2.value = false
+    }, 2000);
+  }, 5000)
+
+  setTimeout(() => {
+    repeat1.value = true;
+  }, 500)
+  setTimeout(() => {
+    repeat1.value = false;
+    repeat3.value = true;
+  }, 3000)
 })
 
 async function accept(close) {
