@@ -15,27 +15,30 @@
       </div>
 
 
-      <PopoverGroup class="hidden lg:flex lg:gap-x-6">
+      <PopoverGroup class="hidden lg:flex lg:gap-x-1 relative">
 
-        <Popover v-for="(navItem, index) in navItems" :key="index" class="relative" v-slot="{ open }">
-          <PopoverButton class="navLink h-[50px] tracking-widest flex items-center gap-x-1 
+        <Popover v-for="(navItem, index) in navItems" :key="index" v-slot="{ open }">
+          <PopoverButton
+            class="navLink h-[40px] tracking-widest flex items-center
             text-sm font-normal leading-3 text-white rounded text-[16px] font-inter
-             hover:shadow-[0px_2px_10px_rgb(0,0,0,0.5)] transition-all duration-200">
-            <div v-if="navItem.subItems.length != 0" class="flex flex-row gap-x-1 items-center py-4 pl-7 pr-5">
+             hover:shadow-[0px_2px_10px_rgb(0,0,0,0.5)] border border-transparent hover:border-white transition-all duration-200 focus:outline-none outline-none">
+            <div v-if="navItem.subItems.length != 0" class="flex flex-row gap-x-1 items-center py-2 pl-5 pr-3">
               {{ navItem.name }}
-              <ChevronDownIcon :class="[open ? 'rotate-180' : '', 'h-5 w-5 flex-none']" aria-hidden="true" />
+              <ChevronDownIcon
+                :class="[open ? 'rotate-180 transition-all duration-300' : 'transition-all duration-300', 'h-5 w-5 flex-none']"
+                aria-hidden="true" />
             </div>
-            <router-link v-else :to="{ name: navItem.link }" class="py-4 pl-7 pr-5">
+            <router-link v-else :to="{ name: navItem.link }" class="py-3 pl-5 pr-3">
               {{ navItem.name }}
             </router-link>
           </PopoverButton>
 
-          <transition v-if="navItem.subItems.length != 0" enter-active-class="transition ease-out duration-300"
-            enter-from-class="opacity-0 translate-y-3" enter-to-class="opacity-100 translate-y-0"
-            leave-active-class="transition ease-in duration-150" leave-from-class="opacity-100 translate-y-0"
-            leave-to-class="opacity-0 translate-y-1">
+          <transition v-if="navItem.subItems.length != 0" enter-active-class="transition ease-out duration-500"
+            enter-from-class="opacity-0 -translate-y-10" enter-to-class="opacity-100 translate-y-0"
+            leave-active-class="transition ease-in duration-200" leave-from-class="opacity-100 translate-y-0"
+            leave-to-class="opacity-0 -translate-y-5">
             <PopoverPanel v-slot="{ close }"
-              class="absolute -left-8 top-full z-10 mt-4 w-screen max-w-2xl overflow-hidden border-t-8 border-blue-500 rounded-t-xl rounded-b-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
+              class="absolute left-0 top-full z-10 mt-4 w-[100%] overflow-hidden border-t-8 border-blue-500 rounded-t-xl rounded-b-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
               <div class="p-4">
                 <div v-for="item in navItem.subItems" :key="item.name"
                   class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
@@ -72,7 +75,7 @@
       <router-link :to="{ name: 'under_construction' }" class="hidden lg:flex lg:flex-1 lg:justify-end">
         <div
           class="navFollow navLink text-white font-normal py-2 px-4 rounded-full inline-block border border-white hover:border-transparent hover:shadow-[0px_2px_10px_rgb(0,0,0,0.5)]">
-          <div class="tracking-wide flex justify-center items-center gap-x-1">
+          <div class="tracking-wide flex justify-center items-center gap-x-1 animate-pulse hover:animate-none">
             Bize Katılın
             <ArrowRightIcon class="h-5 w-5" aria-hidden="true" />
           </div>
@@ -148,13 +151,27 @@ import {
   XMarkIcon,
   ComputerDesktopIcon,
   CpuChipIcon,
-  RocketLaunchIcon
+  RocketLaunchIcon,
+  ArchiveBoxIcon,
+  CalendarIcon,
+  DocumentChartBarIcon,
+  UserIcon
 } from '@heroicons/vue/24/outline'
 import { ChevronDownIcon, ArrowRightIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/vue/20/solid'
 
 const { $gsap: gsap, $Draggable: Draggable } = useNuxtApp(); //gsap to work
 
 const navItems = [
+  {
+    name: 'Anasayfa',
+    link: 'index',
+    subItems: []
+  },
+  {
+    name: 'Hakkımızda',
+    link: 'hakkimizda',
+    subItems: []
+  },
   {
     name: 'UTYAP',
     link: '',
@@ -165,13 +182,18 @@ const navItems = [
     ]
   },
   {
-    name: 'Anasayfa',
-    link: 'index',
-    subItems: []
+    name: 'Etkinlikler',
+    link: '',
+    subItems: [
+      { name: 'Geçmiş etkinliklerin arşivi', description: '', href: 'under_construction', icon: ArchiveBoxIcon },
+      { name: 'Gelecek etkinlik takvimi', description: '', href: 'under_construction', icon: CalendarIcon },
+      { name: 'Etkinlik kayıt ve katılım bilgileri', description: '', href: 'under_construction', icon: DocumentChartBarIcon },
+      { name: 'Konuşmacılar ve sunumlar', description: '', href: 'under_construction', icon: UserIcon },
+    ]
   },
   {
-    name: 'Hakkımızda',
-    link: 'hakkimizda',
+    name: 'Projeler',
+    link: 'under_construction',
     subItems: []
   },
   {

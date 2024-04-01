@@ -102,7 +102,7 @@
                                     class="overflow-hidden rounded-full h-44 w-44 bg-cover bg-center bg-[url('/pictures/3.jpg')]">
                                 </div>
                                 <h3 class="mt-3">Samed Kahraman</h3>
-                                <h4 class="my-2 font-extralight">Pozisyon</h4>
+                                <h4 class="my-2 font-extralight text-gray-400">Pozisyon</h4>
                                 <div class="flex flex-row gap-x-1">
                                     <a href="" class="p-1">
                                         <img class="w-8 h-8" src="/icons/icons8-linkedin-240.png" alt="linkedin">
@@ -142,7 +142,7 @@
                                     class="overflow-hidden rounded-full h-44 w-44 bg-cover bg-center bg-[url('/pictures/3.jpg')]">
                                 </div>
                                 <h3 class="mt-3">Samed Kahraman</h3>
-                                <h4 class="my-2 font-extralight">Pozisyon</h4>
+                                <h4 class="my-2 font-extralight text-gray-400">Pozisyon</h4>
                                 <div class="flex flex-row gap-x-1">
                                     <a href="" class="p-1">
                                         <img class="w-8 h-8" src="/icons/icons8-linkedin-240.png" alt="linkedin">
@@ -175,10 +175,10 @@
                                     class="absolute top-0 left-0 w-full h-full -z-10 bg-cover bg-center bg-[url('/pictures/3.jpg')] rounded-3xl overflow-hidden">
                                 </div>
                                 <div class="managerCard flex flex-col justify-center items-center w-[280px] p-3 
-                                    transition-all duration-300 bg-black/50 -z-20 rounded-3xl hover:bg-transparent">
+                                    transition-all duration-300 bg-black/50 -z-20 rounded-3xl hover:bg-black/20">
                                     <h2 class="my-3">Paydar Takımı</h2>
-                                    <h3>Takım Üyelerİ:</h3>
-                                    <h4 class="my-1 font-extralight">Ahmet - Mehmet - Ali</h4>
+                                    <h3 class="text-gray-400">Takım Üyelerİ:</h3>
+                                    <h4 class="my-1 font-extralight text-gray-400">Ahmet - Mehmet - Ali</h4>
                                 </div>
                             </div>
                         </div>
