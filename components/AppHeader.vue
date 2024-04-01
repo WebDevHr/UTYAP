@@ -20,7 +20,7 @@
         <Popover v-for="(navItem, index) in navItems" :key="index" v-slot="{ open }">
           <PopoverButton
             class="navLink h-[40px] tracking-widest flex items-center
-            text-sm font-normal leading-3 text-white rounded text-[16px] font-inter
+            text-sm font-normal leading-3 text-white rounded text-[16px] font-inter italic
              hover:shadow-[0px_2px_10px_rgb(0,0,0,0.5)] border border-transparent hover:border-white transition-all duration-200 focus:outline-none outline-none">
             <div v-if="navItem.subItems.length != 0" class="flex flex-row gap-x-1 items-center py-2 pl-5 pr-3">
               {{ navItem.name }}
@@ -28,7 +28,7 @@
                 :class="[open ? 'rotate-180 transition-all duration-300' : 'transition-all duration-300', 'h-5 w-5 flex-none']"
                 aria-hidden="true" />
             </div>
-            <router-link v-else :to="{ name: navItem.link }" class="py-3 pl-5 pr-3">
+            <router-link v-else :to="{ name: navItem.link }" class="py-3 pl-3 pr-3">
               {{ navItem.name }}
             </router-link>
           </PopoverButton>
@@ -75,7 +75,7 @@
       <router-link :to="{ name: 'under_construction' }" class="hidden lg:flex lg:flex-1 lg:justify-end">
         <div
           class="navFollow navLink text-white font-normal py-2 px-4 rounded-full inline-block border border-white hover:border-transparent hover:shadow-[0px_2px_10px_rgb(0,0,0,0.5)]">
-          <div class="tracking-wide flex justify-center items-center gap-x-1 animate-pulse hover:animate-none">
+          <div class="tracking-wide flex justify-center items-center gap-x-1 animate-pulse hover:animate-none italic">
             Bize Katılın
             <ArrowRightIcon class="h-5 w-5" aria-hidden="true" />
           </div>
