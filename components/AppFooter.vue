@@ -4,8 +4,8 @@
     <div class="relative bg-black/40">
       <div class="container font-sans mx-auto max-w-7xl items-center justify-between py-4 px-6 lg:px-8 z-[100]">
         <NuxtParticles id="tsparticles5" :options="options" />
-        <div class="text-white flex my-20">
-          <div class="flex flex-col basis-1/3">
+        <div class="text-white flex flex-col md:flex-row md:my-14 sm:my-10 my-5">
+          <div class="flex flex-col md:basis-1/3 w-full">
             <div class="flex justify-start m-10">
               <nuxt-link :to="{ name: 'index' }">
                 <img class="w-20 h-20" src="/assets/pictures/utyap-logo.png" alt="utyap-logo">
@@ -53,7 +53,7 @@
 
             </div>
           </div>
-          <div class="flex basis-2/3 pl-40 my-5">
+          <div class="flex md:basis-2/3 md:pl-40 my-5">
             <div class="basis-1/2 flex flex-col">
               <h2 class="mb-10">LİNKLER</h2>
               <router-link class="font-extralight text-gray-400 mb-4" :to="{ name: 'index' }">Anasayfa</router-link>
@@ -73,7 +73,7 @@
                 :to="{ name: 'under_construction' }">Eğitim</router-link>
             </div>
             <div class="basis-1/2">
-              <div class="w-[200px] flex flex-col gap-y-5">
+              <div class="md:w-[200px] flex flex-col gap-y-5">
                 <h2 class="mb-10">İLETİŞİM</h2>
                 <div class="font-extralight text-gray-400">
                   Design and modified by

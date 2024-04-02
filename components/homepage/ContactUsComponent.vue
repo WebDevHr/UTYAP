@@ -41,7 +41,7 @@
           <div class="md:basis-2/3 rounded-lg">
             <div class="max-w-3xl flex flex-col justify-center">
               <form @submit.prevent="handleSubmit" class="flex flex-col justify-center gap-y-5 md:mt-5">
-                <div class="flex md:flex-row flex-col gap-x-5">
+                <div class="flex md:flex-row flex-col gap-x-5 gap-y-5">
                   <div class="flex-grow">
                     <input type="text" id="name" v-model="formData.name" placeholder="Ad Soyad"
                       class="w-full border-2 border-[#0c2040] text-white bg-[#0c2040] rounded-md px-3 py-2 focus:outline-none focus:border-black"
