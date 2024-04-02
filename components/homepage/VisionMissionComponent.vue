@@ -10,7 +10,7 @@
             class="xl:w-[120px] xl:h-[120px] sm:w-[80px] sm:h-[80px] w-[60px] h-[60px]">
         </div>
         <div class="xl:basis-1/2 flex flex-col container">
-          <h2 class="my-4 text-center lg:text-left">VİZYONUMUZ | MİSYONUMUZ</h2>
+          <h2 class="my-4 text-center lg:text-left text-[#232741]">VİZYONUMUZ | MİSYONUMUZ</h2>
           <p
             class="text-sm md:text-base font-thin text-gray-500 md:leading-loose font-ubuntu lg:text-justify text-center">
             UTYAP ekibi olarak genç neslin; sürdürülebilirliği özümseyip teknoloji ve girişimcilikle birleştirerek
@@ -18,9 +18,9 @@
             yetişmesini;
             ülke ekonomisini sürdürülebilir fikirlerle güçlendirmelerini hedeflemekteyiz.
           </p>
-          <div class="flex flex-col md:flex-row flex-wrap gap-y-5 md:gap-y-10 my-10 text-sm">
+          <div class="flex flex-col md:flex-row flex-wrap gap-y-5 md:gap-y-10 my-10 text-sm text-[#232741]">
             <div class="md:basis-1/2 flex flex-row justify-center md:justify-start items-center gap-x-5 md:pr-5">
-              <FaceSmileIcon class="h-8 md:h-10 w-8 md:w-10 flex-none text-blue-900" />
+              <FaceSmileIcon class="h-8 md:h-10 w-8 md:w-10 flex-none text-[#232741]" />
               <div class="flex flex-col gap-y-3">
                 <div class="text-3xl"><strong>200</strong></div>
                 <div class="w-[200px] md:w-full">
@@ -29,7 +29,7 @@
               </div>
             </div>
             <div class="md:basis-1/2 flex flex-row justify-center md:justify-start items-center gap-x-5 md:pr-5">
-              <BriefcaseIcon class="h-8 md:h-10 w-8 md:w-10 flex-none text-blue-900" />
+              <BriefcaseIcon class="h-8 md:h-10 w-8 md:w-10 flex-none text-[#232741]" />
               <div class="flex flex-col gap-y-3">
                 <div class="text-3xl"><strong>100</strong></div>
                 <div class="w-[200px] md:w-full">
@@ -38,7 +38,7 @@
               </div>
             </div>
             <div class="md:basis-1/2 flex flex-row justify-center md:justify-start items-center gap-x-5 md:pr-5">
-              <ClockIcon class="h-8 md:h-10 w-8 md:w-10 flex-none text-blue-900" />
+              <ClockIcon class="h-8 md:h-10 w-8 md:w-10 flex-none text-[#232741]" />
               <div class="flex flex-col gap-y-3">
                 <div class="text-3xl"><strong>25</strong></div>
                 <div class="w-[200px] md:w-full">
@@ -47,7 +47,7 @@
               </div>
             </div>
             <div class="md:basis-1/2 flex flex-row justify-center md:justify-start items-center gap-x-5 md:pr-5">
-              <PresentationChartBarIcon class="h-8 md:h-10 w-8 md:w-10 flex-none text-blue-900" />
+              <PresentationChartBarIcon class="h-8 md:h-10 w-8 md:w-10 flex-none text-[#232741]" />
               <div class="flex flex-col gap-y-3">
                 <div class="text-3xl"><strong>50</strong></div>
                 <div class="w-[200px] md:w-full">

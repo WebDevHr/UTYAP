@@ -3,7 +3,7 @@
     <nav class="mx-auto flex max-w-7xl items-center justify-between py-4" aria-label="Global" v-if="!mobileMenuOpen">
       <div class="flex lg:flex-1 trigger">
         <router-link class="-m-1.5 p-1.5" :to="{ name: 'index' }"
-          :class="{ 'animate__animated animate__hinge animate__slower': repeat1, 'animate__animated animate__bounceInDown': repeat3, }">
+          :class="{ 'animate__animated animate__hinge animate__slower': repeat1, 'animate__animated animate__bounceInDown animate__2s': repeat3, }">
           <span class="sr-only">UTYAP</span>
           <div class="flex items-center">
             <img class="h-10 md:h-12 w-auto" src="~/assets/pictures/utyap-logo.png" alt="UTYAP" />
@@ -76,17 +76,19 @@
       </PopoverGroup>
 
 
-      <nuxt-link
-        to="https://docs.google.com/forms/d/e/1FAIpQLSczu_qUgivJdWK_xurMqQBwWctV5oR_bPEzm7tPUCKXGH1OVQ/viewform"
-        class="hidden lg:flex lg:flex-1 lg:justify-end" :class="{ 'animate__animated animate__flash': repeat2 }">
-        <div
-          class="navFollow navLink text-white font-normal py-2 px-4 rounded-full inline-block border border-white hover:border-transparent hover:shadow-[0px_2px_10px_rgb(0,0,0,0.5)]">
-          <div class="tracking-wide flex justify-center items-center gap-x-1 italic">
-            Bize Katılın
-            <ArrowRightIcon class="h-5 w-5" aria-hidden="true" />
+      <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+        <nuxt-link
+          to="https://docs.google.com/forms/d/e/1FAIpQLSczu_qUgivJdWK_xurMqQBwWctV5oR_bPEzm7tPUCKXGH1OVQ/viewform"
+          :class="{ 'animate__animated animate__flash': repeat2 }">
+          <div
+            class="navFollow navLink text-white font-normal py-2 px-4 rounded-full inline-block border border-white hover:border-transparent hover:shadow-[0px_2px_10px_rgb(0,0,0,0.5)]">
+            <div class="tracking-wide flex justify-center items-center gap-x-1 italic">
+              Bize Katılın
+              <ArrowRightIcon class="h-5 w-5" aria-hidden="true" />
+            </div>
           </div>
-        </div>
-      </nuxt-link>
+        </nuxt-link>
+      </div>
     </nav>
 
     <Dialog as="div" class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
