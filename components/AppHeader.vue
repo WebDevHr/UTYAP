@@ -3,7 +3,7 @@
     <nav class="mx-auto flex max-w-7xl items-center justify-between py-4" aria-label="Global" v-if="!mobileMenuOpen">
       <div class="flex lg:flex-1 trigger">
         <router-link class="-m-1.5 p-1.5" :to="{ name: 'index' }"
-          :class="{ 'animate__animated animate__hinge': repeat1, 'animate__animated animate__bounceInDown': repeat3, }">
+          :class="{ 'animate__animated animate__hinge animate__slower': repeat1, 'animate__animated animate__bounceInDown': repeat3, }">
           <span class="sr-only">UTYAP</span>
           <div class="flex items-center">
             <img class="h-10 md:h-12 w-auto" src="~/assets/pictures/utyap-logo.png" alt="UTYAP" />
@@ -252,7 +252,7 @@ onMounted(() => {
     repeat2.value = true;
     setTimeout(() => {
       repeat2.value = false
-    }, 2000);
+    }, 3000);
   }, 5000)
 
   setTimeout(() => {
@@ -261,7 +261,7 @@ onMounted(() => {
   setTimeout(() => {
     repeat1.value = false;
     repeat3.value = true;
-  }, 3000)
+  }, 4000)
 })
 
 async function accept(close) {
