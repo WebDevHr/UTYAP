@@ -2,11 +2,13 @@
   <header ref="headerNav" class="bg-transparent fixed w-full pt-4 navHeader px-6 2xl:px-0 z-[1000]">
     <nav class="mx-auto flex max-w-7xl items-center justify-between py-4" aria-label="Global" v-if="!mobileMenuOpen">
       <div class="flex lg:flex-1 trigger">
-        <router-link class="-m-1.5 p-1.5" :to="{ name: 'index' }">
+        <router-link class="-m-1.5 p-1.5" :to="{ name: 'index' }"
+          :class="{ 'animate__animated animate__hinge': repeat1, 'animate__animated animate__bounceInDown': repeat3, }">
           <span class="sr-only">UTYAP</span>
-          <img class="h-10 md:h-12 w-auto"
-            :class="{ 'animate__animated animate__hinge': repeat1, 'animate__animated animate__bounceInDown': repeat3, }"
-            src="~/assets/pictures/utyap-logo.png" alt="UTYAP" /></router-link>
+          <div class="flex items-center">
+            <img class="h-10 md:h-12 w-auto" src="~/assets/pictures/utyap-logo.png" alt="UTYAP" />
+          </div>
+        </router-link>
       </div>
       <div class="flex lg:hidden">
         <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
@@ -223,12 +225,15 @@ const repeat2 = ref(false)
 const repeat3 = ref(false)
 const mobileMenuOpen = ref(false)
 
+let scrollPosition
 
 onMounted(() => {
+  scrollPosition = document.documentElement.scrollTop;
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: ".navHeader",
-      start: 'center top',
+      toggleActions: "restart pause reverse pause",
+      start: "center top",
       scrub: 1,
     },
   });

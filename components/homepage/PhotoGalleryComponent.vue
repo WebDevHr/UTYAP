@@ -2,8 +2,8 @@
   <div class="text-white relative font-ubuntu">
     <NuxtParticles id="tsparticles3" :options="options2" />
 
-    <div class="z-[100] bg-gradient-to-b to-transparent from-[#17163e] ">
-      <div class="bg-gradient-to-t to-transparent from-[#17163e] sm:py-10 py-5">
+    <div class="z-[100] bg-gradient-to-b to-transparent from-black ">
+      <div class="bg-gradient-to-t to-transparent from-black sm:py-10 py-5">
         <div class="font-sans bg-transparent mx-auto max-w-7xl items-center justify-between py-4 px-6 lg:px-8">
           <div class="text-base lg:text-lg">
             <div class="mb-10 text-center lg:text-start">

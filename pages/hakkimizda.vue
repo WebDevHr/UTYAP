@@ -94,25 +94,25 @@
                     <h2 class="my-10">YÖNETİM KURULU</h2>
 
                     <div class="flex flex-wrap gap-x-3 gap-y-10 justify-evenly">
-                        <div v-for="n in 10" :key="n">
+                        <div v-for="(member, index) in  managementMembers " :key="index">
                             <div class="managerCard flex flex-col justify-center items-center w-[250px] p-3 rounded-3xl 
                                 hover:bg-black/40 transition-all duration-300 relative">
-                                <div
-                                    class="overflow-hidden rounded-full h-44 w-44 bg-cover bg-center bg-[url('/pictures/3.jpg')]">
+                                <div class="overflow-hidden rounded-full h-44 w-44">
+                                    <img class="h-44 w-44 object-cover" :src="member.picture" :alt="member.name">
                                 </div>
                                 <div class="relative flex flex-col justify-center items-center">
-                                    <h3 class="mt-3">Samed Kahraman</h3>
-                                    <h4 class="my-2 font-extralight text-gray-400">Başkan</h4>
+                                    <h3 class="mt-3 text-center">{{ member.name }}</h3>
+                                    <h4 class="my-2 font-extralight text-gray-400 text-center">{{ member.title }}</h4>
                                     <div
                                         class="links flex flex-row gap-x-1 absolute top-0 opacity-0 transition-all duration-500">
-                                        <a href="" class="p-1">
+                                        <a v-if="member.links.linkedIn" :href="member.links.linkedIn" class="p-1">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em"
                                                 viewBox="0 0 24 24">
                                                 <path fill="currentColor"
                                                     d="M18.72 4H5.37A1.31 1.31 0 0 0 4 5.25v13.38A1.41 1.41 0 0 0 5.37 20h13.35A1.34 1.34 0 0 0 20 18.63V5.25A1.23 1.23 0 0 0 18.72 4M9 17.34H6.67v-7.13H9ZM7.89 9.13A1.18 1.18 0 0 1 6.67 7.9a1.18 1.18 0 0 1 1.24-1.23A1.18 1.18 0 0 1 9.13 7.9a1.18 1.18 0 0 1-1.24 1.23m9.45 8.21H15v-3.9c0-.93-.33-1.57-1.16-1.57a1.25 1.25 0 0 0-1.17.84a1.43 1.43 0 0 0-.08.57v4.06h-2.3v-7.13h2.3v1a2.32 2.32 0 0 1 2.1-1.21c1.51 0 2.65 1 2.65 3.13Z" />
                                             </svg>
                                         </a>
-                                        <a href="" class="p-1">
+                                        <a v-if="member.links.instagram" :href="member.links.instagram" class="p-1">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em"
                                                 viewBox="0 0 24 24">
                                                 <path fill="currentColor"
@@ -122,7 +122,7 @@
                                                     clip-rule="evenodd" />
                                             </svg>
                                         </a>
-                                        <a href="" class="p-1">
+                                        <a v-if="member.links.gmail" :href="member.links.gmail" class="p-1">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em"
                                                 viewBox="0 0 24 24">
                                                 <path fill="currentColor"
@@ -151,15 +151,15 @@
                     <h2 class="my-10">Danışmanlar</h2>
 
                     <div class="flex flex-wrap gap-x-3 gap-y-10 justify-evenly">
-                        <div v-for="n in 3" :key="n">
+                        <div v-for=" n  in  3 " :key="n">
                             <div class="managerCard flex flex-col justify-center items-center w-[250px] p-3 rounded-3xl 
                                  transition-all duration-300 hover:bg-black/40">
                                 <div
                                     class="overflow-hidden rounded-full h-44 w-44 bg-cover bg-center bg-[url('/pictures/3.jpg')]">
                                 </div>
                                 <div class="relative flex flex-col justify-center items-center">
-                                    <h3 class="mt-3">Samed Kahraman</h3>
-                                    <h4 class="my-2 font-extralight text-gray-400">Pozisyon</h4>
+                                    <h3 class="mt-3 text-center">PROF. DR. HASAN HÜSEYİN SAYAN</h3>
+                                    <h4 class="my-2 font-extralight text-gray-300">AKADEMİK DANIŞMAN</h4>
                                     <div
                                         class="links flex flex-row gap-x-1 absolute top-0 opacity-0 transition-all duration-500">
                                         <a href="" class="p-1">
@@ -179,7 +179,7 @@
                                                     clip-rule="evenodd" />
                                             </svg>
                                         </a>
-                                        <a href="" class="p-1">
+                                        <a href="mailto:hsayan@gazi.edu.tr" class="p-1">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em"
                                                 viewBox="0 0 24 24">
                                                 <path fill="currentColor"
@@ -203,7 +203,7 @@
                     <h2 class="my-10">Takımlar</h2>
 
                     <div class="flex flex-wrap gap-x-3 gap-y-10 justify-evenly">
-                        <div v-for="n in 3" :key="n">
+                        <div v-for=" n  in  3 " :key="n">
                             <div class="relative">
                                 <div
                                     class="absolute top-0 left-0 w-full h-full -z-10 bg-cover bg-center bg-[url('/pictures/3.jpg')] rounded-3xl overflow-hidden">
@@ -246,10 +246,73 @@ await loadLightInteraction(tsParticles)
 await loadCanvasMaskPlugin(tsParticles);
 await loadPolygonMaskPlugin(tsParticles);
 
+const managementMembers = [
+    {
+        name: 'Samed Kahraman',
+        title: 'Başkan',
+        picture: '/pictures/samedkahraman.jpg',
+        links: {
+            gmail: 'gazi.utyap@gmail.com',
+            linkedIn: 'https://www.linkedin.com/in/samedkahraman/',
+            instagram: 'https://www.instagram.com/samedheroo/'
+        }
+    },
+    {
+        name: 'Ahmet Eren Özen',
+        title: 'Başkan Yardımcısı',
+        picture: '/pictures/ahmeterenozen.jpg',
+        links: {
+            gmail: '',
+            linkedIn: 'https://www.linkedin.com/in/aerozen/',
+            instagram: 'https://www.instagram.com/ahmet_eren_ozen/'
+        }
+    },
+    {
+        name: 'Hossein Razeghian',
+        title: 'Web Geliştirme Ekibi Başkanı',
+        picture: '/pictures/hosseinrazeghian.jpg',
+        links: {
+            gmail: 'mailto:razeqian@gmail.com',
+            linkedIn: 'https://www.linkedin.com/in/hossein-razeghian-958b0824b/',
+            instagram: 'https://www.instagram.com/hsyn_rzghn/'
+        }
+    },
+    {
+        name: 'Samed Kahraman',
+        title: 'Başkan',
+        picture: '/pictures/2.jpg',
+        links: {
+            gmail: '',
+            linkedIn: '',
+            instagram: ''
+        }
+    },
+    {
+        name: 'Samed Kahraman',
+        title: 'Başkan',
+        picture: '/pictures/3.jpg',
+        links: {
+            gmail: '',
+            linkedIn: '',
+            instagram: ''
+        }
+    },
+    {
+        name: 'Samed Kahraman',
+        title: 'Başkan',
+        picture: '/pictures/3.jpg',
+        links: {
+            gmail: '',
+            linkedIn: '',
+            instagram: ''
+        }
+    },
+]
+
 </script>
 
 <style scoped>
 .managerCard:hover .links {
-    @apply -translate-y-[50px] opacity-100;
+    @apply -translate-y-[55px] opacity-100;
 }
 </style>

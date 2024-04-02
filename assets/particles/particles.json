@@ -2,7 +2,7 @@
   "autoPlay": true,
   "background": {
     "color": {
-      "value": "#17163e"
+      "value": "#000"
     },
     "image": "",
     "position": "",
@@ -139,14 +139,14 @@
               "value": "3b5e98"
             },
             "stop": {
-              "value": "#17163e"
+              "value": "#000"
             }
           },
           "radius": 1000
         },
         "shadow": {
           "color": {
-            "value": "#17163e"
+            "value": "#000"
           },
           "length": 2000
         }
@@ -293,7 +293,7 @@
         "mode": "delete",
         "value": 0
       },
-      "value": 20
+      "value": 15
     },
     "opacity": {
       "value": 1,

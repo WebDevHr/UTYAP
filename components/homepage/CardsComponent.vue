@@ -1,5 +1,5 @@
 <template>
-  <div class="text-justify bg-gradient-to-b to-transparent from-[#17163e]">
+  <div class="text-justify bg-gradient-to-b to-black/20 from-black">
     <!-- Features Section -->
     <div class="font-sans mx-auto max-w-7xl items-center justify-between py-4 overflow-hidden">
 
@@ -154,7 +154,7 @@ const cartInfos = [
     title: 'EĞİTMEN, JÜRİ, KONUŞMACI & MENTOR OLARAK BEN DE VARIM!',
     subtitle: 'Sizi aramızda görmeyi çok isteriz.',
     link: {
-      source: '#',
+      source: 'https://www.instagram.com/gazi.utyap?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==',
       text: 'Geçmiş mentorlar ve süreç hakkında bilgi'
     },
     cards: [

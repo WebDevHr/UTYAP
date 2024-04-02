@@ -92,14 +92,14 @@ const slides = [
         <SwiperSlide v-for="(slide, idx) in slides" :key="idx" class="bg-white rounded-md py-2 md:py-4">
           <div class="card overflow-hidden mx-2 md:mx-4 rounded-md select-none">
             <div>
-              <div class="h-80 overflow-hidden rounded-t-md" data-swiper-parallax="-200">
-                <img class="h-80 object-cover w-full" :src="slide.src" :alt="idx" />
+              <div class="h-64 overflow-hidden rounded-t-md" data-swiper-parallax="-200">
+                <img class="h-64 object-cover w-full" :src="slide.src" :alt="idx" />
               </div>
               <div class="lg:px-12 px-4" data-swiper-parallax="-800" data-swiper-parallax-opacity="0.5">
                 <h3 class="mb-2 mt-6">
                   {{ slide.title }}
                 </h3>
-                <p class="text-sm font-light text-justify">
+                <p class="lg:text-sm text-xs font-light text-justify h-32">
                   {{ slide.description }}
                 </p>
               </div>
