@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="relative bg-gradient-to-t from-black to-transparent pb-20">
+    <div class="relative bg-gradient-to-t from-[#232741] to-transparent pb-20">
       <NuxtParticles id="tsparticles" :options="options" />
       <div
         class="font-sans bg-transparent mx-auto max-w-7xl items-center justify-between py-4 px-2 sm:px-6 lg:px-8 pb-10">

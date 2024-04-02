@@ -2,7 +2,7 @@
   <div class="text-white relative font-ubuntu">
     <NuxtParticles id="tsparticles3" :options="options2" />
 
-    <div class="z-[100] bg-gradient-to-b to-transparent from-black ">
+    <div class="z-[100] ">
       <div class="bg-gradient-to-t to-transparent from-black sm:py-10 py-5">
         <div class="font-sans bg-transparent mx-auto max-w-7xl items-center justify-between py-4 px-6 lg:px-8">
           <div class="text-base lg:text-lg">
@@ -40,7 +40,7 @@
 
 
 <script setup>
-import options2 from '~/assets/particles/particles-background.json'
+import options2 from '~/assets/particles/particles-nasa.json'
 import { tsParticles } from 'tsparticles-engine'
 import { loadFull } from 'tsparticles' // or whichever bundle you wish to use
 import { loadPolygonPath } from 'tsparticles-path-polygon'

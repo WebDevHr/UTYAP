@@ -1,5 +1,5 @@
 <template>
-  <div class="text-justify bg-gradient-to-b to-black/20 from-black">
+  <div class="text-justify bg-gradient-to-b to-transparent from-[#232741]">
     <!-- Features Section -->
     <div class="font-sans mx-auto max-w-7xl items-center justify-between py-4 overflow-hidden">
 
