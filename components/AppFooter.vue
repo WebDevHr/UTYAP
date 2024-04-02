@@ -11,7 +11,7 @@
                 <img class="w-20 h-20" src="/assets/pictures/utyap-logo.png" alt="utyap-logo">
               </nuxt-link>
             </div>
-            <div class=" font-extralight text-gray-400">
+            <div class=" font-extralight text-gray-400 hover:text-white focus:text-blue-700">
               Cumhuriyetimizin 100. yılında geleceğe açılan bir kapı:
               <br />
               Gazi Üniversitesi | Uzay Teknolojileri ve Yapay Zeka Topluluğu
@@ -56,35 +56,38 @@
           <div class="flex md:basis-2/3 md:pl-40 my-5">
             <div class="basis-1/2 flex flex-col">
               <h2 class="mb-10">LİNKLER</h2>
-              <router-link class="font-extralight text-gray-400 mb-4" :to="{ name: 'index' }">Anasayfa</router-link>
-              <router-link class="font-extralight text-gray-400 mb-4"
+              <router-link class="font-extralight text-gray-400 hover:text-white focus:text-blue-700 mb-4"
+                :to="{ name: 'index' }">Anasayfa</router-link>
+              <router-link class="font-extralight text-gray-400 hover:text-white focus:text-blue-700 mb-4"
                 :to="{ name: 'hakkimizda' }">Hakkımızda</router-link>
-              <nuxt-link class="font-extralight text-gray-400 mb-4"
+              <nuxt-link class="font-extralight text-gray-400 hover:text-white focus:text-blue-700 mb-4"
                 to="https://docs.google.com/forms/d/e/1FAIpQLSczu_qUgivJdWK_xurMqQBwWctV5oR_bPEzm7tPUCKXGH1OVQ/viewform">
                 Aramıza Katıl
               </nuxt-link>
-              <router-link class="font-extralight text-gray-400 mb-4"
+              <router-link class="font-extralight text-gray-400 hover:text-white focus:text-blue-700 mb-4"
                 :to="{ name: 'under_construction' }">Projeler</router-link>
-              <router-link class="font-extralight text-gray-400 mb-4"
+              <router-link class="font-extralight text-gray-400 hover:text-white focus:text-blue-700 mb-4"
                 :to="{ name: 'under_construction' }">Etkinlikler</router-link>
-              <router-link class="font-extralight text-gray-400 mb-4"
+              <router-link class="font-extralight text-gray-400 hover:text-white focus:text-blue-700 mb-4"
                 :to="{ name: 'under_construction' }">Kariyer</router-link>
-              <router-link class="font-extralight text-gray-400 mb-4"
+              <router-link class="font-extralight text-gray-400 hover:text-white focus:text-blue-700 mb-4"
                 :to="{ name: 'under_construction' }">Eğitim</router-link>
             </div>
             <div class="basis-1/2">
               <div class="md:w-[200px] flex flex-col gap-y-5">
                 <h2 class="mb-10">İLETİŞİM</h2>
-                <div class="font-extralight text-gray-400">
+                <div class="font-extralight text-gray-400 hover:text-white focus:text-blue-700">
                   Design and modified by
                   <nuxt-link class="text-blue-400 hover:text-blue-700" to="https://github.com/WebDevHr">
                     UTYAP Web Team
                   </nuxt-link>
                 </div>
-                <nuxt-link class="font-extralight text-gray-400" to="mailto:gazi.utyap@gmail.com?subject=Website:">
+                <nuxt-link class="font-extralight text-gray-400 hover:text-white focus:text-blue-700"
+                  to="mailto:gazi.utyap@gmail.com?subject=Website:">
                   gazi.utyap@gmail.com
                 </nuxt-link>
-                <nuxt-link class="font-extralight text-gray-400" to="mailto:info@example.com?subject=Website:">
+                <nuxt-link class="font-extralight text-gray-400 hover:text-white focus:text-blue-700"
+                  to="mailto:info@example.com?subject=Website:">
                   info@utyap.com
                 </nuxt-link>
               </div>
