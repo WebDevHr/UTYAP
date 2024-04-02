@@ -14,9 +14,11 @@
 
             <div class="shadow-lg border rounded-3xl overflow-hidden bg-gray-100 relative">
               <div class="applyButton absolute -top-[12px] justify-center w-[296px] sm:w-[350px] hidden">
-                <button
-                  class=" px-5 py-3 my-2 border-2 border-gray-700 hover:border-white rounded-3xl bg-white/60 hover:bg-white font-semibold duration-300 text-gray-500 hover:text-gray-900">Hemen
-                  başvur</button>
+                <nuxt-link
+                  to="https://docs.google.com/forms/d/e/1FAIpQLSczu_qUgivJdWK_xurMqQBwWctV5oR_bPEzm7tPUCKXGH1OVQ/viewform"
+                  class=" px-5 py-3 my-2 border-2 border-gray-700 hover:border-white rounded-3xl bg-white/60 hover:bg-white font-semibold duration-300 text-gray-500 hover:text-gray-900">
+                  Hemen başvur
+                </nuxt-link>
               </div>
               <img :src="cartInfo.imgSrc" :alt="cartInfo.imgSrc" class="h-[215px] w-full object-cover">
               <div class="cardBody p-5 bg-gray-100 h-[300px]">

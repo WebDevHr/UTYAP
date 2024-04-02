@@ -4,7 +4,7 @@
         <div class="font-ubuntu text-white">
             <div class="mx-auto flex max-w-7xl h-[700px] items-center justify-center px-6 lg:px-8">
                 <div class="flex justify-center w-full h-[200px] items-center select-none flex-col-reverse gap-y-10">
-                    <h2 class="animate__animated animate__heartBeat animate__infinite animate__slower">
+                    <h2 class="animate__animated animate__jello animate__infinite animate__slower">
                         Çok Yakında
                     </h2>
                     <WrenchScrewdriverIcon

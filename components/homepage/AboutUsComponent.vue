@@ -10,7 +10,7 @@
 					2022 itibariyle kendini tamamen yenileyen Utyap birçok toplulukla anlaşmalar yaparak yeni hedefler,
 					yeni hayaller yolunda ilerlemeye başlamıştır.
 				</p>
-				<router-link to="#" class="bg-white/30 hover:bg-white hover:text-gray-800 text-white font-bold 
+				<router-link :to="{ name: 'hakkimizda' }" class="bg-white/30 hover:bg-white hover:text-gray-800 text-white font-bold 
 						py-2 px-4 mt-6 rounded-full inline-block border transition-all duration-500 lg:text-base md:text-sm text-xs">
 					DAHA FAZLA BİLGİ
 				</router-link>

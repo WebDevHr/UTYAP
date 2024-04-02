@@ -123,12 +123,13 @@
                   </DisclosurePanel>
                 </Disclosure>
                 <router-link v-else :to="{ name: navItem.link }"
-                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">{{
-      navItem.name }}</router-link>
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                  {{ navItem.name }}
+                </router-link>
               </div>
             </div>
             <div class="py-6">
-              <a href="#"
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSczu_qUgivJdWK_xurMqQBwWctV5oR_bPEzm7tPUCKXGH1OVQ/viewform"
                 class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Bize
                 Katılın</a>
             </div>

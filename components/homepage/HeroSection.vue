@@ -6,10 +6,10 @@
           YAPAY ZEKA TOPLULUĞU</h1>
       </div>
       <p class="sm:text-lg text-sm font-light font-ubuntu">Gazi Üniversitesinin, Tek Uzay Teknolojileri Topluluğu</p>
-      <router-link to="#"
+      <router-link :to="{ name: 'hakkimizda' }"
         class="bg-white/30 hover:bg-white hover:text-gray-800 text-white py-2 px-4 mt-6 rounded-full inline-block border transition-all duration-500">
         <div class="flex justify-center items-center gap-x-1 text-xs sm:text-sm md:text-base font-normal">
-          Ekiplerimiz hakkında bilgi edinin
+          Topluluğumuz hakkında bilgi edinin
           <ArrowRightIcon class="h-5 w-5" aria-hidden="true" />
         </div>
       </router-link>
