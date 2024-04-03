@@ -1,28 +1,3 @@
-<script setup>
-import SwiperControls from '~/components/homepage/SwiperControls.vue'
-
-const slides = [
-  {
-    title: 'KEÇİÖREN TEKNOMER PARTNERİMİZ!',
-    description: 'UTYAP olarak Keçiören TEKNOMER ile ortak bir vizyon doğrultusunda güçlerimizi birleştirdiğimizi duyurmaktan mutluluk duyuyoruz. Bu partnerliğin Ankara\'daki teknoloji ve inovasyon ekosisteminin gelişmesine katkıda bulunacağına inanıyoruz.Partnerliğimiz kapsamında ortak projeler geliştirecek, çokça etkinlik organize edecek ve yeni başarılara imza atacağız.',
-    src: '/pictures/news1.jpeg',
-    tag: '#haber'
-  },
-  {
-    title: 'KEÇİÖREN TEKNOMER PARTNERİMİZ!',
-    description: 'UTYAP olarak çok yoğun ve verimli bir dönem geçirdik. Teknik geziler, firma işbirlikleri, eğitimler ve speak uplar gibi pek çok etkinlik düzenledik. Bu etkinlikler sayesinde hem sektördeki gelişmeleri yakından takip ettik hem de kendimizi kişisel ve mesleki olarak geliştirdik. İşte size bu etkinliklerden bazı kareler. Siz de UTYAP ailesine katılmak ve bu fırsatlardan yararlanmak isterseniz bize ulaşın. ',
-    src: '/pictures/utyap4.jpeg',
-    tag: '#rapor'
-  },
-  {
-    title: 'Aramıza katılın‼️',
-    description: 'Teknik birikime sahip ekiplerimiz gelecek yılın UTYAP liderlerini yetiştiriyor! Katılımın zorunlu olmadığı UTYAP Teknoloji Okuluna başvuru yapmak tek tık uzağınızda. UTYAP Teknoloji Okuluna kayıtlı üyelere özel Proje Odaklı Arduino, Eagle, Python ile Görüntü İşleme, Yapay Zeka, CAD ve PCB Tasarım eğitimlerine katılmak ve gelecek sene takımlarımızı emanet edeceğimiz USTAlardan olmak istiyorsan başvurunu bekliyoruz.',
-    src: '/pictures/news3.jpeg',
-    tag: '#etkinlik'
-  },
-]
-</script>
-
 <template>
   <div>
     <h2 class="text-white flex justify-center items-center pb-10">
@@ -116,6 +91,31 @@ const slides = [
     </div>
   </div>
 </template>
+
+<script setup>
+import SwiperControls from '~/components/homepage/SwiperControls.vue'
+
+const slides = [
+  {
+    title: 'KEÇİÖREN TEKNOMER PARTNERİMİZ!',
+    description: 'UTYAP olarak Keçiören TEKNOMER ile ortak bir vizyon doğrultusunda güçlerimizi birleştirdiğimizi duyurmaktan mutluluk duyuyoruz. Bu partnerliğin Ankara\'daki teknoloji ve inovasyon ekosisteminin gelişmesine katkıda bulunacağına inanıyoruz.Partnerliğimiz kapsamında ortak projeler geliştirecek, çokça etkinlik organize edecek ve yeni başarılara imza atacağız.',
+    src: '/pictures/news1.jpeg',
+    tag: '#haber'
+  },
+  {
+    title: 'Etkİnlİkler ve Deneyİmler!',
+    description: 'UTYAP olarak çok yoğun ve verimli bir dönem geçirdik. Teknik geziler, firma işbirlikleri, eğitimler ve speak uplar gibi pek çok etkinlik düzenledik. Bu etkinlikler sayesinde hem sektördeki gelişmeleri yakından takip ettik hem de kendimizi kişisel ve mesleki olarak geliştirdik. İşte size bu etkinliklerden bazı kareler. Siz de UTYAP ailesine katılmak ve bu fırsatlardan yararlanmak isterseniz bize ulaşın. ',
+    src: '/pictures/utyap4.jpeg',
+    tag: '#rapor'
+  },
+  {
+    title: 'Aramıza katılın‼️',
+    description: 'Teknik birikime sahip ekiplerimiz gelecek yılın UTYAP liderlerini yetiştiriyor! Katılımın zorunlu olmadığı UTYAP Teknoloji Okuluna başvuru yapmak tek tık uzağınızda. UTYAP Teknoloji Okuluna kayıtlı üyelere özel Proje Odaklı Arduino, Eagle, Python ile Görüntü İşleme, Yapay Zeka, CAD ve PCB Tasarım eğitimlerine katılmak ve gelecek sene takımlarımızı emanet edeceğimiz USTAlardan olmak istiyorsan başvurunu bekliyoruz.',
+    src: '/pictures/news3.jpeg',
+    tag: '#etkinlik'
+  },
+]
+</script>
 
 <style scoped>
 .swiper-slide {
