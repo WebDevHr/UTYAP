@@ -1,7 +1,7 @@
 <template>
 	<div class="text-white relative font-ubuntu">
 		<NuxtParticles id="tsparticles2" :options="options3"></NuxtParticles>
-		<div class="bg-black/10 pt-16 pb-8 select-none">
+		<div class="pt-16 pb-8 select-none">
 			<div
 				class="font-sans bg-transparent mx-auto max-w-7xl items-center justify-between py-4 px-6 lg:px-8 mb-10 text-center">
 				<h2 class="mb-4">UTYAP HAKKINDA</h2>

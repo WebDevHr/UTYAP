@@ -1,8 +1,8 @@
 <template>
   <!-- <div class="absolute w-full h-full bg-black/40 z-[-1]"></div> -->
   <div class="bg-[url('/pictures/contactus.jpg')] bg-center bg-fixed bg-cover">
-    <div class="bg-gradient-to-b to-transparent from-[#232741] text-white">
-      <div class="relative bg-gradient-to-t to-transparent from-[#232741]">
+    <div class="bg-gradient-to-b to-transparent from-[#06021f] text-white">
+      <div class="relative bg-gradient-to-t to-transparent from-[#06021f]">
         <div
           class="font-sans mx-auto max-w-7xl items-center justify-between px-6 lg:px-8 z-[100] py-[20px] md:py-[100px]">
           <h2 class="mb-5 mt-20">İletİşİm</h2>
@@ -12,7 +12,7 @@
               <div class="mb-3">
                 <div class="flex gap-x-5 items-center">
                   <MapPinIcon
-                    class="h-10 md:h-12 w-10 md:w-12 lg:w-14 lg:h-14 flex-none bg-[#232741] border p-3 rounded-full text-white" />
+                    class="h-10 md:h-12 w-10 md:w-12 lg:w-14 lg:h-14 flex-none bg-[#06021f06021f] border p-3 rounded-full text-white" />
                   <div class="flex flex-col gap-y-1">
                     <h3>KONUM:</h3>
                     <div>Ankara, Türkiye</div>
@@ -22,7 +22,7 @@
               <div class="mb-3">
                 <div class="flex gap-x-5 items-center">
                   <MapPinIcon
-                    class="h-10 md:h-12 w-10 md:w-12 lg:w-14 lg:h-14 flex-none bg-[#232741] border p-3 rounded-full text-white" />
+                    class="h-10 md:h-12 w-10 md:w-12 lg:w-14 lg:h-14 flex-none bg-[#06021f06021f] border p-3 rounded-full text-white" />
                   <div class="flex flex-col gap-y-1">
                     <h3>E-Posta:</h3>
                     <div>info@utyap.com</div>
@@ -32,7 +32,7 @@
               <div class="mb-3">
                 <div class="flex gap-x-5 items-center">
                   <MapPinIcon
-                    class="h-10 md:h-12 w-10 md:w-12 lg:w-14 lg:h-14 flex-none bg-[#232741] border p-3 rounded-full text-white" />
+                    class="h-10 md:h-12 w-10 md:w-12 lg:w-14 lg:h-14 flex-none bg-[#06021f06021f] border p-3 rounded-full text-white" />
                   <div class="flex flex-col gap-y-1">
                     <h3>SOSYAL MEDYA:</h3>
                     <div>@gazi.utyap</div>
@@ -46,26 +46,26 @@
                   <div class="flex md:flex-row flex-col gap-x-5 gap-y-5">
                     <div class="flex-grow">
                       <input type="text" id="name" v-model="formData.name" placeholder="Ad Soyad"
-                        class="w-full border border-white text-white bg-[#232741] rounded-md px-3 py-2 focus:outline-none focus:border-black"
+                        class="w-full border border-white text-white bg-[#06021f] rounded-md px-3 py-2 focus:outline-none focus:border-black"
                         required />
                     </div>
 
                     <div class="flex-grow">
                       <input type="email" id="email" v-model="formData.email" placeholder="E-posta Adresi"
-                        class="w-full border border-white text-white bg-[#232741] rounded-md px-3 py-2 focus:outline-none focus:border-black"
+                        class="w-full border border-white text-white bg-[#06021f] rounded-md px-3 py-2 focus:outline-none focus:border-black"
                         required />
                     </div>
                   </div>
 
                   <div class="">
                     <input type="text" id="subject" v-model="formData.subject" placeholder="Konu"
-                      class="w-full border border-white text-white bg-[#232741] rounded-md px-3 py-2 focus:outline-none focus:border-black"
+                      class="w-full border border-white text-white bg-[#06021f] rounded-md px-3 py-2 focus:outline-none focus:border-black"
                       required />
                   </div>
 
                   <div class="">
                     <textarea id="message" v-model="formData.message" placeholder="Mesaj"
-                      class="resize-none w-full border border-white text-white bg-[#232741] rounded-md px-3 py-2 focus:outline-none focus:border-black"
+                      class="resize-none w-full border border-white text-white bg-[#06021f] rounded-md px-3 py-2 focus:outline-none focus:border-black"
                       rows="4" required></textarea>
                   </div>
 
