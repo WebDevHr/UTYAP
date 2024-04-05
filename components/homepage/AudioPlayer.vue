@@ -1,5 +1,5 @@
 <template>
-  <div
+  <div ref="audioPlayerContainer"
     class="fixed bottom-5 -right-[315px] z-[1001] flex flex-row items-center bg-gray-100 px-3 pb-1 gap-x-3 rounded-2xl toggleSlide"
     v-if="audioPlyerIsOpen">
     <div class="flex flex-col gap-y-2 py-2">
@@ -21,7 +21,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 import {
   XMarkIcon,
   ChevronDoubleLeftIcon
@@ -38,16 +38,45 @@ const props = defineProps({
   }
 })
 
-
+const audioPlayerContainer = ref(null);
 const { $gsap: gsap, $Draggable: Draggable } = useNuxtApp(); //gsap to work
 const audioPlayer = ref(null); // Ref for the audio element
 const audioPlyerIsOpen = ref(true)
 const audioPlayerToggle = ref(false)
 
+
+onMounted(() => {
+  playAudio();
+
+  // Click outside logic
+  const handleClickOutside = (event) => {
+    if (audioPlyerIsOpen.value && audioPlayerContainer.value && !audioPlayerContainer.value.contains(event.target)) {
+      audioPlayerSlideClose();
+    }
+  };
+
+  document.addEventListener('mousedown', handleClickOutside);
+
+  // Cleanup (remove listener when component unmounts)
+  onUnmounted(() => {
+    document.removeEventListener('mousedown', handleClickOutside);
+  });
+});
+
+const audioPlayerSlideClose = () => {
+  if (audioPlayerToggle.value) {
+    gsap.to(".toggleSlide", {
+      right: "-315px",
+      duration: 0.6
+    })
+    audioPlayerToggle.value = !audioPlayerToggle.value
+  }
+}
+
 const audioPlayerSlideToggle = () => {
   if (!audioPlayerToggle.value) {
     gsap.to(".toggleSlide", {
-      right: 0,
+      right: "10px",
       duration: 0.6
     })
   }
@@ -65,8 +94,4 @@ function playAudio() {
     audioPlayer.value.play();
   }
 }
-
-onMounted(() => {
-  playAudio();
-}) 
 </script>
