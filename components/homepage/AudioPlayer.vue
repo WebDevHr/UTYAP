@@ -11,8 +11,9 @@
           :class="[audioPlayerToggle ? 'rotate-180 transition-all duration-500' : 'transition-all duration-500']" />
       </button>
     </div>
-    <div class="overflow-hidden flex flex-col justify-center items-center ">
-      <audio class="" ref="audioPlayer" controls :src="audioSrc.src" :autoplay="autoplay" :muted="isMuted">
+    <div class="overflow-hidden flex flex-col justify-center items-center">
+      <audio id="audioPlayer" class="" ref="audioPlayer" controls :src="audioSrc.src" :autoplay="autoplay"
+        :muted="isMuted">
         Your browser does not support the audio element.
       </audio>
 
@@ -44,8 +45,7 @@ const { $gsap: gsap, $Draggable: Draggable } = useNuxtApp(); //gsap to work
 const audioPlayer = ref(null); // Ref for the audio element
 const audioPlyerIsOpen = ref(true)
 const audioPlayerToggle = ref(false)
-const isMuted = ref()
-
+let isMuted = ref(false)
 
 
 onMounted(() => {
@@ -65,17 +65,22 @@ onMounted(() => {
     document.removeEventListener('mousedown', handleClickOutside);
   });
 
-  if (!!localStorage.getItem('isMuted')) {
-    localStorage.setItem('isMuted', true)
-    isMuted.value = true
-  } else {
-    isMuted.value = localStorage.getItem('isMuted')
-  }
+  setTimeout(() => {
+    if (!localStorage.getItem('isMuted') && localStorage.getItem('isMuted') !== false) {
+      localStorage.setItem('isMuted', false)
+      isMuted.value = false
+    } else {
+      isMuted.value = (localStorage.getItem('isMuted') === 'true')
+    }
+    setTimeout(() => {
+      audioPlayer.value.addEventListener('volumechange', (event) => {
+        isMuted.value = event.target.muted;
+        localStorage.setItem('isMuted', isMuted.value);
+      }, false);
+    }, 500)
+  }, 500)
 });
 
-watch(isMuted, (newMutedState) => {
-  localStorage.setItem('isMuted', newMutedState);
-});
 
 const audioPlayerSlideClose = () => {
   if (audioPlayerToggle.value) {
