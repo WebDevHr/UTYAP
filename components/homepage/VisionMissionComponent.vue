@@ -1,8 +1,7 @@
 <template>
   <div class="bg-[url('/pictures/vision-mission.jpg')] bg-fixed bg-cover bg-center">
-    <div class="bg-gradient-to-t from-transparent to-[#06021f]">
-      <div
-        class="font-bebasneue tracking-wider select-none overflow-hidden bg-gradient-to-t to-transparent from-[#06021f]">
+    <div class="background-gradient-navyblue-to-bottom">
+      <div class="font-bebasneue tracking-wider select-none overflow-hidden background-gradient-navyblue-to-top">
         <div class="font-sans mx-auto max-w-7xl ">
           <div class="py-4 px-6 lg:px-8 my-10 flex flex-col xl:flex-row gap-x-10 xl:h-[550px] mb-[100px] items-center">
             <div

@@ -56,4 +56,12 @@ html,
 body {
   scroll-behavior: smooth;
 }
+
+.background-gradient-navyblue-to-top {
+  background: linear-gradient(180deg, rgba(6, 2, 31, 1) 0%, rgba(6, 2, 31, 0) 70%);
+}
+
+.background-gradient-navyblue-to-bottom {
+  background: linear-gradient(0deg, rgba(6, 2, 31, 1) 0%, rgba(6, 2, 31, 0) 70%);
+}
 </style>

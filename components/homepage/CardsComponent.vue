@@ -1,7 +1,7 @@
 <template>
   <div class="bg-[url('/pictures/cards.jpg')] bg-fixed bg-cover bg-center">
-    <div class="bg-gradient-to-b from-transparent to-[#06021f]">
-      <div class="text-justify bg-gradient-to-b to-transparent from-[#06021f]">
+    <div class="background-gradient-navyblue-to-bottom ">
+      <div class="background-gradient-navyblue-to-top">
         <!-- Features Section -->
         <div class="font-sans mx-auto max-w-7xl items-center justify-between py-4 overflow-hidden">
 
@@ -198,3 +198,6 @@ const cartInfos = [
   }
 ]
 </script>
+
+
+<style scoped></style>

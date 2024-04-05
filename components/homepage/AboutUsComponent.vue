@@ -7,8 +7,8 @@
 			<div
 				class="font-sans bg-transparent mx-auto max-w-7xl items-center justify-between py-4 px-6 lg:px-8 mb-10 text-center">
 				<h2 class="mb-4">UTYAP HAKKINDA</h2>
-				<p class="text-base lg:text-lg mb-8 lg:mx-20 md:mx-10 mx-3 text-center font-thin">
-					Utyap 2019'da Gazi Üniversitesi Teknoloji Fakültesinde gönüllü öğrenciler tarafından
+				<p class="text-sm md:text-base font-thin text-white md:leading-loose font-ubuntu text-center">
+					UTYAP 2019'da Gazi Üniversitesi Teknoloji Fakültesinde gönüllü öğrenciler tarafından
 					kurulmuştur.
 					2022 itibariyle kendini tamamen yenileyen Utyap birçok toplulukla anlaşmalar yaparak yeni
 					hedefler,

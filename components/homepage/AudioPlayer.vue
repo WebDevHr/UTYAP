@@ -77,8 +77,8 @@ onMounted(() => {
         isMuted.value = event.target.muted;
         localStorage.setItem('isMuted', isMuted.value);
       }, false);
-    }, 500)
-  }, 500)
+    }, 100)
+  }, 200)
 });
 
 
