@@ -1,8 +1,8 @@
 <template>
   <!-- <div class="absolute w-full h-full bg-black/40 z-[-1]"></div> -->
   <div class="bg-[url('/pictures/contactus.jpg')] bg-center bg-fixed bg-cover">
-    <div class="bg-gradient-to-b to-transparent from-[#06021f] text-white">
-      <div class="relative bg-gradient-to-t to-transparent from-[#06021f]">
+    <div class="background-gradient-navyblue-to-bottom text-white">
+      <div class="relative background-gradient-navyblue-to-top">
         <div
           class="font-sans mx-auto max-w-7xl items-center justify-between px-6 lg:px-8 z-[100] py-[20px] md:py-[100px]">
           <h2 class="mb-5 mt-20">İletİşİm</h2>
