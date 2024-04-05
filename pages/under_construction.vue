@@ -1,6 +1,6 @@
 <template>
     <div class="bg-gradient-to-t from-[#06021f] to-transparent relative">
-        <NuxtParticles id="tsparticles" :options="options" />
+        <NuxtParticles id="tsparticles10" :options="options" />
         <div class="font-ubuntu text-white">
             <div class="mx-auto flex max-w-7xl h-[700px] items-center justify-center px-6 lg:px-8">
                 <div class="flex justify-center w-full h-[200px] items-center select-none flex-col-reverse gap-y-10">
