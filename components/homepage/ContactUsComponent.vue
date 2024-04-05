@@ -12,7 +12,7 @@
               <div class="mb-3">
                 <div class="flex gap-x-5 items-center">
                   <MapPinIcon
-                    class="h-10 md:h-12 w-10 md:w-12 lg:w-14 lg:h-14 flex-none bg-[#06021f06021f] border p-3 rounded-full text-white" />
+                    class="h-10 md:h-12 w-10 md:w-12 lg:w-14 lg:h-14 flex-none bg-[#06021f] border p-3 rounded-full text-white" />
                   <div class="flex flex-col gap-y-1">
                     <h3>KONUM:</h3>
                     <div>Ankara, Türkiye</div>
@@ -22,17 +22,17 @@
               <div class="mb-3">
                 <div class="flex gap-x-5 items-center">
                   <MapPinIcon
-                    class="h-10 md:h-12 w-10 md:w-12 lg:w-14 lg:h-14 flex-none bg-[#06021f06021f] border p-3 rounded-full text-white" />
+                    class="h-10 md:h-12 w-10 md:w-12 lg:w-14 lg:h-14 flex-none bg-[#06021f] border p-3 rounded-full text-white" />
                   <div class="flex flex-col gap-y-1">
                     <h3>E-Posta:</h3>
-                    <div>info@utyap.com</div>
+                    <div>gazi.utyap@gmail.com</div>
                   </div>
                 </div>
               </div>
               <div class="mb-3">
                 <div class="flex gap-x-5 items-center">
                   <MapPinIcon
-                    class="h-10 md:h-12 w-10 md:w-12 lg:w-14 lg:h-14 flex-none bg-[#06021f06021f] border p-3 rounded-full text-white" />
+                    class="h-10 md:h-12 w-10 md:w-12 lg:w-14 lg:h-14 flex-none bg-[#06021f] border p-3 rounded-full text-white" />
                   <div class="flex flex-col gap-y-1">
                     <h3>SOSYAL MEDYA:</h3>
                     <div>@gazi.utyap</div>
