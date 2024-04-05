@@ -33,11 +33,11 @@ h3 {
 }
 
 input::placeholder {
-  @apply text-gray-300
+  @apply text-gray-500
 }
 
 textarea::placeholder {
-  @apply text-gray-300
+  @apply text-gray-500
 }
 
 

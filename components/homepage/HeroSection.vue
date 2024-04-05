@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-transparent text-white pb-48 pt-48">
+  <header class="bg-transparent text-white pb-48 pt-64 sm:pt-48">
     <div class="container mx-auto text-center select-none">
       <div class="flex justify-center">
         <h1 class="sm:text-6xl text-3xl font-bold mb-4 sm:max-w-[500px] max-w-[250px] font-inter">UZAY TEKNOLOJİLERİ VE

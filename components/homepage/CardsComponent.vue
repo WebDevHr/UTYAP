@@ -7,16 +7,17 @@
         <h2 class="flex justify-center py-10 text-white">
           Detaylı Bilgi | Aramıza Katıl!
         </h2>
-        <div class="flex xl:gap-x-10 flex-col xl:flex-row mx-10 justify-center relative items-center">
+        <div class="flex xl:gap-x-10 flex-col xl:flex-row mx-3 md:mx-10 justify-center relative items-center">
           <div ref="cardToHover"
-            class="cardToHover card w-[296px] sm:w-[350px] rounded overflow-hidden py-10 text-center "
+            class="cardToHover card md:w-[350px] rounded overflow-hidden py-5 lg:py-10 text-center w-full"
             v-for="(cartInfo, index) in cartInfos" :key="index" @mouseenter="cardHover" @mouseleave="cardHoverLeave">
 
             <div class="shadow-lg border rounded-3xl overflow-hidden bg-gray-100 relative">
-              <div class="applyButton absolute -top-[12px] justify-center w-[296px] sm:w-[350px] hidden">
+              <div class="applyButton absolute -top-[12px] items-center  justify-center md:w-[350px] hidden w-full">
                 <nuxt-link
                   to="https://docs.google.com/forms/d/e/1FAIpQLSczu_qUgivJdWK_xurMqQBwWctV5oR_bPEzm7tPUCKXGH1OVQ/viewform"
-                  class=" px-5 py-3 my-2 border-2 border-gray-700 hover:border-white rounded-3xl bg-white/60 hover:bg-white font-semibold duration-300 text-gray-500 hover:text-gray-900">
+                  class=" px-5 py-3 my-2 border-2 border-gray-700 hover:border-white rounded-3xl bg-white/60 
+                  hover:bg-white font-semibold duration-300 text-gray-500 hover:text-gray-900">
                   Hemen başvur
                 </nuxt-link>
               </div>

@@ -4,7 +4,7 @@
       <NuxtParticles id="tsparticles" :options="options" />
       <div
         class="font-sans bg-transparent mx-auto max-w-7xl items-center justify-between py-4 px-2 sm:px-6 lg:px-8 pb-10">
-        <LazyHomepageAudioPlayer :audioSrc="interstellar" :autoplay="loaded" class="fixed bottom-5 right-0 z-[1001]" />
+        <LazyHomepageAudioPlayer :audioSrc="interstellar" :autoplay="loaded" />
         <HeroSection />
         <SliderComponent />
       </div>
@@ -42,11 +42,11 @@ await loadPolygonPath(tsParticles)
 await loadLightInteraction(tsParticles)
 await loadCanvasMaskPlugin(tsParticles);
 
-const interstellar = ref('')
+const interstellar = ref({ name: 'interstellar.Day-one', src: '/interstellar.Day-one(320).mp3' })
 const loaded = ref(false)
 
+
 onMounted(() => {
-  interstellar.value = '/interstellar.Day-one(320).mp3'
   loaded.value = true
 })
 

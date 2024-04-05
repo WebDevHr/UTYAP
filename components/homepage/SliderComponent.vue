@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2 class="text-white flex justify-center items-center pb-10">
+    <h2 class="text-white flex justify-center items-center pb-10 pt-20">
       Haberler
     </h2>
     <div class="overflow-hidden md:overflow-visible pb-10">
