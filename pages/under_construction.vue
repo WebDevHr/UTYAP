@@ -22,7 +22,7 @@ import {
 } from '@heroicons/vue/24/outline'
 
 import { ref, onMounted } from 'vue'
-import options from '~/assets/particles/particles-nasa.json'
+import options from '~/assets/particles/particles-nasa-under-construction.json'
 
 import { tsParticles } from 'tsparticles-engine'
 import { loadFull } from 'tsparticles' // or whichever bundle you wish to use
