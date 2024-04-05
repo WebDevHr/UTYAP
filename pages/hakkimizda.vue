@@ -197,7 +197,7 @@
 
             </div>
             <div class="relative pb-20 text-white">
-                <div class="absolute top-0 left-0 w-full h-full -z-10 bg-gradient-to-b from-white/20 to-black ">
+                <div class="absolute top-0 left-0 w-full h-full -z-10 bg-gradient-to-b from-white/20 to-[#06021f] ">
                 </div>
                 <div class="mx-auto flex flex-col max-w-7xl py-4 px-4">
                     <h2 class="my-10">Takımlar</h2>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- Footer -->
-    <div class="relative bg-black/40">
+    <div class="relative">
       <div class="container font-sans mx-auto max-w-7xl items-center justify-between py-4 px-6 lg:px-8 z-[100]">
         <NuxtParticles id="tsparticles5" :options="options" />
         <div class="text-white flex flex-col md:flex-row md:my-14 sm:my-10 my-5">
