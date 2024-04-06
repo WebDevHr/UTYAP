@@ -262,7 +262,7 @@ const managementMembers = [
         title: 'Başkan',
         picture: '/pictures/samedkahraman.jpg',
         links: {
-            gmail: 'gazi.utyap@gmail.com',
+            gmail: 'mailto:gazi.utyap@gmail.com',
             linkedIn: 'https://www.linkedin.com/in/samedkahraman/',
             instagram: 'https://www.instagram.com/samedheroo/'
         }
@@ -292,7 +292,7 @@ const managementMembers = [
         title: 'Keşif Araçları Ekibi Başkanı',
         picture: '',
         links: {
-            gmail: 'akburuserkan@gmail.com',
+            gmail: 'mailto:akburuserkan@gmail.com',
             linkedIn: '',
             instagram: ''
         }
@@ -302,7 +302,7 @@ const managementMembers = [
         title: 'Fırlatma Sistemleri Ekibi Başkanı',
         picture: '',
         links: {
-            gmail: 'musabaybars01@gmail.com',
+            gmail: 'mailto:musabaybars01@gmail.com',
             linkedIn: '',
             instagram: ''
         }
@@ -312,7 +312,7 @@ const managementMembers = [
         title: 'Sponsorluk Danışmanı',
         picture: '',
         links: {
-            gmail: 'f.kubraoztekin06@gmail.com',
+            gmail: 'mailto:f.kubraoztekin06@gmail.com',
             linkedIn: '',
             instagram: ''
         }
@@ -322,7 +322,7 @@ const managementMembers = [
         title: 'Özgün-İnovatİf Tasarım',
         picture: '',
         links: {
-            gmail: 'eygi.0604@gmail.com',
+            gmail: 'mailto:eygi.0604@gmail.com',
             linkedIn: '',
             instagram: ''
         }
@@ -332,7 +332,7 @@ const managementMembers = [
         title: 'Robotik Teknik Lideri',
         picture: '',
         links: {
-            gmail: 'kn.prlk.06@gmail.com ',
+            gmail: 'mailto:kn.prlk.06@gmail.com ',
             linkedIn: '',
             instagram: ''
         }
@@ -342,7 +342,7 @@ const managementMembers = [
         title: 'Savunma Sanayi Geliştirme ekibi Başkanı',
         picture: '',
         links: {
-            gmail: 'erengonenc08@gmail.com',
+            gmail: 'mailto:erengonenc08@gmail.com',
             linkedIn: '',
             instagram: ''
         }
@@ -352,7 +352,7 @@ const managementMembers = [
         title: 'Elektronik Tasarım Ekibi Başkanı',
         picture: '',
         links: {
-            gmail: 'yaseminburcak61@gmail.com',
+            gmail: 'mailto:yaseminburcak61@gmail.com',
             linkedIn: '',
             instagram: ''
         }
@@ -362,7 +362,7 @@ const managementMembers = [
         title: 'Gömülü Sistemler Ekibi Başkanı',
         picture: '',
         links: {
-            gmail: 'isikm2689@gmail.com ',
+            gmail: 'mailto:isikm2689@gmail.com ',
             linkedIn: '',
             instagram: ''
         }
@@ -372,7 +372,7 @@ const managementMembers = [
         title: 'Yapay Zeka Ekibi Başkanı',
         picture: '',
         links: {
-            gmail: 'mustafa.temur.turan@gmail.com',
+            gmail: 'mailto:mustafa.temur.turan@gmail.com',
             linkedIn: '',
             instagram: ''
         }
@@ -382,7 +382,7 @@ const managementMembers = [
         title: 'Uygulama Geliştirme Ekibi Başkanı',
         picture: '',
         links: {
-            gmail: 'erkamucan@gmail.com',
+            gmail: 'mailto:erkamucan@gmail.com',
             linkedIn: '',
             instagram: ''
         }
@@ -392,7 +392,7 @@ const managementMembers = [
         title: 'Sosyal Medya Sorumlusu',
         picture: '',
         links: {
-            gmail: 'enisealsancak@gmail.com',
+            gmail: 'mailto:enisealsancak@gmail.com',
             linkedIn: '',
             instagram: ''
         }
