@@ -125,7 +125,7 @@
                                                     clip-rule="evenodd" />
                                             </svg>
                                         </a>
-                                        <a v-if="member.links.gmail" :href="member.links.gmail" class="p-1">
+                                        <a v-if="member.links.gmail" :href="`mailto:${member.links.gmail}`" class="p-1">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em"
                                                 viewBox="0 0 24 24">
                                                 <path fill="currentColor"
@@ -188,7 +188,8 @@
                                                     clip-rule="evenodd" />
                                             </svg>
                                         </a>
-                                        <a v-if="consultant.links.gmail" :href="consultant.links.gmail" class="p-1">
+                                        <a v-if="consultant.links.gmail" :href="`mailto:${consultant.links.gmail}`"
+                                            class="p-1">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em"
                                                 viewBox="0 0 24 24">
                                                 <path fill="currentColor"
@@ -262,7 +263,7 @@ const managementMembers = [
         title: 'Başkan',
         picture: '/pictures/samedkahraman.jpg',
         links: {
-            gmail: 'mailto:gazi.utyap@gmail.com',
+            gmail: 'gazi.utyap@gmail.com',
             linkedIn: 'https://www.linkedin.com/in/samedkahraman/',
             instagram: 'https://www.instagram.com/samedheroo/'
         }
@@ -282,7 +283,7 @@ const managementMembers = [
         title: 'Web Geliştirme Ekibi Başkanı',
         picture: '/pictures/hosseinrazeghian.jpg',
         links: {
-            gmail: 'mailto:razeqian@gmail.com',
+            gmail: 'razeqian@gmail.com',
             linkedIn: 'https://www.linkedin.com/in/hossein-razeghian-958b0824b/',
             instagram: 'https://www.instagram.com/hsyn_rzghn/'
         }
@@ -292,7 +293,7 @@ const managementMembers = [
         title: 'Keşif Araçları Ekibi Başkanı',
         picture: '',
         links: {
-            gmail: 'mailto:akburuserkan@gmail.com',
+            gmail: 'akburuserkan@gmail.com',
             linkedIn: '',
             instagram: ''
         }
@@ -302,7 +303,7 @@ const managementMembers = [
         title: 'Fırlatma Sistemleri Ekibi Başkanı',
         picture: '',
         links: {
-            gmail: 'mailto:musabaybars01@gmail.com',
+            gmail: 'musabaybars01@gmail.com',
             linkedIn: '',
             instagram: ''
         }
@@ -312,7 +313,7 @@ const managementMembers = [
         title: 'Sponsorluk Danışmanı',
         picture: '',
         links: {
-            gmail: 'mailto:f.kubraoztekin06@gmail.com',
+            gmail: 'f.kubraoztekin06@gmail.com',
             linkedIn: '',
             instagram: ''
         }
@@ -322,7 +323,7 @@ const managementMembers = [
         title: 'Özgün-İnovatİf Tasarım',
         picture: '',
         links: {
-            gmail: 'mailto:eygi.0604@gmail.com',
+            gmail: 'eygi.0604@gmail.com',
             linkedIn: '',
             instagram: ''
         }
@@ -332,7 +333,7 @@ const managementMembers = [
         title: 'Robotik Teknik Lideri',
         picture: '',
         links: {
-            gmail: 'mailto:kn.prlk.06@gmail.com ',
+            gmail: 'kn.prlk.06@gmail.com ',
             linkedIn: '',
             instagram: ''
         }
@@ -342,7 +343,7 @@ const managementMembers = [
         title: 'Savunma Sanayi Geliştirme ekibi Başkanı',
         picture: '',
         links: {
-            gmail: 'mailto:erengonenc08@gmail.com',
+            gmail: 'erengonenc08@gmail.com',
             linkedIn: '',
             instagram: ''
         }
@@ -352,7 +353,7 @@ const managementMembers = [
         title: 'Elektronik Tasarım Ekibi Başkanı',
         picture: '',
         links: {
-            gmail: 'mailto:yaseminburcak61@gmail.com',
+            gmail: 'yaseminburcak61@gmail.com',
             linkedIn: '',
             instagram: ''
         }
@@ -362,7 +363,7 @@ const managementMembers = [
         title: 'Gömülü Sistemler Ekibi Başkanı',
         picture: '',
         links: {
-            gmail: 'mailto:isikm2689@gmail.com ',
+            gmail: 'isikm2689@gmail.com ',
             linkedIn: '',
             instagram: ''
         }
@@ -372,7 +373,7 @@ const managementMembers = [
         title: 'Yapay Zeka Ekibi Başkanı',
         picture: '',
         links: {
-            gmail: 'mailto:mustafa.temur.turan@gmail.com',
+            gmail: 'mustafa.temur.turan@gmail.com',
             linkedIn: '',
             instagram: ''
         }
@@ -382,7 +383,7 @@ const managementMembers = [
         title: 'Uygulama Geliştirme Ekibi Başkanı',
         picture: '',
         links: {
-            gmail: 'mailto:erkamucan@gmail.com',
+            gmail: 'erkamucan@gmail.com',
             linkedIn: '',
             instagram: ''
         }
@@ -392,7 +393,7 @@ const managementMembers = [
         title: 'Sosyal Medya Sorumlusu',
         picture: '',
         links: {
-            gmail: 'mailto:enisealsancak@gmail.com',
+            gmail: 'enisealsancak@gmail.com',
             linkedIn: '',
             instagram: ''
         }
