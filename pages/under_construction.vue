@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-gradient-to-t from-[#06021f] to-transparent relative">
+    <div class="background-gradient-navyblue-to-top relative">
         <NuxtParticles id="tsparticles10" :options="options" />
         <div class="font-ubuntu text-white">
             <div class="mx-auto flex max-w-7xl h-[700px] items-center justify-center px-6 lg:px-8">

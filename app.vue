@@ -64,4 +64,12 @@ body {
 .background-gradient-navyblue-to-bottom {
   background: linear-gradient(0deg, rgba(6, 2, 31, 1) 0%, rgba(6, 2, 31, 0) 80%);
 }
+
+.background-gradient-black-to-top {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.95) 10%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0) 80%);
+}
+
+.background-gradient-black-to-bottom {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.95) 10%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0) 80%);
+}
 </style>

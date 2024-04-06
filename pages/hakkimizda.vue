@@ -31,7 +31,7 @@
             </div>
             <div class="relative py-20 text-white">
 
-                <div class="absolute top-0 left-0 w-full h-full -z-10 bg-gradient-to-b from-black to-white/20">
+                <div class="absolute top-0 left-0 w-full h-full -z-10 background-gradient-black-to-top">
                 </div>
                 <div class="mx-auto flex flex-col max-w-7xl py-4 px-4">
                     <h2 class="text-white w-full my-10">
@@ -88,7 +88,7 @@
 
             </div>
             <div class="relative py-20 text-white font-ubuntu">
-                <div class="absolute top-0 left-0 w-full h-full -z-10 bg-gradient-to-b from-white/20 to-black">
+                <div class="absolute top-0 left-0 w-full h-full -z-10 background-gradient-black-to-bottom">
                 </div>
                 <div class="mx-auto flex flex-col max-w-7xl py-4 px-4">
                     <h2 class="my-10">YÖNETİM KURULU</h2>
@@ -140,13 +140,9 @@
 
             </div>
         </div>
-        <div class="relative">
-            <div
-                class="absolute top-0 left-0 bg-[url('/pictures/team-work.jpg')] bg-fixed bg-cover w-full h-full -z-20">
-            </div>
-            <div class="relative py-20 text-white">
-                <div class="absolute top-0 left-0 w-full h-full -z-10 bg-gradient-to-b from-black to-white/20">
-                </div>
+        <div class="relative bg-[url('/pictures/team-work.jpg')] bg-fixed bg-cover w-full h-full -z-20">
+            <div class="relative py-20 text-white -z-10 background-gradient-black-to-top">
+
                 <div class="mx-auto flex flex-col max-w-7xl py-4 px-4">
                     <h2 class="my-10">Danışmanlar</h2>
 
@@ -197,7 +193,7 @@
 
             </div>
             <div class="relative pb-20 text-white">
-                <div class="absolute top-0 left-0 w-full h-full -z-10 bg-gradient-to-b from-white/20 to-[#06021f] ">
+                <div class="absolute top-0 left-0 w-full h-full -z-10 background-gradient-navyblue-to-bottom ">
                 </div>
                 <div class="mx-auto flex flex-col max-w-7xl py-4 px-4">
                     <h2 class="my-10">Takımlar</h2>

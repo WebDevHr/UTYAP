@@ -2,13 +2,13 @@
   <div class="text-white relative font-ubuntu">
     <NuxtParticles id="tsparticles3" :options="options2" />
     <div class="z-[100]">
-      <div class="font-sans bg-transparent mx-auto max-w-7xl items-center justify-between py-4 px-6 lg:px-8">
+      <div class="font-sans bg-transparent mx-auto max-w-7xl items-center justify-between py-4 px-3 sm:px-6 lg:px-8">
         <div class="text-base lg:text-lg">
           <div class="mb-10 text-center lg:text-start">
             <h2 class="my-5">FOTOĞRAF GALERİSİ</h2>
             <p class="font-ubuntu font-light">Ekibimiz, etkinliklerimiz & yarışmalarımız </p>
           </div>
-          <div class="flex flex-wrap gap-x-10 md:gap-y-10 gap-y-3 justify-center items-center">
+          <div class="flex flex-wrap md:gap-x-10 md:gap-y-10 gap-y-3 justify-center items-center">
             <div class="relative" v-for="(item, index) in gallery" :key="index">
               <img class="rounded-2xl max-w-[500px] max-h-[350px]" :src="item.src" alt="1">
               <div class="absolute w-full h-full rounded-2xl top-0 left-0 bg-black/40 hover:bg-transparent border-4 
