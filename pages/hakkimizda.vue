@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="relative md:h-[800px] sm:h-[500px] h-[400px] bg-gradient-to-b from-transparent to-black">
+        <div class="relative md:h-[800px] sm:h-[500px] h-[400px] background-gradient-black-to-bottom">
             <NuxtParticles id="tsparticles" :options="options"></NuxtParticles>
             <div class="mx-auto flex flex-col max-w-7xl items-center justify-between py-4 px-4">
                 <div class="grid grid-flow-row-dense grid-cols-5 md:mt-[100px] lg:mt-[200px]">
@@ -140,9 +140,13 @@
 
             </div>
         </div>
-        <div class="relative bg-[url('/pictures/team-work.jpg')] bg-fixed bg-cover w-full h-full -z-20">
-            <div class="relative py-20 text-white -z-10 background-gradient-black-to-top">
-
+        <div class="relative">
+            <div
+                class="absolute top-0 left-0 bg-[url('/pictures/team-work.jpg')] bg-fixed bg-cover w-full h-full -z-20">
+            </div>
+            <div class="relative py-20 text-white">
+                <div class="absolute top-0 left-0 w-full h-full -z-10 background-gradient-black-to-top">
+                </div>
                 <div class="mx-auto flex flex-col max-w-7xl py-4 px-4">
                     <h2 class="my-10">Danışmanlar</h2>
 
@@ -193,7 +197,7 @@
 
             </div>
             <div class="relative pb-20 text-white">
-                <div class="absolute top-0 left-0 w-full h-full -z-10 background-gradient-navyblue-to-bottom ">
+                <div class="absolute top-0 left-0 w-full h-full -z-10 background-gradient-navyblue-to-bottom">
                 </div>
                 <div class="mx-auto flex flex-col max-w-7xl py-4 px-4">
                     <h2 class="my-10">Takımlar</h2>
