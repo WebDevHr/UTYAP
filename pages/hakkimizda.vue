@@ -97,8 +97,11 @@
                         <div v-for="(member, index) in  managementMembers " :key="index">
                             <div class="managerCard flex flex-col justify-center items-center w-[250px] p-3 rounded-3xl 
                                 hover:bg-black/40 transition-all duration-300 relative">
-                                <div class="overflow-hidden rounded-full h-44 w-44">
-                                    <img class="h-44 w-44 object-cover" :src="member.picture" :alt="member.name">
+                                <div
+                                    class="overflow-hidden rounded-full h-44 w-44 bg-black flex justify-center items-center">
+                                    <img v-if="member.picture != ''" class="h-44 w-44 object-cover"
+                                        :src="member.picture" :alt="member.name">
+                                    <UserIcon class="text-white/50 w-1/2 h-1/2" v-else />
                                 </div>
                                 <div class="relative flex flex-col justify-center items-center">
                                     <h3 class="mt-3 text-center">{{ member.name }}</h3>
@@ -151,25 +154,31 @@
                     <h2 class="my-10">Danışmanlar</h2>
 
                     <div class="flex flex-wrap gap-x-3 gap-y-10 justify-evenly">
-                        <div v-for=" n  in  3 " :key="n">
+                        <div v-for="(consultant, index) in  consultants " :key="index">
                             <div class="managerCard flex flex-col justify-center items-center w-[250px] p-3 rounded-3xl 
                                  transition-all duration-300 hover:bg-black/40">
                                 <div
-                                    class="overflow-hidden rounded-full h-44 w-44 bg-cover bg-center bg-[url('/pictures/3.jpg')]">
+                                    class="overflow-hidden rounded-full h-44 w-44 bg-black flex justify-center items-center">
+                                    <img v-if="consultant.picture != ''" class="h-44 w-44 object-cover"
+                                        :src="consultant.picture" :alt="consultant.name">
+                                    <UserIcon class="text-white/50 w-1/2 h-1/2" v-else />
                                 </div>
                                 <div class="relative flex flex-col justify-center items-center">
-                                    <h3 class="mt-3 text-center">PROF. DR. HASAN HÜSEYİN SAYAN</h3>
-                                    <h4 class="my-2 font-extralight text-gray-300">AKADEMİK DANIŞMAN</h4>
+                                    <h3 class="mt-3 text-center">{{ consultant.name }}</h3>
+                                    <h4 class="my-2 font-extralight text-gray-400 text-center">{{ consultant.title }}
+                                    </h4>
                                     <div
                                         class="links flex flex-row gap-x-1 absolute top-0 opacity-0 transition-all duration-500">
-                                        <a href="" class="p-1">
+                                        <a v-if="consultant.links.linkedIn" :href="consultant.links.linkedIn"
+                                            class="p-1">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em"
                                                 viewBox="0 0 24 24">
                                                 <path fill="currentColor"
                                                     d="M18.72 4H5.37A1.31 1.31 0 0 0 4 5.25v13.38A1.41 1.41 0 0 0 5.37 20h13.35A1.34 1.34 0 0 0 20 18.63V5.25A1.23 1.23 0 0 0 18.72 4M9 17.34H6.67v-7.13H9ZM7.89 9.13A1.18 1.18 0 0 1 6.67 7.9a1.18 1.18 0 0 1 1.24-1.23A1.18 1.18 0 0 1 9.13 7.9a1.18 1.18 0 0 1-1.24 1.23m9.45 8.21H15v-3.9c0-.93-.33-1.57-1.16-1.57a1.25 1.25 0 0 0-1.17.84a1.43 1.43 0 0 0-.08.57v4.06h-2.3v-7.13h2.3v1a2.32 2.32 0 0 1 2.1-1.21c1.51 0 2.65 1 2.65 3.13Z" />
                                             </svg>
                                         </a>
-                                        <a href="" class="p-1">
+                                        <a v-if="consultant.links.instagram" :href="consultant.links.instagram"
+                                            class="p-1">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em"
                                                 viewBox="0 0 24 24">
                                                 <path fill="currentColor"
@@ -179,7 +188,7 @@
                                                     clip-rule="evenodd" />
                                             </svg>
                                         </a>
-                                        <a href="mailto:hsayan@gazi.edu.tr" class="p-1">
+                                        <a v-if="consultant.links.gmail" :href="consultant.links.gmail" class="p-1">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em"
                                                 viewBox="0 0 24 24">
                                                 <path fill="currentColor"
@@ -228,7 +237,10 @@
 
 <script setup>
 import options from '~/assets/particles/particles-colors.json'
-import options2 from '~/assets/particles/particles-polygon-mask-uytap.json'
+
+import {
+    UserIcon
+} from '@heroicons/vue/24/outline'
 
 import { tsParticles } from 'tsparticles-engine'
 import { loadFull } from 'tsparticles' // or whichever bundle you wish to use
@@ -243,8 +255,6 @@ if (process.client) {
 }
 await loadPolygonPath(tsParticles)
 await loadLightInteraction(tsParticles)
-await loadCanvasMaskPlugin(tsParticles);
-await loadPolygonMaskPlugin(tsParticles);
 
 const managementMembers = [
     {
@@ -278,31 +288,124 @@ const managementMembers = [
         }
     },
     {
-        name: 'Samed Kahraman',
-        title: 'Başkan',
-        picture: '/pictures/2.jpg',
+        name: 'Serkan AKBURU',
+        title: 'Keşif Araçları Ekibi Başkanı',
+        picture: '',
         links: {
-            gmail: '',
+            gmail: 'akburuserkan@gmail.com',
             linkedIn: '',
             instagram: ''
         }
     },
     {
-        name: 'Samed Kahraman',
-        title: 'Başkan',
-        picture: '/pictures/3.jpg',
+        name: 'Aybars ÖZTÜRK',
+        title: 'Fırlatma Sistemleri Ekibi Başkanı',
+        picture: '',
         links: {
-            gmail: '',
+            gmail: 'musabaybars01@gmail.com',
             linkedIn: '',
             instagram: ''
         }
     },
     {
-        name: 'Samed Kahraman',
-        title: 'Başkan',
-        picture: '/pictures/3.jpg',
+        name: 'Fatma Kübra ÖZTEKİN',
+        title: 'Sponsorluk Danışmanı',
+        picture: '',
         links: {
-            gmail: '',
+            gmail: 'f.kubraoztekin06@gmail.com',
+            linkedIn: '',
+            instagram: ''
+        }
+    },
+    {
+        name: 'Eygi Tuana GÜÇLÜ',
+        title: 'Özgün-İnovatİf Tasarım',
+        picture: '',
+        links: {
+            gmail: 'eygi.0604@gmail.com',
+            linkedIn: '',
+            instagram: ''
+        }
+    },
+    {
+        name: 'Kaan PARLAK',
+        title: 'Robotik Teknik Lideri',
+        picture: '',
+        links: {
+            gmail: 'kn.prlk.06@gmail.com ',
+            linkedIn: '',
+            instagram: ''
+        }
+    },
+    {
+        name: 'Eren GÖNENÇ',
+        title: 'Savunma Sanayi Geliştirme ekibi Başkanı',
+        picture: '',
+        links: {
+            gmail: 'erengonenc08@gmail.com',
+            linkedIn: '',
+            instagram: ''
+        }
+    },
+    {
+        name: 'Yasemin BURCAK',
+        title: 'Elektronik Tasarım Ekibi Başkanı',
+        picture: '',
+        links: {
+            gmail: 'yaseminburcak61@gmail.com',
+            linkedIn: '',
+            instagram: ''
+        }
+    },
+    {
+        name: 'Mehmet Furkan IŞIK',
+        title: 'Gömülü Sistemler Ekibi Başkanı',
+        picture: '',
+        links: {
+            gmail: 'isikm2689@gmail.com ',
+            linkedIn: '',
+            instagram: ''
+        }
+    },
+    {
+        name: 'Temur TURAN',
+        title: 'Yapay Zeka Ekibi Başkanı',
+        picture: '',
+        links: {
+            gmail: 'mustafa.temur.turan@gmail.com',
+            linkedIn: '',
+            instagram: ''
+        }
+    },
+    {
+        name: 'Erkam UÇAN',
+        title: 'Uygulama Geliştirme Ekibi Başkanı',
+        picture: '',
+        links: {
+            gmail: 'erkamucan@gmail.com',
+            linkedIn: '',
+            instagram: ''
+        }
+    },
+    {
+        name: 'Enise ALSANCAK',
+        title: 'Sosyal Medya Sorumlusu',
+        picture: '',
+        links: {
+            gmail: 'enisealsancak@gmail.com',
+            linkedIn: '',
+            instagram: ''
+        }
+    },
+]
+
+const consultants = [
+    {
+        name: 'PROF. DR. HASAN HÜSEYİN SAYAN',
+        title: 'AKADEMİK DANIŞMAN',
+        picture: '',
+        links: {
+            gmail: 'hsayan@gazi.edu.tr',
             linkedIn: '',
             instagram: ''
         }
