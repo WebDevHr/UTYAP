@@ -70,7 +70,10 @@
                   </div>
 
                   <div class="flex justify-center">
-                    <BaseComponentsBaseButton class="mt-4">GÖNDER</BaseComponentsBaseButton>
+                    <BaseComponentsBaseDialog :info="dialogInfo">
+                      <BaseComponentsBaseButton class="mt-4" :type="`submit`">GÖNDER
+                      </BaseComponentsBaseButton>
+                    </BaseComponentsBaseDialog>
                   </div>
                 </form>
               </div>
@@ -93,6 +96,13 @@ const formData = {
   subject: '',
   message: '',
 }
+
+const dialogInfo = {
+  title: 'Mesajınız alındı',
+  text: 'En kısa zamanda size geri dönüş yapacağız. Bizim ile iletişime geçtiğiniz için teşekkür ederiz.',
+  button: 'KAPAT'
+}
+
 async function handleSubmit() {
   // Here's where you'll handle form submission 
   // (e.g., send data to an API endpoint)

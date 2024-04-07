@@ -12,7 +12,6 @@
 
     <LazyHomepageCardsComponent />
     <LazyHomepageAboutUsComponent />
-
     <LazyHomepageVisionMissionComponent />
     <LazyHomepagePhotoGalleryComponent />
     <LazyHomepageContactUsComponent id="iletisim" />
@@ -42,7 +41,6 @@ await loadCanvasMaskPlugin(tsParticles);
 
 const interstellar = ref({ name: 'interstellar.Day-one', src: '/interstellar.Day-one(320).mp3' })
 const loaded = ref(false)
-
 
 onMounted(() => {
   loaded.value = true
