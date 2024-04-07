@@ -11,7 +11,7 @@
             </h2>
             <div class="flex xl:gap-x-10 flex-col xl:flex-row mx-3 md:mx-10 justify-center relative items-center">
               <div ref="cardToHover"
-                class="cardToHover card md:w-[350px] rounded overflow-hidden py-5 lg:py-10 text-center w-full"
+                class="cardToHover card max-w-[350px] md:w-[350px] rounded overflow-hidden py-5 lg:py-10 text-center w-full"
                 v-for="(cartInfo, index) in cartInfos" :key="index" @mouseenter="cardHover"
                 @mouseleave="cardHoverLeave">
 

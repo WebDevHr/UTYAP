@@ -59,9 +59,9 @@
 
               </div>
             </div>
-            <div class="flex md:basis-2/3 md:pl-40 my-5">
-              <div class="basis-1/2 flex flex-col">
-                <h2 class="mb-10">LİNKLER</h2>
+            <div class="flex md:basis-2/3 flex-wrap md:pl-40 ">
+              <div class="basis-1/2 flex flex-col my-5">
+                <h2 class="sm:mb-10 mb-4">LİNKLER</h2>
                 <router-link
                   class="font-extralight text-gray-400 hover:text-white hover:translate-x-1 hover:-translate-y-[2px] focus:text-blue-700 mb-4 w-[150px]"
                   :to="{ name: 'index' }">Anasayfa</router-link>
@@ -88,7 +88,7 @@
               </div>
               <div class="basis-1/2">
                 <div class="md:w-[200px] flex flex-col gap-y-5">
-                  <h2 class="mb-10">İLETİŞİM</h2>
+                  <h2 class="sm:mb-10">İLETİŞİM</h2>
                   <div
                     class="font-extralight text-gray-400 hover:text-white hover:translate-x-1 hover:-translate-y-[2px] focus:text-blue-700">
                     Design and modified by
@@ -113,32 +113,21 @@
         </div>
       </div>
 
-      <footer class="bg-gray-900 text-white py-8 text-sm sm:text-base md:text-lg">
+      <div class="bg-gray-900 text-white py-8 text-sm sm:text-base md:text-lg">
         <div class="container mx-auto text-center font-bebasneue">
           UZAY TEKNOLOJİLERİ VE YAPAY ZEKA TOPLULUĞU © 2024 Tüm hakları saklıdır.
         </div>
-      </footer>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
 import options from '~/assets/particles/particles-amongus.json'
-import HeroSection from '~/components/homepage/HeroSection.vue';
-import SliderComponent from '~/components/homepage/SliderComponent.vue';
 
 import { tsParticles } from 'tsparticles-engine'
-import { loadFull } from 'tsparticles' // or whichever bundle you wish to use
-import { loadPolygonPath } from 'tsparticles-path-polygon'
-import { loadLightInteraction } from 'tsparticles-interaction-light'
-import { loadCanvasMaskPlugin } from "tsparticles-plugin-canvas-mask";
+import { loadFull } from 'tsparticles'
 if (process.client) {
-  // This example will BLOCK your application from rendering until the tsParticles library is initialized
-  // You can put this in some other place if you know that you won't be loading particles until after the first paint
   await loadFull(tsParticles)
 }
-await loadPolygonPath(tsParticles)
-await loadLightInteraction(tsParticles)
-await loadCanvasMaskPlugin(tsParticles);
 </script>

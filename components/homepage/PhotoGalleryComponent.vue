@@ -10,7 +10,7 @@
           </div>
           <div class="flex flex-wrap md:gap-x-10 md:gap-y-10 gap-y-3 justify-center items-center">
             <div class="relative" v-for="(item, index) in gallery" :key="index">
-              <img class="rounded-2xl max-w-[500px] max-h-[350px]" :src="item.src" alt="1">
+              <img class="rounded-2xl md:max-w-[350px] max-h-[350px]" :src="item.src" alt="1">
               <div class="absolute w-full h-full rounded-2xl top-0 left-0 bg-black/40 hover:bg-transparent border-4 
                   border-gray-900 hover:border-transparent transition-all duration-300">
                 <div class="flex flex-col absolute bottom-0 p-5">
