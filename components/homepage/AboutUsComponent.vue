@@ -14,9 +14,8 @@
 					hedefler,
 					yeni hayaller yolunda ilerlemeye başlamıştır.
 				</p>
-				<router-link :to="{ name: 'hakkimizda' }" class="bg-white/30 hover:bg-white hover:text-gray-800 text-white font-bold 
-						py-2 px-4 mt-6 rounded-full inline-block border transition-all duration-500 lg:text-base md:text-sm text-xs">
-					DAHA FAZLA BİLGİ
+				<router-link :to="{ name: 'hakkimizda' }">
+					<BaseComponentsBaseButton class="mt-6">DAHA FAZLA BİLGİ</BaseComponentsBaseButton>
 				</router-link>
 			</div>
 		</div>

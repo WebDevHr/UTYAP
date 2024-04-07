@@ -18,10 +18,8 @@
                 <div class="shadow-lg border rounded-3xl overflow-hidden bg-gray-100 relative">
                   <div class="applyButton absolute -top-[12px] items-center  justify-center md:w-[350px] hidden w-full">
                     <nuxt-link
-                      to="https://docs.google.com/forms/d/e/1FAIpQLSczu_qUgivJdWK_xurMqQBwWctV5oR_bPEzm7tPUCKXGH1OVQ/viewform"
-                      class=" px-5 py-3 my-2 border-2 border-gray-700 hover:border-white rounded-3xl bg-white/60 
-                  hover:bg-white font-semibold duration-300 text-gray-500 hover:text-gray-900">
-                      Hemen başvur
+                      to="https://docs.google.com/forms/d/e/1FAIpQLSczu_qUgivJdWK_xurMqQBwWctV5oR_bPEzm7tPUCKXGH1OVQ/viewform">
+                      <BaseComponentsBaseButton :type="`submit`" class="mt-3">HEMEN BAŞVUR</BaseComponentsBaseButton>
                     </nuxt-link>
                   </div>
                   <img :src="cartInfo.imgSrc" :alt="cartInfo.imgSrc" class="h-[215px] w-full object-cover">

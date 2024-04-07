@@ -5,8 +5,8 @@
       <div
         class="font-sans bg-transparent mx-auto max-w-7xl items-center justify-between py-4 px-2 sm:px-6 lg:px-8 pb-10">
         <LazyHomepageAudioPlayer :audioSrc="interstellar" :autoplay="loaded" />
-        <HeroSection />
-        <SliderComponent />
+        <HomepageHeroSection />
+        <HomePageSliderComponent />
       </div>
     </div>
 
@@ -25,8 +25,6 @@
 
 import { ref, onMounted } from 'vue'
 import options from '~/assets/particles/particles.json'
-import HeroSection from '~/components/homepage/HeroSection.vue';
-import SliderComponent from '~/components/homepage/SliderComponent.vue';
 
 import { tsParticles } from 'tsparticles-engine'
 import { loadFull } from 'tsparticles' // or whichever bundle you wish to use
