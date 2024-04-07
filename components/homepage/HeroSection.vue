@@ -9,7 +9,7 @@
       <router-link :to="{ name: 'hakkimizda' }">
         <BaseComponentsBaseButton class="mt-6">
           <div class="flex justify-center items-center gap-x-1">
-            Topluluğumuz Hakkında Bilgi Edinin
+            TOPLULUĞUMUZ HAKKINDA BİLGİ EDİNİN
             <ArrowRightIcon class="h-5 w-5" aria-hidden="true" />
           </div>
         </BaseComponentsBaseButton>

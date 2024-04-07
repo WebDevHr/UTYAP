@@ -63,27 +63,27 @@
               <div class="basis-1/2 flex flex-col">
                 <h2 class="mb-10">LİNKLER</h2>
                 <router-link
-                  class="font-extralight text-gray-400 hover:text-white hover:translate-x-1 hover:-translate-y-[2px] focus:text-blue-700 mb-4"
+                  class="font-extralight text-gray-400 hover:text-white hover:translate-x-1 hover:-translate-y-[2px] focus:text-blue-700 mb-4 w-[150px]"
                   :to="{ name: 'index' }">Anasayfa</router-link>
                 <router-link
-                  class="font-extralight text-gray-400 hover:text-white hover:translate-x-1 hover:-translate-y-[2px] focus:text-blue-700 mb-4"
+                  class="font-extralight text-gray-400 hover:text-white hover:translate-x-1 hover:-translate-y-[2px] focus:text-blue-700 mb-4 w-[150px]"
                   :to="{ name: 'hakkimizda' }">Hakkımızda</router-link>
                 <nuxt-link
-                  class="font-extralight text-gray-400 hover:text-white hover:translate-x-1 hover:-translate-y-[2px] focus:text-blue-700 mb-4"
+                  class="font-extralight text-gray-400 hover:text-white hover:translate-x-1 hover:-translate-y-[2px] focus:text-blue-700 mb-4 w-[150px]"
                   to="https://docs.google.com/forms/d/e/1FAIpQLSczu_qUgivJdWK_xurMqQBwWctV5oR_bPEzm7tPUCKXGH1OVQ/viewform">
                   Aramıza Katıl
                 </nuxt-link>
                 <router-link
-                  class="font-extralight text-gray-400 hover:text-white hover:translate-x-1 hover:-translate-y-[2px] focus:text-blue-700 mb-4"
+                  class="font-extralight text-gray-400 hover:text-white hover:translate-x-1 hover:-translate-y-[2px] focus:text-blue-700 mb-4 w-[150px]"
                   :to="{ name: 'under_construction' }">Projeler</router-link>
                 <router-link
-                  class="font-extralight text-gray-400 hover:text-white hover:translate-x-1 hover:-translate-y-[2px] focus:text-blue-700 mb-4"
+                  class="font-extralight text-gray-400 hover:text-white hover:translate-x-1 hover:-translate-y-[2px] focus:text-blue-700 mb-4 w-[150px]"
                   :to="{ name: 'under_construction' }">Etkinlikler</router-link>
                 <router-link
-                  class="font-extralight text-gray-400 hover:text-white hover:translate-x-1 hover:-translate-y-[2px] focus:text-blue-700 mb-4"
+                  class="font-extralight text-gray-400 hover:text-white hover:translate-x-1 hover:-translate-y-[2px] focus:text-blue-700 mb-4 w-[150px]"
                   :to="{ name: 'under_construction' }">Kariyer</router-link>
                 <router-link
-                  class="font-extralight text-gray-400 hover:text-white hover:translate-x-1 hover:-translate-y-[2px] focus:text-blue-700 mb-4"
+                  class="font-extralight text-gray-400 hover:text-white hover:translate-x-1 hover:-translate-y-[2px] focus:text-blue-700 mb-4 w-[150px]"
                   :to="{ name: 'under_construction' }">Eğitim</router-link>
               </div>
               <div class="basis-1/2">

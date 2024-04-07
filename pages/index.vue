@@ -6,7 +6,7 @@
         class="font-sans bg-transparent mx-auto max-w-7xl items-center justify-between py-4 px-2 sm:px-6 lg:px-8 pb-10">
         <LazyHomepageAudioPlayer :audioSrc="interstellar" :autoplay="loaded" />
         <HomepageHeroSection />
-        <HomePageSliderComponent />
+        <HomepageSliderComponent />
       </div>
     </div>
 
