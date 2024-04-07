@@ -7,8 +7,9 @@
         </div>
         <div class="relative flex flex-col justify-center items-center">
             <h3 class="title mt-3 text-center transition-all duration-500">{{ member.name }}</h3>
-            <h4 class="title my-2 font-extralight text-gray-400 text-center transition-all duration-500">{{ member.title
-                }}</h4>
+            <h4 class="title my-2 font-extralight text-gray-400 text-center transition-all duration-500 select-none">{{
+                member.title
+            }}</h4>
             <div class="links flex flex-row gap-x-1 absolute top-0 opacity-0 transition-all duration-500">
                 <a v-if="member.links.linkedIn" :href="member.links.linkedIn" class="p-1">
                     <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24">
