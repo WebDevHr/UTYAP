@@ -13,4 +13,9 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
   },
+  runtimeConfig: {
+    public: {
+      GOOGLE_MAPS_API_KEY: process.env.GOOGLE_MAPS_API_KEY
+    }
+  }
 })
