@@ -23,7 +23,7 @@
 <script setup>
 
 import { ref, onMounted } from 'vue'
-import options from '~/assets/particles/particles-colors.json'
+import options from '~/assets/particles/particles.json'
 
 import { tsParticles } from 'tsparticles-engine'
 import { loadFull } from 'tsparticles' // or whichever bundle you wish to use
