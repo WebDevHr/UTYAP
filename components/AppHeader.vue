@@ -120,7 +120,7 @@
                       class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">
                       <nuxt-link :to="{ name: item.href }"
                         class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">{{
-      item.name }}</nuxt-link>
+                          item.name }}</nuxt-link>
                     </DisclosureButton>
                   </DisclosurePanel>
                 </Disclosure>

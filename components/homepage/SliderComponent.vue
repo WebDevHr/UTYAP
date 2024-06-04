@@ -59,11 +59,11 @@
           clickable: true,
           type: 'bullets',
         }" :parallax="true" :speed="800" :grab-cursor="true" :thumbs="{
-          thumbsContainerClass: 'swiper-thumbs'
-        }" :a11y="true" effect="cube" :autoplay="{
-          delay: 4000,
-          disableOnInteraction: true
-        }">
+  thumbsContainerClass: 'swiper-thumbs'
+}" :a11y="true" effect="cube" :autoplay="{
+  delay: 4000,
+  disableOnInteraction: true
+}">
         <SwiperSlide v-for="(slide, idx) in slides" :key="idx" class="bg-white rounded-md py-2 md:py-4">
           <div class="card overflow-hidden mx-2 md:mx-4 rounded-md select-none">
             <div>
@@ -81,7 +81,7 @@
             </div>
             <div class="flex justify-start my-5 mx-14" data-swiper-parallax="-1000" data-swiper-parallax-opacity="0">
               <span class="bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{{
-          slide.tag }}</span>
+                slide.tag }}</span>
             </div>
           </div>
         </SwiperSlide>

@@ -14,7 +14,7 @@
 </template>
 
 <script setup>
-import { GoogleMap, Marker, CustomMarker, InfoWindow } from 'vue3-google-map'
+import { GoogleMap, Marker, InfoWindow } from 'vue3-google-map'
 const center = { lat: 39.93941876113325, lng: 32.81729416785606 }
 const GOOGLE_MAPS_API_KEY = useRuntimeConfig().public.GOOGLE_MAPS_API_KEY;
 </script>
